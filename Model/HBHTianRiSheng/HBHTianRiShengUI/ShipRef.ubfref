@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ReferenceComponent id="70c52189-9b76-4bc0-bf46-5fcf4d5cfb1a" name="ShipRef" displayName="出货单" description="" help="" refType="1" isMultiSelect="False" isDefault="False" isClientReturn="False" width="580" height="408" isBinding="False" displayNameResourceID="" URI="U9.VOB.Cus.HBHTianRiSheng.HBHTianRiShengUI.ShipRef" Classify="" ForMultOrg="False">
+  <References>
+    <Reference id="d99d227f-aed4-43c5-b1a2-49c30ad0af5d" name="cRef" displayName="cRef" description="" help="出货单" refEntityId="ec00169d-7380-48d8-a30a-22c80426282b" refEntityName="UFIDA.U9.SM.Ship.Ship" refType="1" isMain="False">
+      <RefFields>
+        <RefField id="22eefcd9-8faa-448a-b5aa-44c1d412213b" name="ID" displayName="ID" description="" help="单据基类.Key.ID" isKey="True" isEdit="False" isName="False" isVisible="False" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.SM.Ship.Ship:ID" displayNameIndexStr="2" />
+        <RefField id="0b982b5b-2736-4e13-9f3c-9c10d5d6e793" name="DocNo" displayName="单号" description="" help="单据基类.Misc.单号" isKey="False" isEdit="True" isName="True" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.SM.Ship.Ship:DocNo" displayNameIndexStr="2" />
+        <RefField id="e611d667-8bbb-4756-97e7-5b37e5cfc86e" name="BusinessDate" displayName="日期" description="" help="单据基类.Misc.日期" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.SM.Ship.Ship:BusinessDate" displayNameIndexStr="2" />
+        <RefField id="b7429714-f623-43ae-b5d5-9c4d294490f1" name="DocumentType_Name" displayName="单据类型" description="" help="单据类型基类.Misc.名称" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.SM.Ship.Ship:DocumentType.Name" displayNameIndexStr="" />
+        <RefField id="58520bf8-45a7-433a-a76b-41d68f27e03d" name="Status" displayName="状态" description="" help="出货单.A_基本.状态" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.SM.Ship.Ship:Status" displayNameIndexStr="2" />
+        <RefField id="e74c7140-b6e9-48d0-ab63-e2709fbf2c70" name="ShipConfirmDate" displayName="出货确认日期" description="" help="出货单.A_基本.出货确认日期" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="120" refAttributeName="UFIDA.U9.SM.Ship.Ship:ShipConfirmDate" displayNameIndexStr="2" />
+        <RefField id="0fac6848-36fe-4cb8-bb36-da0d0a559e43" name="ApproveDate" displayName="审核日期" description="" help="出货单.A_基本.审核日期" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.SM.Ship.Ship:ApproveDate" displayNameIndexStr="2" />
+      </RefFields>
+      <OrderFields>
+        <OrderField id="e66627d1-8bfa-4988-b7e4-ca04ecac8767" name="BusinessDate" displayName="日期" description="" help="单据基类.Misc.日期" direction="1" sequence="0" refAttributeName="UFIDA.U9.SM.Ship.Ship:BusinessDate" />
+        <OrderField id="b3d1f0d5-52ec-4c1c-91a6-aa47c3ae4109" name="DocNo" displayName="单号" description="" help="单据基类.Misc.单号" direction="1" sequence="0" refAttributeName="UFIDA.U9.SM.Ship.Ship:DocNo" />
+      </OrderFields>
+      <Filter>UFIDA::U9::SM::Ship::Ship.Status = 3</Filter>
+    </Reference>
+  </References>
+</ReferenceComponent>

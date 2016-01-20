@@ -1,0 +1,101 @@
+<View ID="b717b974-1628-4eef-b9da-f71e7279773c" ChildLabelWidth="56" ChildRefWidth="20" GridBottomMargin="5" GridColumnCount="1" GridColumnSpace="24" GridLeftMargin="0" GridRightMargin="0" GridRowCount="3" GridRowSpace="10" GridTopMargin="0" Height="504" IsMainForm="True" LayoutType="GridBag" Name="FollowServiceBListUIForm" Namespace="FollowServiceBListUIModel" QueryInfo="QueryInfo" TabStop="False" TemplateCode="UI_ListForm_HasCheckBox" TemplateType="CustomTemplate" UIModelID="2c5f9006-e923-4649-a9d3-8c766d79fc99" URI=".UI_列表Form带CheckBoxWebPart" UserType="ForQuery" ViewID="4983" Width="992" X="10" Y="10">
+  <Columns>
+    <Column Fixed="False" Name="Column0" Type="Title" Width="992" />
+  </Columns>
+  <Rows>
+    <Row Fixed="True" Height="28" Name="Row0" />
+    <Row Fixed="False" Height="421" Name="Row1" />
+    <Row Fixed="True" Height="25" Name="Row3" />
+  </Rows>
+  <Providers />
+  <InParameters />
+  <Toolbar ID="305b5791-76b9-443c-87f8-e299e6c8563b" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="28" Name="Toolbar1" TabIndex="1" TabStop="True" Width="992" X="0" Y="0">
+    <Button ID="6e7d4ab3-703e-469f-acc2-693ed83afe79" AccessKey="N" DisplayNameResourceID="19478b02-d2a9-4d7e-b7af-00070c61ff2d" DisplaySrcType="PublicResource" Height="28" Name="BtnNew" TabIndex="1" TabStop="True" Width="35" X="0" Y="0">
+      <Events>
+        <Event ActionName="OnNew" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="" Template="" />
+      </Events>
+    </Button>
+    <Button ID="82880960-606b-4250-8723-ee141507b254" AccessKey="R" DisplayNameResourceID="0467218f-229b-4954-b2d4-3c5976467f76" DisplaySrcType="PublicResource" Height="28" Name="BtnDelete" TabIndex="2" TabStop="True" Width="35" X="35" Y="0">
+      <Events>
+        <Event ActionName="OnDelete" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="" Template="" />
+      </Events>
+    </Button>
+    <Separator ID="f64eb3cb-78e9-443a-a694-f2e1def98543" Height="28" Name="Separator0" TabIndex="3" TabStop="True" Width="8" X="70" Y="0" />
+    <Button ID="6155778c-57b6-4b06-b931-98eb5c0f6c56" AccessKey="O" DisplayNameResourceID="688fd549-5a92-49cc-8072-6d5377f6409a" DisplaySrcType="PublicResource" Height="28" Name="BtnOutPut" TabIndex="4" TabStop="True" Width="35" X="78" Y="0">
+      <Events>
+        <Event ActionName="OnOutPut" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="" Template="" />
+      </Events>
+    </Button>
+    <Button ID="1e9d3e90-3a3d-4a99-aaa1-5aaac51dafe1" AccessKey="P" DisplayNameResourceID="27b5c615-cde5-458c-be74-833317249568" DisplaySrcType="PublicResource" Height="28" Name="BtnPrint" TabIndex="5" TabStop="True" Width="35" X="113" Y="0">
+      <Events>
+        <Event ActionName="OnPrint" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="" Template="" />
+      </Events>
+    </Button>
+  </Toolbar>
+  <Card ID="5aa63c37-b93a-44cd-99ed-6be45692bba1" ChildLabelWidth="60" ChildRefWidth="20" FunctionBar="FunctionBar" GridBottomMargin="2" GridColumnCount="17" GridColumnSpace="0" GridHeight="1" GridLeftMargin="10" GridRightMargin="10" GridRowCount="1" GridRowSpace="5" GridTopMargin="3" GridWidth="1" GridX="0" GridY="2" Height="25" LayoutType="GridBag" Name="Card0" TabIndex="3" TabStop="False" Width="992" X="0" Y="469">
+    <Columns>
+      <Column Fixed="True" Name="Column0" Type="Title" Width="80" />
+      <Column Fixed="True" Name="Column1" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column2" Type="Value" Width="80" />
+      <Column Fixed="True" Name="Column3" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column4" Type="Value" Width="80" />
+      <Column Fixed="True" Name="Column5" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column6" Type="Value" Width="80" />
+      <Column Fixed="True" Name="Column13" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column12" Width="80" />
+      <Column Fixed="True" Name="Column11" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column10" Width="80" />
+      <Column Fixed="True" Name="Column9" Width="114" />
+      <Column Fixed="False" Name="Column16" Width="117" />
+      <Column Fixed="False" Name="Column15" Type="Title" Width="80" />
+      <Column Fixed="False" Name="Column14" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column7" Width="120" />
+      <Column Fixed="False" Name="Column8" Width="1" />
+    </Columns>
+    <Rows>
+      <Row Fixed="True" Height="20" Name="Row0" />
+    </Rows>
+    <Label ID="e806965d-435c-4de0-bbce-b76031a2b15a" DisplayName="" DisplayNameIndexStr="1" DisplayNameResourceID="7fb97e0d-d794-43d8-9b10-4ea28a2d6bd3" DisplaySrcType="PublicResource" DisplaySrcUIFieldID="ChooseCase" DisplaySrcUIViewID="" Enabled="True" GridHeight="1" GridWidth="1" GridX="13" GridY="0" Height="20" IsNull="True" Name="Label0" TabIndex="2" TabStop="True" TitleAlign="Right" TitleLocation="Left" Visible="True" Width="80" X="771" Y="3">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <DropDownList ID="02a7e5b6-3b99-4e4f-8a1c-b66a1691e2bf" DisplayFormat="50" Enabled="True" GridHeight="1" GridWidth="1" GridX="15" GridY="0" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="DDLCase" TabIndex="3" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="120" X="861" Y="3">
+      <Events>
+        <Event ActionName="OnCaseChanged" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="TextChanged" Parameter="" Template="" />
+      </Events>
+      <RelationControls />
+    </DropDownList>
+    <Button ID="f3bb556a-f1db-4226-b66d-70e929be8640" AccessKey="" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" Name="OnLookCase" TabIndex="1" TabStop="True" Width="80" X="10" Y="3">
+      <Events>
+        <Event ActionName="OnLookCase" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="False" Name="Click" Parameter="" Template="" />
+      </Events>
+    </Button>
+    <Button ID="a2619369-0322-48e5-b5fa-949956ab674c" AccessKey="" DisplayName="转回报单" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="1" GridX="4" GridY="0" Height="20" Name="BtnToFeedback" TabIndex="4" TabStop="True" Width="80" X="190" Y="3">
+      <Events>
+        <Event EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="" Template="" />
+      </Events>
+    </Button>
+  </Card>
+  <Card ID="ca0f98ca-a228-487a-bd66-553eccb63049" ChildLabelWidth="60" ChildRefWidth="20" GridBottomMargin="0" GridColumnCount="2" GridColumnSpace="0" GridHeight="1" GridLeftMargin="10" GridRightMargin="10" GridRowCount="2" GridRowSpace="5" GridTopMargin="0" GridWidth="1" GridX="0" GridY="1" Height="421" LayoutType="GridBag" Name="Card3" TabIndex="2" TabStop="False" Width="992" X="0" Y="38">
+    <Columns>
+      <Column Fixed="True" Name="Column0" Type="Value" Width="971" />
+      <Column Fixed="False" Name="Column1" Type="Spacing" Width="1" />
+    </Columns>
+    <Rows>
+      <Row Fixed="True" Height="415" Name="Row0" />
+      <Row Fixed="False" Height="1" Name="Row1" />
+    </Rows>
+    <DataGrid ID="d771d91a-1aa3-4e40-b9cb-51af91a1f1c3" AllowAddRow="True" AllowDelRow="True" AllowInsertRow="True" AllowSelectAllPage="True" AutoEditModel="True" EditStatus="browse" Enabled="True" GridHeight="2" GridWidth="2" GridX="0" GridY="0" HasSum="True" Height="421" IsMultiSelect="True" IsSumAllData="True" Name="DataGrid1" PageSize="18" Paging="True" ShowEditBar="True" TabIndex="1" TabStop="True" Width="972" X="10" Y="0">
+      <Events>
+        <Event ActionName="OnGridRowDbClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="GridRowDbClicked" Parameter="" Template="" />
+      </Events>
+      <Header ID="d0cc6b6f-35fc-4266-9054-14613d995644" Name="Header1">
+        <HeaderRow Name="DefaultRow" />
+      </Header>
+      <UIFilterBar Name="LocateBar" />
+      <Columns />
+    </DataGrid>
+  </Card>
+  <Events />
+</View>

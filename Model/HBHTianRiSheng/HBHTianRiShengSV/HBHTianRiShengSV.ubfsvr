@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Component id="24285723-18fe-48c5-ac2f-faf0e630ff68" name="HBHTianRiShengSV" displayName="HBHTianRiShengSV" description="" help="" type="SV" assemblyName="U9.VOB.Cus.HBHTianRiSheng.HBHTianRiShengSV">
+  <Namespace id="2a353548-ff01-487b-87bb-98ae0b8cd6eb" name="U9.VOB.Cus.HBHTianRiSheng" displayName="U9.VOB.Cus.HBHTianRiSheng" description="U9.VOB.Cus.HBHTianRiSheng" help="">
+    <Operation id="b245b3c5-4b44-458c-aa13-c6bdeee2a8cf" name="Follow2FeedbackSV" displayName="任务单转回报单服务" description="任务单转回报单服务" help="" mD_ParentClass_ID="" isFactEntity="False" returnTypeID="378d45b4-375d-4b5d-8748-abc9575c26b3" isService="True" isDefault="False" isEntityKey="False" transactionType="0" isAuthorization="True" isISV="False">
+      <Groups>
+        <Group id="9a37f5a8-7fd2-4015-90bd-903955399549" name="Misc" displayName="Misc" description="" help="" />
+      </Groups>
+      <Attributes>
+        <Attribute id="5c0e97b8-6c8f-4063-86a8-102e392d085f" name="FollowIDs" displayName="任务单集合" description="" help="任务单转回报单服务.Misc.任务单集合" isCollection="True" dataTypeID="5f46919d-38c1-4b11-a014-5b3c6e938807" isKey="False" defaultValue="" length="50" precise="5" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="0" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="True" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+      </Attributes>
+      <Implements>
+        <Operation id="03ea4ec9-dc52-4a8b-ae81-540b0c4e5659" name="Impement" displayName="实现" description="" help="" mD_ParentClass_ID="" isFactEntity="False" returnTypeID="378d45b4-375d-4b5d-8748-abc9575c26b3" isService="False" isDefault="True" isEntityKey="False" transactionType="2" isAuthorization="True" isISV="False" />
+      </Implements>
+    </Operation>
+    <Diagram id="00000000-0000-0000-0000-000000000000" name="HBHTianRiShengSV" displayName="HBHTianRiShengSV">
+      <Class Editable="True" ID="0d4d35a8-2cd9-4a09-ab5b-8b07c7b3cd68" Type="Service" ADID="b245b3c5-4b44-458c-aa13-c6bdeee2a8cf">
+        <Location X="143" Y="91" />
+        <Size width="120" height="58" />
+      </Class>
+    </Diagram>
+  </Namespace>
+</Component>

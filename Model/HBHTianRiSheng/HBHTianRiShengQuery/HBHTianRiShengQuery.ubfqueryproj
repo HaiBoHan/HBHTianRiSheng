@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project id="dfae4cdc-fa63-409f-9c71-77cf5b666525" name="HBHTianRiShengQuery" displayName="HBHTianRiShengQuery" description="" help="" type="" assemblyName="HBHTianRiShengQuery" mapProject="" resourceName="" projectVersion="Normal">
+  <Imports>
+    <Import id="b23ac6c0-3073-48fb-bf3c-5f68d68f8f30" name="HBHTianRiShengUIList" displayName="HBHTianRiShengUIList" description="" help="" componentid="881766a2-d79e-48c8-a348-6804da71c91f" path="..\HBHTianRiShengUIList\HBHTianRiShengUIList.ubfuiproj" type="UI" isRuntime="False" />
+    <Import id="1fceaa69-a71d-4eaa-ab73-03c0fc090a7b" name="HBHJianLiYuanListBP" displayName="HBHJianLiYuanListBP" description="" help="" componentid="e20b593f-5c47-4b02-85bf-93807ce08f95" path="..\HBHJianLiYuanListBP\HBHJianLiYuanListBP.ubfbpproj" type="BP" isRuntime="False" />
+  </Imports>
+  <SourceControl />
+  <ItemGroup>
+    <Item id="c4f185ee-deb4-4768-baac-2b5e71f75431" name="FollowServiceQuery.ubfquery" displayName="FollowServiceQuery.ubfquery" description="" help="" include="FollowServiceQuery.ubfquery" type="" />
+    <Item id="fb4dbcae-f2e2-4d2e-a3bd-0071d5a7310d" name="FollowServiceDocTypeQuery.ubfquery" displayName="FollowServiceDocTypeQuery.ubfquery" description="" help="" include="FollowServiceDocTypeQuery.ubfquery" type="" />
+    <Item id="687ee20c-b181-40b8-a839-a437aa2ae96f" name="FeedbackQuery.ubfquery" displayName="FeedbackQuery.ubfquery" description="" help="" include="FeedbackQuery.ubfquery" type="" />
+    <Item id="a92e1e8c-51af-4c18-950c-95957b3a6425" name="FeedbackDocTypeQuery.ubfquery" displayName="FeedbackDocTypeQuery.ubfquery" description="" help="" include="FeedbackDocTypeQuery.ubfquery" type="" />
+  </ItemGroup>
+</Project>

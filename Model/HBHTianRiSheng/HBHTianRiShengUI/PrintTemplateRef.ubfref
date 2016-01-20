@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ReferenceComponent id="dce19abd-47f5-4cb1-931a-7c6233a6a6c3" name="PrintTemplateRef" displayName="打印模版" description="" help="" refType="1" isMultiSelect="False" isDefault="False" isClientReturn="False" width="580" height="408" isBinding="False" displayNameResourceID="" URI="U9.VOB.Cus.HBHTianRiSheng.HBHTianRiShengUI.PrintTemplateRef" Classify="" ForMultOrg="False">
+  <References>
+    <Reference id="260bf970-7fc4-4c29-9e39-5a141b800d07" name="cRef" displayName="cRef" description="" help="打印模版" refEntityId="dd17d05e-e2c0-48c5-802a-f1be67ee311e" refEntityName="UFSoft.UBF.ExportService.PrintReferenceBE.PrintTemplate" refType="1" isMain="False">
+      <RefFields>
+        <RefField id="e0a333dd-cbf5-4930-835a-a5acaa8dafe1" name="ID" displayName="ID" description="" help="打印模版.Key.ID" isKey="True" isEdit="False" isName="False" isVisible="False" isParent="False" sequence="0" length="80" refAttributeName="UFSoft.UBF.ExportService.PrintReferenceBE.PrintTemplate:ID" displayNameIndexStr="2" />
+        <RefField id="74884711-5672-4837-a950-71ff4b47a252" name="TemplateID" displayName="模版ID" description="" help="打印模版.Misc.模版ID" isKey="False" isEdit="True" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFSoft.UBF.ExportService.PrintReferenceBE.PrintTemplate:TemplateID" displayNameIndexStr="2" />
+        <RefField id="cfb730ce-7c78-4f2c-8009-9f4368db4a73" name="TemplateName" displayName="模版名称" description="" help="打印模版.Misc.模版名称" isKey="False" isEdit="False" isName="True" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFSoft.UBF.ExportService.PrintReferenceBE.PrintTemplate:TemplateName" displayNameIndexStr="2" />
+        <RefField id="8e5ff411-352f-431f-a599-8117159ad520" name="CatalogType" displayName="分类标识" description="" help="打印模版.Misc.分类标识" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="100" refAttributeName="UFSoft.UBF.ExportService.PrintReferenceBE.PrintTemplate:CatalogType" displayNameIndexStr="2" />
+        <RefField id="68f41988-fa96-44c9-8c36-beda56c3549d" name="IsDefault" displayName="是否缺省" description="" help="打印模版.Misc.是否缺省模版" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFSoft.UBF.ExportService.PrintReferenceBE.PrintTemplate:IsDefault" displayNameIndexStr="" />
+        <RefField id="44bad392-4d06-4635-8076-76d91c0e1b01" name="Culture" displayName="语种" description="" help="打印模版.Misc.语种" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFSoft.UBF.ExportService.PrintReferenceBE.PrintTemplate:Culture" displayNameIndexStr="2" />
+      </RefFields>
+      <OrderFields>
+        <OrderField id="c2defd3c-9608-4048-b630-daa1dd9482f5" name="TemplateID" displayName="模版ID" description="" help="打印模版.Misc.模版ID" direction="0" sequence="0" refAttributeName="UFSoft.UBF.ExportService.PrintReferenceBE.PrintTemplate:TemplateID" />
+      </OrderFields>
+      <Filter>UFSoft::UBF::ExportService::PrintReferenceBE::PrintTemplate.CatalogType = @CatalogType</Filter>
+    </Reference>
+  </References>
+  <RefParameters>
+    <RefParam id="38ad6f8b-1aa6-4324-ba88-557af882af74" name="CatalogType" displayName="分类标识" description="" help="" dataType="String" defaultValue="" />
+  </RefParameters>
+</ReferenceComponent>

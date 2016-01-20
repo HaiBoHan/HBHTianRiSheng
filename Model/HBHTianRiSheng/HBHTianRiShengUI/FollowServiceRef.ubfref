@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ReferenceComponent id="5d9958c0-1a8f-49ca-97cc-8c2e1b30e8d1" name="FollowServiceRef" displayName="售后服务" description="" help="" refType="1" isMultiSelect="False" isDefault="False" isClientReturn="False" width="580" height="408" isBinding="False" displayNameResourceID="" URI="HBHTianRiShengUI.FollowServiceRef" Classify="" ForMultOrg="False">
+  <References>
+    <Reference id="bdfd79f0-7030-4993-b3a8-067b196a4c29" name="cRef" displayName="cRef" description="" help="售后服务" refEntityId="5f46919d-38c1-4b11-a014-5b3c6e938807" refEntityName="U9.VOB.Cus.HBHTianRiSheng.FollowService" refType="1" isMain="False">
+      <RefFields>
+        <RefField id="cd822c2c-3641-4bdf-82c0-0323dd426059" name="ID" displayName="ID" description="" help="单据基类.Key.ID" isKey="True" isEdit="False" isName="False" isVisible="False" isParent="False" sequence="0" length="80" refAttributeName="U9.VOB.Cus.HBHTianRiSheng.FollowService:ID" displayNameIndexStr="2" />
+        <RefField id="1b5aabec-0741-4478-8a4c-66fd882d5335" name="DocNo" displayName="单号" description="" help="单据基类.Misc.单号" isKey="False" isEdit="True" isName="True" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="U9.VOB.Cus.HBHTianRiSheng.FollowService:DocNo" displayNameIndexStr="2" />
+        <RefField id="64ffb976-39ec-4323-acdd-465643be52cf" name="BusinessDate" displayName="日期" description="" help="单据基类.Misc.日期" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="U9.VOB.Cus.HBHTianRiSheng.FollowService:BusinessDate" displayNameIndexStr="2" />
+        <RefField id="7f947196-b742-42e8-99b1-3772f14bc8ef" name="Customer_Name" displayName="客户名称" description="" help="客户.客户.名称" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="255" refAttributeName="U9.VOB.Cus.HBHTianRiSheng.FollowService:Customer.Name" displayNameIndexStr="" />
+        <RefField id="510c8934-ac6a-4d17-907a-73d757135234" name="Address" displayName="地址" description="" help="售后服务.Misc.地址" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="U9.VOB.Cus.HBHTianRiSheng.FollowService:Address" displayNameIndexStr="2" />
+        <RefField id="e5d13228-5903-4d83-a343-7549eeb8b50a" name="Phone" displayName="电话" description="" help="售后服务.Misc.电话" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="U9.VOB.Cus.HBHTianRiSheng.FollowService:Phone" displayNameIndexStr="2" />
+        <RefField id="e3efb27c-b0ee-4a62-b133-2892d31fe5a1" name="DeliveryType" displayName="发运方式" description="" help="售后服务.Misc.发运方式" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="U9.VOB.Cus.HBHTianRiSheng.FollowService:DeliveryType" displayNameIndexStr="2" />
+        <RefField id="98413fda-8ef9-4dea-8d06-d949053933d6" name="DeliveryMan" displayName="派送人" description="" help="售后服务.Misc.派送人" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="U9.VOB.Cus.HBHTianRiSheng.FollowService:DeliveryMan" displayNameIndexStr="2" />
+        <RefField id="8ebb435a-0a91-4b3f-8544-8959c88e04a2" name="DeliveryTime" displayName="派送时间" description="" help="售后服务.Misc.派送时间" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="U9.VOB.Cus.HBHTianRiSheng.FollowService:DeliveryTime" displayNameIndexStr="2" />
+      </RefFields>
+      <OrderFields>
+        <OrderField id="b48ce72a-02c6-4f91-811a-c868e8e1cbc5" name="DocNo" displayName="单号" description="" help="单据基类.Misc.单号" direction="1" sequence="0" refAttributeName="U9.VOB.Cus.HBHTianRiSheng.FollowService:DocNo" />
+      </OrderFields>
+      <Filter />
+    </Reference>
+  </References>
+</ReferenceComponent>

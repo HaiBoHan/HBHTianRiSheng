@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Component id="6edca10e-c317-4523-abf9-0a692fd183d5" name="U9.VOB.Cus.HBHTianRiSheng.FollowServiceDocType" displayName="FollowServiceDocType" description="" help="" type="BE" assemblyName="U9.VOB.Cus.HBHTianRiSheng.HBHTianRiShengBE">
+  <Namespace id="d88ec467-6b53-4361-9cc8-e3ef2945a1e8" name="U9.VOB.Cus.HBHTianRiSheng" displayName="U9.VOB.Cus.HBHTianRiSheng" description="U9.VOB.Cus.HBHTianRiSheng" help="">
+    <Entity id="d843ae0d-18b6-4889-866c-32e106114576" name="FollowServiceDocType" displayName="售后任务单据类型" description="售后任务单据类型" help="" mD_ParentClass_ID="009a5f75-27f1-484d-bf96-7305a7aaf7dd" isFactEntity="True" defaultTable="Cust_FollowServiceDocType" isMain="True" inheritanceMapKind="0" discriminator="FollowServiceDocType" isQuery="True" isAbstract="False" isSealed="False" isModifyControl="True" hasImpressibleAttribute="True" isInCache="False" isAuthorization="True" isPKClustered="True" forOBAImport="True">
+      <Groups>
+        <Group id="95a52c92-a145-4fae-9ce3-8ccda37f1b89" name="Misc" displayName="Misc" description="" help="" />
+      </Groups>
+      <Attributes>
+        <Attribute id="023662b4-0165-4aa4-ae45-4d4591cd7ec1" name="Status" displayName="状态" description="" help="售后任务单据类型.Misc.状态" dataTypeID="34af30f0-a7d9-4005-962e-21076f509a72" isKey="False" defaultValue="0" length="50" precise="5" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="0" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="True" />
+      </Attributes>
+      <BEIndecs>
+        <BEIndex id="2a60c62b-0637-4e15-9f7b-ded78fb407b5" name="U9_VOB_Cus_HBHTianRiSheng_FollowServiceDocType_BusinessKey_Index" displayName="U9_VOB_Cus_HBHTianRiSheng_FollowServiceDocType_BusinessKey_Index" description="" help="" isUnique="True" isClustered="False" isForBusinessKeys="True">
+          <BEIndexAttributes>
+            <BEIndexAttribute id="06c3c8e3-e237-4c6a-80b2-c55170eda218" name="Code" displayName="编码" description="" help="" isAscend="True" attributeID="af88133a-092b-4d68-bb36-9e3909bc1f20" sequence="0" attributeFullName="Code" />
+            <BEIndexAttribute id="d7cc25aa-bd1e-4685-bba3-83d66ada65ca" name="Org" displayName="组织" description="" help="" isAscend="True" attributeID="1b2b4b47-1271-4282-b9e5-dc55e227f12c" sequence="0" attributeFullName="Org" />
+          </BEIndexAttributes>
+        </BEIndex>
+      </BEIndecs>
+    </Entity>
+    <Diagram id="0120d513-62ff-457c-94eb-14a9227d0ac5" name="FollowServiceDocType" displayName="FollowServiceDocType">
+      <Class Editable="True" ID="42a0a516-a132-49ca-8266-838d95cfa5aa" Type="Entity" ADID="d843ae0d-18b6-4889-866c-32e106114576">
+        <Location X="270" Y="113" />
+        <Size width="120" height="58" />
+      </Class>
+      <Class Editable="False" ID="12ccc1e9-5956-4a45-a184-6a72d64faa1c" Type="Entity" ADID="009a5f75-27f1-484d-bf96-7305a7aaf7dd">
+        <Location X="574" Y="57" />
+        <Size width="120" height="58" />
+      </Class>
+    </Diagram>
+  </Namespace>
+</Component>

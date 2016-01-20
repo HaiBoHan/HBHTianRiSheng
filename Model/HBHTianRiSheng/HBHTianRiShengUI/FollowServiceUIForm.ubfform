@@ -1,0 +1,1238 @@
+<View ID="096e1e2a-8249-4512-a1dd-51128a0865c1" ChildLabelWidth="56" ChildRefWidth="20" GridBottomMargin="5" GridColumnCount="1" GridColumnSpace="24" GridLeftMargin="0" GridRightMargin="0" GridRowCount="3" GridRowSpace="10" GridTopMargin="0" Height="504" IsMainForm="True" LayoutType="GridBag" Name="FollowServiceUIForm" Namespace="FollowServiceUIModel" TabStop="False" TemplateCode="UI_SingleCard" TemplateType="CustomTemplate" UIModelID="bb744320-bf24-4abd-9e4c-dd6f87ed0210" URI=".UI_单卡片WebPart" ViewID="4983" Width="992" X="10" Y="10">
+  <Columns>
+    <Column Fixed="False" Name="Column0" Type="Value" Width="992" />
+  </Columns>
+  <Rows>
+    <Row Fixed="True" Height="28" Name="Row0" />
+    <Row Fixed="False" Height="421" Name="Row1" />
+    <Row Fixed="True" Height="25" Name="Row3" />
+  </Rows>
+  <Providers />
+  <InParameters>
+    <Parameter DataType="" IsConsumer="True" IsPersoner="False" Name="ID" UIModelParameterName="" UIViewID="" />
+  </InParameters>
+  <Toolbar ID="bf5cf8a1-1ac7-4ebd-817e-6ea503581957" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="28" Name="Toolbar2" TabIndex="1" TabStop="True" Width="992">
+    <Button ID="05acf8c5-857a-42aa-8c21-fb7d74a0a44c" AccessKey="S" DisplayNameResourceID="8288c5a3-3b19-48d3-b139-f7018d2782ee" DisplaySrcType="PublicResource" Height="28" Name="BtnSave" TabIndex="1" TabStop="True" Width="35" X="0" Y="0">
+      <Events>
+        <Event ActionName="SaveClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="SaveClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="20d96b09-7747-49f3-86b4-10cba881d856" AccessKey="Z" DisplayNameResourceID="f35cb480-9e8f-4689-aaac-3e9fc9a0c65e" DisplaySrcType="PublicResource" Height="28" Name="BtnCancel" TabIndex="2" TabStop="True" Width="35" X="35" Y="0">
+      <Events>
+        <Event ActionName="CancelClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="CancelClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="f19d32ce-2dc4-49fd-9861-da97e213c0b1" AccessKey="N" DisplayNameResourceID="19478b02-d2a9-4d7e-b7af-00070c61ff2d" DisplaySrcType="PublicResource" Height="28" Name="BtnAdd" TabIndex="3" TabStop="True" Width="35" X="70" Y="0">
+      <Events>
+        <Event ActionName="NewClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="NewClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="18f5eec3-60bf-43ff-9888-be1b8bdcbda8" AccessKey="R" DisplayNameResourceID="0467218f-229b-4954-b2d4-3c5976467f76" DisplaySrcType="PublicResource" Height="28" Name="BtnDelete" TabIndex="4" TabStop="True" Width="35" X="105" Y="0">
+      <Events>
+        <Event ActionName="DeleteClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="DeleteClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Separator ID="50193101-0dc7-48be-9af9-7005b2da2977" Height="28" Name="Separator0" TabIndex="5" TabStop="True" Width="8" X="140" Y="0" />
+    <Button ID="2a0bc696-20d0-454a-a3a9-195a60e5c5b5" AccessKey="C" DisplayNameResourceID="be9f8d20-e484-464b-9818-a2c1b599b967" DisplaySrcType="PublicResource" Height="28" Name="BtnCopy" TabIndex="6" TabStop="True" Width="35" X="148" Y="0">
+      <Events>
+        <Event ActionName="CopyClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="CopyClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Separator ID="7dda8c44-1922-4f37-be97-0a89efc82760" Height="28" Name="Separator1" TabIndex="7" TabStop="True" Width="8" X="183" Y="0" />
+    <Button ID="6a8b9743-f0f2-44f4-b4b1-9b46895d97df" AccessKey="T" DisplayNameResourceID="c42c0f21-2fd7-49b2-ac54-62f811747b18" DisplaySrcType="PublicResource" Height="28" Name="BtnSubmit" TabIndex="8" TabStop="True" Width="35" X="191" Y="0">
+      <Events>
+        <Event ActionName="SubmitClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="SubmitClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="54e47d64-a3f7-4152-86c1-b128573ef211" AccessKey="Y" DisplayName="" DisplayNameResourceID="eb678a04-c7e1-44f1-b175-8f90f9903862" DisplaySrcType="PublicResource" Height="28" Name="BtnApprove" TabIndex="9" TabStop="True" Width="35" X="226" Y="0">
+      <Events>
+        <Event ActionName="ApproveClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="ApproveClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="524f62ef-8c37-4859-a7d1-316ce04abc6b" AccessKey="" DisplayName="回收" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" Height="28" Name="BtnRecovery" TabIndex="25" TabStop="True" Width="35" X="261" Y="0">
+      <Events>
+        <Event EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="" Template="" />
+      </Events>
+    </Button>
+    <Button ID="84628bf3-6b98-445d-86d6-f3fb72c35941" AccessKey="" DisplayName="" DisplayNameResourceID="ae796775-bce3-4aed-89a9-20eaa4648a67" DisplaySrcType="PublicResource" Height="28" Name="BtnUndoApprove" TabIndex="10" TabStop="True" Width="35" X="296" Y="0">
+      <Events>
+        <Event EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="" Template="" />
+      </Events>
+    </Button>
+    <Separator ID="c523da51-cd3e-4754-9402-09c3f0ceb842" Height="28" Name="Separator2" TabIndex="11" TabStop="True" Width="8" X="331" Y="0" />
+    <Button ID="942ca488-c1b0-4bfd-bfc7-eacbd57f3460" AccessKey="F" DisplayNameResourceID="27621430-7bc7-4c0e-979e-f0108439d13e" DisplaySrcType="PublicResource" Height="28" Name="BtnFind" TabIndex="12" TabStop="True" Width="35" X="339" Y="0">
+      <Events>
+        <Event ActionName="FindClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="FindClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="2855dd89-511b-4bba-9ce7-5445d8eef036" AccessKey="L" DisplayNameResourceID="c639596b-5a8c-4fc1-88bb-a3d670cda992" DisplaySrcType="PublicResource" Height="28" Name="BtnList" TabIndex="13" TabStop="True" Width="35" X="374" Y="0">
+      <Events>
+        <Event ActionName="ListClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="ListClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Separator ID="6d0a9721-6945-4238-aa23-6640f7df16a8" Height="28" Name="Separator3" TabIndex="14" TabStop="True" Width="8" X="409" Y="0" />
+    <Button ID="c18951c7-7367-425e-9bcf-1efe6e056791" AccessKey="[" DisplayNameResourceID="f229e163-fcd1-4f6a-a645-df86c0efd8ec" DisplaySrcType="PublicResource" Height="28" Name="BtnFirstPage" TabIndex="15" TabStop="True" Width="35" X="417" Y="0">
+      <Events>
+        <Event ActionName="FirstPage" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="FirstPage" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="c8669f58-fbaf-4048-bb13-4acad2e9ad7b" AccessKey="[" DisplayNameResourceID="5ed368d8-7616-4696-b671-3f1c895f3b43" DisplaySrcType="PublicResource" Height="28" Name="BtnPrevPage" TabIndex="16" TabStop="True" Width="35" X="452" Y="0">
+      <Events>
+        <Event ActionName="PrevPage" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="FirstPage" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="bb7e3324-7276-4e87-a4cc-d95bacfe94f9" AccessKey="." DisplayNameResourceID="36afec41-957c-493a-97a4-eddb136af5b4" DisplaySrcType="PublicResource" Height="28" Name="BtnNextPage" TabIndex="17" TabStop="True" Width="35" X="487" Y="0">
+      <Events>
+        <Event ActionName="NextPage" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="NextPage" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="405ad7f4-5fb6-459e-9513-98da4ec92da7" AccessKey="]" DisplayNameResourceID="dc4a37d1-35de-4016-81dd-582aef3cdeb0" DisplaySrcType="PublicResource" Height="28" Name="BtnLastPage" TabIndex="18" TabStop="True" Width="35" X="522" Y="0">
+      <Events>
+        <Event ActionName="LastPage" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="LastPage" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Separator ID="6d9ab355-a1d2-4a00-be7e-428d3c86f0b4" Height="28" Name="Separator4" TabIndex="19" TabStop="True" Width="8" X="557" Y="0" />
+    <Button ID="8909df58-77da-4ca5-b6d7-9a0d9f82af19" AccessKey="A" DisplayNameResourceID="92ccef79-ad54-438c-a16e-20a4fd407b97" DisplaySrcType="PublicResource" Height="28" Name="BtnAttachment" TabIndex="20" TabStop="True" Width="35" X="565" Y="0">
+      <Events>
+        <Event ActionName="AttachmentClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="AttachmentClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="a8e28f97-07ad-4bf3-9ff6-1817d7437d72" AccessKey="F" DisplayNameResourceID="e222698c-ae3c-470a-8053-1b69905c510a" DisplaySrcType="PublicResource" Height="28" Name="BtnFlow" TabIndex="21" TabStop="True" Width="35" X="600" Y="0">
+      <Events>
+        <Event ActionName="FlowClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="FlowClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Separator ID="d8b6f486-1c7c-45b0-b00c-4eede8d66275" Height="28" Name="Separator5" TabIndex="22" TabStop="True" Width="8" X="635" Y="0" />
+    <Button ID="695cf118-9461-424a-aa0c-fa98e4893d74" AccessKey="O" DisplayNameResourceID="688fd549-5a92-49cc-8072-6d5377f6409a" DisplaySrcType="PublicResource" Height="28" Name="BtnOutput" TabIndex="23" TabStop="True" Width="35" X="643" Y="0">
+      <Events>
+        <Event ActionName="OutputClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="OutputClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="55cfec94-b936-4106-aa10-6a3864fc54f3" AccessKey="O" DisplayNameResourceID="27b5c615-cde5-458c-be74-833317249568" DisplaySrcType="PublicResource" Height="28" Name="BtnPrint" TabIndex="24" TabStop="True" Width="35" X="678" Y="0">
+      <Events>
+        <Event ActionName="PrintClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="OutputClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+  </Toolbar>
+  <Card ID="47e88e5b-c78f-43bb-90db-fc2ec0b62a5f" ChildLabelWidth="60" ChildRefWidth="20" FunctionBar="FunctionBar" GridBottomMargin="2" GridColumnCount="22" GridColumnSpace="0" GridHeight="1" GridLeftMargin="10" GridRightMargin="10" GridRowCount="1" GridRowSpace="5" GridTopMargin="3" GridWidth="1" GridX="0" GridY="2" Height="25" LayoutType="GridBag" Name="Card0" TabIndex="3" TabStop="False" Width="992" X="0" Y="469">
+    <Columns>
+      <Column Fixed="True" Name="Column0" Type="Title" Width="80" />
+      <Column Fixed="True" Name="Column1" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column2" Type="Title" Width="80" />
+      <Column Fixed="True" Name="Column3" Type="Spacing" Width="5" />
+      <Column Fixed="True" Name="Column4" Type="Title" Width="90" />
+      <Column Fixed="True" Name="Column5" Type="Spacing" Width="5" />
+      <Column Fixed="True" Name="Column6" Type="Title" Width="80" />
+      <Column Fixed="True" Name="Column13" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column12" Type="Title" Width="80" />
+      <Column Fixed="True" Name="Column11" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column10" Type="Title" Width="80" />
+      <Column Fixed="True" Name="Column9" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column19" Type="Title" Width="80" />
+      <Column Fixed="True" Name="Column18" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column17" Type="Title" Width="80" />
+      <Column Fixed="True" Name="Column21" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column22" Type="Value" Width="71" />
+      <Column Fixed="True" Name="Column16" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column15" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column14" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column7" Type="Spacing" Width="80" />
+      <Column Fixed="False" Name="Column8" Type="Spacing" Width="1" />
+    </Columns>
+    <Rows>
+      <Row Fixed="True" Height="20" Name="Row0" />
+    </Rows>
+    <Button ID="b7c2ab32-a4a1-43d4-a2bc-5441ff2bcd09" AccessKey="" DisplayNameResourceID="626ebf9b-f65a-4dd5-8f32-96f84919878c" DisplaySrcType="PublicResource" GridHeight="1" GridWidth="1" GridX="18" GridY="0" Height="20" Name="BtnOk" TabIndex="9" TabStop="True" Width="80" X="811" Y="3">
+      <Events>
+        <Event ActionName="OnOk" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="OKClick" Template=".\UITpls\WebPart\RefCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="bbd96621-2f66-4511-b8be-8e64f3961abb" AccessKey="Z" DisplayNameResourceID="020a5365-8f12-4970-b8df-17ce3ae60a68" DisplaySrcType="PublicResource" GridHeight="1" GridWidth="1" GridX="20" GridY="0" Height="20" Name="BtnClose" TabIndex="10" TabStop="True" Width="80" X="901" Y="3">
+      <Events>
+        <Event ActionName="OnClose" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="CancelClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="42ec7efe-a8a2-4378-91b2-fa12d24783f6" AccessKey="" DisplayName="回报单追溯" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="1" GridX="10" GridY="0" Height="20" Name="BtnReview" TabIndex="11" TabStop="True" Width="80" X="460" Y="3">
+      <Events>
+        <Event EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="" Template="" />
+      </Events>
+    </Button>
+    <Button ID="02830ca1-97ff-49d9-9da1-00fdd97f0075" AccessKey="" DisplayName="转回报单" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" Name="BtnToFeeback" TabIndex="12" TabStop="True" Width="80" X="10" Y="3">
+      <Events>
+        <Event EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="" Template="" />
+      </Events>
+    </Button>
+    <Button ID="b24f94cf-743a-4435-baa9-91bef5cf3ae3" AccessKey="" DisplayName="关闭" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="1" GridX="4" GridY="0" Height="20" Name="BtnDocClose" TabIndex="13" TabStop="True" Width="90" X="185" Y="3">
+      <Events>
+        <Event EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="" Template="" />
+      </Events>
+    </Button>
+    <Button ID="b0d2b141-85b5-450c-9632-859f3cb4c321" AccessKey="" DisplayName="打开" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="1" GridX="6" GridY="0" Height="20" Name="BtnDocOpen" TabIndex="14" TabStop="True" Width="80" X="280" Y="3">
+      <Events>
+        <Event EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="" Template="" />
+      </Events>
+    </Button>
+  </Card>
+  <Card ID="5720fcf4-8e94-4f96-b651-cc11c2cc5adb" BorderStyle="True" ChildLabelWidth="60" ChildRefWidth="20" GridBottomMargin="0" GridColumnCount="11" GridColumnSpace="0" GridHeight="1" GridLeftMargin="10" GridRightMargin="10" GridRowCount="17" GridRowSpace="5" GridTopMargin="0" GridWidth="1" GridX="0" GridY="1" Height="421" LayoutType="GridBag" Name="Card2" TabIndex="2" TabStop="False" Width="992" X="0" Y="38">
+    <Columns>
+      <Column Fixed="True" Name="Column0" Type="Title" Width="153" />
+      <Column Fixed="True" Name="Column1" Type="Spacing" Width="5" />
+      <Column Fixed="True" Name="Column2" Type="Value" Width="180" />
+      <Column Fixed="True" Name="Column3" Type="Spacing" Width="20" />
+      <Column Fixed="True" Name="Column4" Type="Title" Width="152" />
+      <Column Fixed="True" Name="Column5" Type="Spacing" Width="5" />
+      <Column Fixed="True" Name="Column6" Type="Value" Width="180" />
+      <Column Fixed="True" Name="Column7" Type="Spacing" Width="20" />
+      <Column Fixed="True" Name="Column8" Type="Title" Width="152" />
+      <Column Fixed="True" Name="Column9" Type="Spacing" Width="5" />
+      <Column Fixed="False" Name="Column11" Type="Spacing" Width="1" />
+    </Columns>
+    <Rows>
+      <Row Fixed="True" Height="19" Name="Row0" />
+      <Row Fixed="True" Height="20" Name="Row1" />
+      <Row Fixed="True" Height="20" Name="Row2" />
+      <Row Fixed="True" Height="20" Name="Row3" />
+      <Row Fixed="True" Height="20" Name="Row4" />
+      <Row Fixed="True" Height="20" Name="Row5" />
+      <Row Fixed="True" Height="20" Name="Row6" />
+      <Row Fixed="True" Height="20" Name="Row7" />
+      <Row Fixed="True" Height="20" Name="Row8" />
+      <Row Fixed="True" Height="20" Name="Row9" />
+      <Row Fixed="True" Height="20" Name="Row10" />
+      <Row Fixed="True" Height="20" Name="Row11" />
+      <Row Fixed="True" Height="20" Name="Row12" />
+      <Row Fixed="True" Height="20" Name="Row13" />
+      <Row Fixed="True" Height="20" Name="Row14" />
+      <Row Fixed="True" Height="20" Name="Row15" />
+      <Row Fixed="False" Height="20" Name="Row16" />
+    </Rows>
+    <Label ID="7bd48199-f0d5-4e70-b7d0-1040114bf14f" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="2" Height="20" IsNull="True" IsSequence="False" Name="lblDocNo139" RelationControl="DocNo139" TabIndex="0" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="49">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <TextBox ID="48670a6b-fcdf-45a9-a528-746a5a60c3b6" DisplayFormat="50" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="2" Height="20" IsNull="False" IsProperty="False" IsSequence="False" MultiLine="False" Name="DocNo139" RelationControl="lblDocNo139" TabIndex="1" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="DocNo" UIViewID="FollowService" Visible="True" Width="180" X="168" Y="49">
+      <Events />
+      <RelationControls />
+    </TextBox>
+    <Label ID="d17e958d-0520-489a-830b-01203ec1b0c1" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="3" Height="20" IsNull="True" IsSequence="False" Name="lblBusinessDate151" RelationControl="BusinessDate151" TabIndex="2" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="74">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <DatePicker ID="c4052e93-c5ae-474b-aa8f-baf37dc9bb5d" DisplayFormat="10" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="3" Height="20" IsNull="False" IsProperty="False" IsSequence="False" Name="BusinessDate151" RelationControl="lblBusinessDate151" TabIndex="3" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="BusinessDate" UIViewID="FollowService" Visible="True" Width="180" X="168" Y="74">
+      <Events />
+      <RelationControls />
+    </DatePicker>
+    <Label ID="0886dc5b-16a8-4604-bdbe-9564f65b08c0" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="1" Height="20" IsNull="True" IsSequence="False" Name="lblDocumentType67" RelationControl="DocumentType67" TabIndex="4" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="24">
+      <Events />
+      <RelationControls />
+      <Events />
+      <FormLink FormRefID="4723b733-117e-424d-a25d-e42f54d720d9" FormRefName="FollowServiceDocTypeUIForm.ubfform" FormRefPath="FollowServiceDocTypeUIForm.ubfform" FormRefProjectPath="HBHTianRiShengUI.ubfuiproj" Height="504" IsShowStateBar="True" Name="FormLink0" Width="992">
+        <InParameters>
+          <Parameter ContextID="" ControlID="DocumentType67" ControlProperty="Key" ControlType="ReferenceModel" Name="ID" ParameterBindType="Bind2Control" />
+        </InParameters>
+        <OutParameters>
+          <Parameter ContextID="" ControlID="DocumentType67" ControlProperty="Key" ControlType="ReferenceModel" Name="ID" />
+          <Parameter ContextID="" ControlID="DocumentType67" ControlProperty="Value" ControlType="ReferenceModel" Name="Code" />
+          <Parameter ContextID="" ControlID="DocumentType67" ControlProperty="Text" ControlType="ReferenceModel" Name="Name" />
+          <Parameter ContextID="" ControlID="DocumentType_DocHeaderSequenceStyle94" ControlProperty="Value" ControlType="DropDownListModel" Name="DocHeaderSequenceStyle" />
+        </OutParameters>
+      </FormLink>
+    </Label>
+    <Reference ID="6b6469a0-3560-4b14-85a2-d3c15fe1e759" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="DocumentType_Code" CodeFieldUIViewID="FollowService" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="2" GridY="1" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="DocumentType67" NameAttributeName="Name" NameFieldUIFieldID="DocumentType_Name" NameFieldUIViewID="FollowService" PkeyField="ID" RefType="d4d63d11-cec4-45e1-b71f-ca9537887624" RelationControl="lblDocumentType67" TabIndex="5" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="DocumentType" UIViewID="FollowService" Visible="True" Width="180" WindowHeight="408" WindowWidth="580" X="168" Y="24">
+      <Events />
+      <RelationControls />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="简称" ColumnID="ShortName" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="编号方式" ColumnID="DocHeaderSequenceStyle" TargetControlType="DropDownListModel" TargetID="DocumentType_DocHeaderSequenceStyle94" TargetProperty="Value" />
+      <RefNameFields>
+        <RefNameField UIFieldID="Name" />
+      </RefNameFields>
+      <UIFilterBar Name="ReferenceFilter" />
+      <Events />
+    </Reference>
+    <Label ID="16c1b80f-4ee1-4dc5-a723-740b01e7832c" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="4" Height="20" IsNull="True" IsSequence="False" Name="lblCustomer73" RelationControl="Customer73" TabIndex="6" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="99">
+      <Events />
+      <RelationControls />
+      <Events />
+      <FormLink FormRefID="c60a3c61-932c-45f9-9745-162e0807d1c9" FormRefName="CustomerMainUIForm.ubfform" FormRefPath="CustomerMainUIForm.ubfform" FormRefProjectPath="D:\U9Cust\UFIDA\U9Proj\UBFV30\U9.VOB.Product.Metadata\UI\UFIDA.U9.CBO.Pub.Customer.CustomerUI.MetaData.dll" Height="504" IsShowStateBar="True" Name="FormLink1" Width="992">
+        <InParameters>
+          <Parameter ContextID="" ControlID="Customer73" ControlProperty="Key" ControlType="ReferenceModel" Name="ID" ParameterBindType="Bind2Control" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="CustomerSiteID" />
+        </InParameters>
+        <OutParameters>
+          <Parameter ContextID="" ControlID="Customer73" ControlProperty="Key" ControlType="ReferenceModel" Name="ID" />
+          <Parameter ContextID="" ControlID="Customer73" ControlProperty="Value" ControlType="ReferenceModel" Name="Code" />
+          <Parameter ContextID="" ControlID="Customer73" ControlProperty="Text" ControlType="ReferenceModel" Name="Name" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="CustomerSiteID" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="CustomerSiteCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="CustomerSiteName" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ShortName" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="DepartmentID" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="DepartmentCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="DepartmentName" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="SaleserID" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="SaleserCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="SaleserName" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="DefaultBillToID" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="DefaultBillToCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="DefaultBillToName" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="DefaultShipToID" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="DefaultShipToCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="DefaultShipToName" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="DefaultGatheringID" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="DefaultGatheringCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="DefaultGatheringName" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PriceListID" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PriceListCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PriceListName" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsPriceListModify" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsUseAppPortal" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="OfficeLocation" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="OfficeLocationCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="OfficeLocationName" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="Bargain" />
+        </OutParameters>
+      </FormLink>
+    </Label>
+    <Reference ID="a51398b8-2141-4695-9727-fae3bbaf7e1a" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="Customer_Code" CodeFieldUIViewID="FollowService" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="2" GridY="4" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="Customer73" NameAttributeName="Name" NameFieldUIFieldID="Customer_Name" NameFieldUIViewID="FollowService" PkeyField="ID" RefType="d6428416-2436-4ab4-af0f-1464119d76e7" RelationControl="lblCustomer73" TabIndex="7" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="Customer" UIViewID="FollowService" Visible="True" Width="180" WindowHeight="408" WindowWidth="580" X="168" Y="99">
+      <Events />
+      <RelationControls />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="部门ID" ColumnID="Department_ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="部门编码" ColumnID="Department_Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="部门名称" ColumnID="Department_Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="销售员ID" ColumnID="Saleser_ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="销售员编码" ColumnID="Saleser_Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="销售员名称" ColumnID="Saleser_Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="交易币种ID" ColumnID="TradeCurrency_ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="交易币种编码" ColumnID="TradeCurrency_Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="交易币种名称" ColumnID="TradeCurrency_Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="简称" ColumnID="ShortName" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="客户分类" ColumnID="CustomerCategory_Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="地区" ColumnID="Territory_Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="币种货币符号" ColumnID="TradeCurrency_Symbol" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="精度" ColumnID="TradeCurrency_PriceRound_Precision" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="舍入值" ColumnID="TradeCurrency_PriceRound_RoundValue" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="舍入类型" ColumnID="TradeCurrency_PriceRound_RoundType" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="精度1" ColumnID="TradeCurrency_MoneyRound_Precision" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="舍入值1" ColumnID="TradeCurrency_MoneyRound_RoundValue" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="舍入类型" ColumnID="TradeCurrency_MoneyRound_RoundType" TargetControlType="" TargetID="" TargetProperty="" />
+      <RefNameFields>
+        <RefNameField UIFieldID="Name" />
+      </RefNameFields>
+      <UIFilterBar Name="ReferenceFilter" />
+      <Events />
+    </Reference>
+    <Label ID="d6088abb-fa55-4d40-a631-d3510676c83d" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="5" Height="20" IsNull="True" IsSequence="False" Name="lblAddress100" RelationControl="Address100" TabIndex="8" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="124">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <TextBox ID="6b8ffb85-bd8e-40e3-b414-b6904697de4b" DisplayFormat="50" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="5" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="Address100" RelationControl="lblAddress100" TabIndex="9" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="Address" UIViewID="FollowService" Visible="True" Width="180" X="168" Y="124">
+      <Events />
+      <RelationControls />
+    </TextBox>
+    <Label ID="2c71b3af-6d8a-4963-98ed-cd528e3ae366" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="7" Height="20" IsNull="True" IsSequence="False" Name="lblPhone73" RelationControl="Phone73" TabIndex="10" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="174">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <TextBox ID="a4ccb0ba-df10-4bb0-8460-bdf59673ff26" DisplayFormat="50" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="7" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="Phone73" RelationControl="lblPhone73" TabIndex="11" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="Phone" UIViewID="FollowService" Visible="True" Width="180" X="168" Y="174">
+      <Events />
+      <RelationControls />
+    </TextBox>
+    <Label ID="4ca04ae6-dce8-4b2a-b891-fb9c69109bda" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="10" Height="20" IsNull="True" IsSequence="False" Name="lblDeliveryTime82" RelationControl="DeliveryTime82" TabIndex="16" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="249">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <DatePicker ID="0a073cf8-d03d-4f73-b14d-88f0c5ee208d" DisplayFormat="19" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="10" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="DeliveryTime82" RelationControl="lblDeliveryTime82" TabIndex="17" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="DeliveryTime" UIViewID="FollowService" Visible="True" Width="180" X="168" Y="249">
+      <Events />
+      <RelationControls />
+    </DatePicker>
+    <Label ID="c7aed720-6bff-4ddb-8c1f-7a2e4e2a0ac2" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="12" Height="20" IsNull="True" IsSequence="False" Name="lblPayType77" RelationControl="PayType77" TabIndex="18" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="299">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <DropDownList ID="2f43130d-2dcd-4e81-9ab7-8dd870b70175" DisplayFormat="10.0" Enabled="True" EnumFullName="U9.VOB.Cus.HBHTianRiSheng.PayTypeEnum" EnumID="e78f215a-f99b-42b8-915a-f5da99405172" GridHeight="1" GridWidth="1" GridX="2" GridY="12" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="PayType77" RelationControl="lblPayType77" TabIndex="19" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="PayType" UIViewID="FollowService" Visible="True" Width="180" X="168" Y="299">
+      <Events />
+      <RelationControls />
+    </DropDownList>
+    <Label ID="55b5d99c-5824-4e96-9e45-0ab2287397b4" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="14" Height="20" IsNull="True" IsSequence="False" Name="lblPayMoney122" RelationControl="PayMoney122" TabIndex="20" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="349">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <NumberControl ID="34d5e7ca-e4be-4266-bc46-ff1467c0f116" DisplayFormat="24.9" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="14" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="PayMoney122" Precision="2" RelationControl="lblPayMoney122" TabIndex="21" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="PayMoney" UIViewID="FollowService" Visible="True" Width="180" X="168" Y="349">
+      <Events />
+      <RelationControls />
+      <PrecisionBind Name="PrecisionBind0" />
+      <RoundRuleBind Name="RoundRuleBind0" />
+      <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind0" />
+      <CurrencyType Name="CurrencyType0" />
+    </NumberControl>
+    <Label ID="214275fd-6276-4398-a051-c85223fffbb7" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="15" Height="20" IsNull="True" IsSequence="False" Name="lblSettlementDept65" RelationControl="SettlementDept65" TabIndex="22" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="374">
+      <Events />
+      <RelationControls />
+      <Events />
+      <FormLink FormRefID="beee4a9d-0556-4787-a7f9-38d775f0c4f6" FormRefName="DepartmentMainUIForm.ubfform" FormRefPath="DepartmentMainUIForm.ubfform" FormRefProjectPath="D:\U9Cust\UFIDA\U9Proj\UBFV30\U9.VOB.Product.Metadata\UI\UFIDA.U9.CBO.Pub.Department.DepartmentUI.MetaData.dll" Height="504" IsShowStateBar="True" Name="FormLink2" Width="992">
+        <InParameters>
+          <Parameter ContextID="" ControlID="SettlementDept65" ControlProperty="Key" ControlType="ReferenceModel" Name="ID" ParameterBindType="Bind2Control" />
+        </InParameters>
+        <OutParameters>
+          <Parameter ContextID="" ControlID="SettlementDept65" ControlProperty="Key" ControlType="ReferenceModel" Name="ID" />
+          <Parameter ContextID="" ControlID="SettlementDept65" ControlProperty="Value" ControlType="ReferenceModel" Name="Code" />
+          <Parameter ContextID="" ControlID="SettlementDept65" ControlProperty="Text" ControlType="ReferenceModel" Name="Name" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="WorkCalendar" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="WorkCalendarName" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="WorkCalendarCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="Warehouse" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="WarehouseCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="WarehouseName" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="Bin" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="BinCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="BinName" />
+        </OutParameters>
+      </FormLink>
+    </Label>
+    <Reference ID="a565ba54-28cd-41b9-b82e-7cb35dcf9a49" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="SettlementDept_Code" CodeFieldUIViewID="FollowService" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="2" GridY="15" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="SettlementDept65" NameAttributeName="Name" NameFieldUIFieldID="SettlementDept_Name" NameFieldUIViewID="FollowService" PkeyField="ID" RefType="82a8f09a-6081-4b12-8735-10ffcaddca48" RelationControl="lblSettlementDept65" TabIndex="23" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="SettlementDept" UIViewID="FollowService" Visible="True" Width="180" WindowHeight="408" WindowWidth="580" X="168" Y="374">
+      <Events />
+      <RelationControls />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="来源组织" ColumnID="MasterOrg_Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="存储地点ID" ColumnID="Warehouse_ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="存储地点编码" ColumnID="Warehouse_Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="存储地点名称" ColumnID="Warehouse_Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="库位ID" ColumnID="Bin_ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="库位编码" ColumnID="Bin_Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="库位名称" ColumnID="Bin_Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <RefNameFields>
+        <RefNameField UIFieldID="Name" />
+      </RefNameFields>
+      <UIFilterBar Name="ReferenceFilter" />
+      <Events />
+    </Reference>
+    <Label ID="a9c91762-eacc-4732-8e75-a79aeedc3d43" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="16" Height="20" IsNull="True" IsSequence="False" Name="lblMaterialNum41" RelationControl="MaterialNum41" TabIndex="24" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="399">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <TextBox ID="62a0145c-0c17-4e64-9716-ea6883e4a591" DisplayFormat="50" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="16" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="MaterialNum41" RelationControl="lblMaterialNum41" TabIndex="25" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="MaterialNum" UIViewID="FollowService" Visible="True" Width="180" X="168" Y="399">
+      <Events />
+      <RelationControls />
+    </TextBox>
+    <Label ID="8a28da6f-ada4-4306-a535-c35e761bb782" Enabled="True" GridHeight="1" GridWidth="1" GridX="4" GridY="6" Height="20" IsNull="True" IsSequence="False" Name="lblStatus121" RelationControl="Status121" TabIndex="28" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="152" X="368" Y="149">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <DropDownList ID="c5384e01-331c-46cb-b5e3-584f2b307b75" DisplayFormat="10.0" Enabled="False" EnumFullName="U9.VOB.HBHCommon.U9CommonBE.DocStatus" EnumID="34af30f0-a7d9-4005-962e-21076f509a72" GridHeight="1" GridWidth="1" GridX="6" GridY="6" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="Status121" RelationControl="lblStatus121" TabIndex="29" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="Status" UIViewID="FollowService" Visible="True" Width="180" X="525" Y="149">
+      <Events />
+      <RelationControls />
+    </DropDownList>
+    <Label ID="fd616922-c51d-4105-893a-b446e0f7e801" Enabled="True" GridHeight="1" GridWidth="1" GridX="4" GridY="10" Height="20" IsNull="True" IsSequence="False" Name="lblMemo148" RelationControl="Memo148" TabIndex="30" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="152" X="368" Y="249">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <TextBox ID="f4347137-4631-486d-ae80-717ecd80dade" DisplayFormat="500" Enabled="True" GridHeight="3" GridWidth="1" GridX="6" GridY="8" Height="70" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="True" Name="Memo148" RelationControl="lblMemo148" TabIndex="31" TabStop="True" TextAlign="Left" TextBoxMode="MultiLine" TitleAlign="Left" TitleLocation="Left" UIFieldID="Memo" UIViewID="FollowService" Visible="True" Width="180" X="525" Y="199">
+      <Events />
+      <RelationControls />
+    </TextBox>
+    <Label ID="111d246c-1bcf-40f7-89c6-dc4f4efde8da" Enabled="True" GridHeight="1" GridWidth="1" GridX="4" GridY="7" Height="20" IsNull="True" IsSequence="False" Name="lblSrcDoc118" RelationControl="SrcDoc118" TabIndex="32" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="152" X="368" Y="174">
+      <Events />
+      <RelationControls />
+      <Events />
+      <FormLink FormRefID="824496cc-bb94-472c-950e-4adfaec2f2c6" FormRefName="ShipMainUIForm.ubfform" FormRefPath="ShipMainUIForm.ubfform" FormRefProjectPath="D:\U9Cust\UFIDA\U9Proj\UBFV30\U9.VOB.Product.Metadata\UI\UFIDA.U9.SCM.SD.ShipUI.MetaData.dll" Height="504" IsShowStateBar="True" Name="FormLink3" Width="992">
+        <InParameters>
+          <Parameter ContextID="" ControlID="SrcDoc118" ControlProperty="Key" ControlType="ReferenceModel" Name="ID" ParameterBindType="Bind2Control" />
+          <Parameter ContextID="" ControlID="SHIP_Type19" ControlProperty="Value" ControlType="TextBoxModel" Name="SHIP_Type" ParameterBindType="Bind2Control" />
+        </InParameters>
+        <OutParameters />
+      </FormLink>
+    </Label>
+    <Reference ID="777d63e1-205c-4255-8a17-56a8a56bb2c7" CodeAttributeName="DocNo" CodeField="DocNo" CodeFieldUIFieldID="SrcDoc_DocNo" CodeFieldUIViewID="FollowService" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="6" GridY="7" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="SrcDoc118" NameAttributeName="DocNo" NameFieldUIFieldID="SrcDoc_DocNo" NameFieldUIViewID="FollowService" PkeyField="ID" RefType="70c52189-9b76-4bc0-bf46-5fcf4d5cfb1a" RelationControl="lblSrcDoc118" TabIndex="33" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="SrcDoc" UIViewID="FollowService" Visible="True" Width="180" WindowHeight="408" WindowWidth="580" X="525" Y="174">
+      <Events />
+      <RelationControls />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="单号" ColumnID="DocNo" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="日期" ColumnID="BusinessDate" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="单据类型" ColumnID="DocumentType_Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="状态" ColumnID="Status" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="出货确认日期" ColumnID="ShipConfirmDate" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="审核日期" ColumnID="ApproveDate" TargetControlType="" TargetID="" TargetProperty="" />
+      <RefNameFields>
+        <RefNameField UIFieldID="DocNo" />
+      </RefNameFields>
+      <UIFilterBar Name="ReferenceFilter" />
+      <Events />
+    </Reference>
+    <Label ID="6673d6bb-4581-41b1-ab7f-4fcde0d9ac66" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblDocumentType_DocHeaderSequenceStyle94" RelationControl="DocumentType_DocHeaderSequenceStyle94" TabIndex="34" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="False" Width="152" X="368" Y="150">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <DropDownList ID="7d104cf0-af83-43c9-8bf1-31c2d7bebe69" DisplayFormat="10.0" Enabled="True" EnumFullName="UFIDA.U9.Base.Doc.DocHeaderSequenceStyleEnum" EnumID="dcf65e0a-1554-447b-b4c6-b3ec2951d965" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="False" IsProperty="False" IsSequence="False" Name="DocumentType_DocHeaderSequenceStyle94" RelationControl="lblDocumentType_DocHeaderSequenceStyle94" TabIndex="35" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="DocumentType_DocHeaderSequenceStyle" UIViewID="FollowService" Visible="False" Width="180" X="525" Y="150">
+      <Events />
+      <RelationControls />
+    </DropDownList>
+    <Label ID="be2da40f-1fdd-475e-aa6c-1fb03a3bd003" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="Label191" RelationControl="SHIP_Type19" TabIndex="36" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="False" Width="152" X="368" Y="150">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <TextBox ID="40891f42-e193-4d08-8a54-73bc703c5f3b" DisplayFormat="50" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="False" IsProperty="True" IsSequence="False" MultiLine="False" Name="SHIP_Type19" RelationControl="Label191" TabIndex="37" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="SHIP_Type" UIViewID="FollowService" Visible="False" Width="180" X="525" Y="150">
+      <Events />
+      <RelationControls />
+    </TextBox>
+    <Label ID="3e2bae5c-62b0-490f-9b91-e4c3ffc543bc" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="8" Height="20" IsNull="True" IsSequence="False" Name="lblDeliveryType195" RelationControl="DeliveryType195" TabIndex="40" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="199">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <Reference ID="243a2c6d-4317-4677-901f-fce2252500a2" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="DeliveryType_Code" CodeFieldUIViewID="FollowService" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="2" GridY="8" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="DeliveryType195" NameAttributeName="Name" NameFieldUIFieldID="DeliveryType_Name" NameFieldUIViewID="FollowService" PkeyField="ID" RefType="f57b45d3-b8a6-4d37-b3c9-a7bc8ae3ada4" RelationControl="lblDeliveryType195" TabIndex="41" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="DeliveryType" UIViewID="FollowService" Visible="True" Width="180" WindowHeight="408" WindowWidth="580" X="168" Y="199">
+      <Events />
+      <RelationControls />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="描述" ColumnID="Description" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="值集编码" ColumnID="ValueSetDef_Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="值集名称" ColumnID="ValueSetDef_Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <RefNameFields>
+        <RefNameField UIFieldID="Name" />
+      </RefNameFields>
+      <UIFilterBar Name="ReferenceFilter">
+        <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="DefCode" />
+      </UIFilterBar>
+      <Events />
+    </Reference>
+    <Label ID="565f5114-6b7d-4481-b4e6-6717289226bd" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="6" Height="20" IsNull="True" IsSequence="False" Name="lblContracts76" RelationControl="Contracts76" TabIndex="42" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="149">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <TextBox ID="30f031d3-d956-4646-b036-450a7942060b" DisplayFormat="50" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="6" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="Contracts76" RelationControl="lblContracts76" TabIndex="43" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="Contracts" UIViewID="FollowService" Visible="True" Width="180" X="168" Y="149">
+      <Events />
+      <RelationControls />
+    </TextBox>
+    <Label ID="ea665c11-00c9-4a50-a567-2114c5e2e9a4" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="13" Height="20" IsNull="True" IsSequence="False" Name="lblWorkType118" RelationControl="WorkType118" TabIndex="44" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="324">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <Reference ID="51736d18-f90a-4cd8-a74f-800bffa1b8a0" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="WorkType_Code" CodeFieldUIViewID="FollowService" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="2" GridY="13" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="WorkType118" NameAttributeName="Name" NameFieldUIFieldID="WorkType_Name" NameFieldUIViewID="FollowService" PkeyField="ID" RefType="f57b45d3-b8a6-4d37-b3c9-a7bc8ae3ada4" RelationControl="lblWorkType118" TabIndex="45" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="WorkType" UIViewID="FollowService" Visible="True" Width="180" WindowHeight="408" WindowWidth="580" X="168" Y="324">
+      <Events />
+      <RelationControls />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="描述" ColumnID="Description" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="值集编码" ColumnID="ValueSetDef_Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="值集名称" ColumnID="ValueSetDef_Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <RefNameFields>
+        <RefNameField UIFieldID="Name" />
+      </RefNameFields>
+      <UIFilterBar Name="ReferenceFilter">
+        <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="DefCode" />
+      </UIFilterBar>
+      <Events />
+    </Reference>
+    <Label ID="072dcc98-178c-4baf-ae89-5eac7f7dc05c" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="11" Height="20" IsNull="True" IsSequence="False" Name="lblRequireTime136" RelationControl="RequireTime136" TabIndex="46" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="274">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <DatePicker ID="40b46fed-eaa0-46e7-aaa9-cee2bbb98bb1" DisplayFormat="19" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="11" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="RequireTime136" RelationControl="lblRequireTime136" TabIndex="47" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="RequireTime" UIViewID="FollowService" Visible="True" Width="180" X="168" Y="274">
+      <Events />
+      <RelationControls />
+    </DatePicker>
+    <Label ID="07b9236a-e8b5-4f7a-ad73-7bf5734f5ec4" Enabled="True" GridHeight="1" GridWidth="1" GridX="4" GridY="1" Height="20" IsNull="True" IsSequence="False" Name="lblSO175" RelationControl="SO175" TabIndex="48" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="152" X="368" Y="24">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <TextBox ID="cfbd6ea2-de2f-4063-b691-d7078f2ab03c" DisplayFormat="50" Enabled="True" GridHeight="1" GridWidth="1" GridX="6" GridY="1" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="SO175" RelationControl="lblSO175" TabIndex="49" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="SO" UIViewID="FollowService" Visible="True" Width="180" X="525" Y="24">
+      <Events />
+      <RelationControls />
+    </TextBox>
+    <Label ID="961fd745-3fb1-43e1-9550-f6f3a1b53157" Enabled="True" GridHeight="1" GridWidth="1" GridX="4" GridY="2" Height="20" IsNull="True" IsSequence="False" Name="lblItem1109" RelationControl="Item1109" TabIndex="50" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="152" X="368" Y="49">
+      <Events />
+      <RelationControls />
+      <Events />
+      <FormLink FormRefID="053a1be3-2c56-428b-b221-b5291644f2cb" FormRefName="ItemMainUIForm.ubfform" FormRefPath="ItemMainUIForm.ubfform" FormRefProjectPath="D:\U9Cust\UFIDA\U9Proj\UBFV30\U9.VOB.Product.Metadata\UI\UFIDA.U9.CBO.Pub.Item.ItemUI.MetaData.dll" Height="520" IsShowStateBar="True" Name="FormLink4" Width="992">
+        <InParameters>
+          <Parameter ContextID="" ControlID="Item1109" ControlProperty="Key" ControlType="ReferenceModel" Name="ID" ParameterBindType="Bind2Control" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsDisableAdd" />
+        </InParameters>
+        <OutParameters>
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="InventoryUOMID" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="InventoryUOMCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="InventoryUOMName" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ItemForm" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ManufactureUOM" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ManufactureUOM_Code" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ManufactureUOM_Name" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PurchaseUOM" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PurchaseUOM_Code" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PurchaseUOM_Name" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="BuildQuanSelectType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="BuildBatch" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="BomControlMode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="Version" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="VersionID" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsNegativeInventory" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="InventoryPlanningMethod" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="CostUOM" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="CostUOMCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="CostUOMName" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ItemFormAttribute" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsGradeControl" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="StartGrade" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="EndGrade" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsPotencyControl" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="StartPotency" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="EndPotency" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="LotParam" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsVersionQtyControl" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsLimitBin" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="MeterialOut" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="MeterialOutUOMCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="MeterialOutUOMName" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="MeterialOutUOMPrecision" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="MeterialOutUOMRoundType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="MeterialOutUOMRoundValue" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="StandardGrade" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="StandardPotency" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="CostUOMPrecision" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="CostUOMRoundType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="CostUOMRoundValue" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="InventoryUOMPrcision" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="InventoryUOMRoundType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="InventoryUOMRoundValue" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PurchaseUOMPrecision" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PurchaseUOMRoundType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PurchaseUOMRoundValue" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ManufactureUOMPrecision" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ManufactureUOMRoundType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ManufactureUOMRoundValue" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsEcnControl" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsTrademark" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="Warehouse" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="WarehouseCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="WarehouseName" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="Bin" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="BinCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="BinName" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsVarRatio" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsMisc" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="LotPOVType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsDualQuantity" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsLimitWarehouse" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="LotValidDate" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ChargeProcessMode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="SnParamID" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="SnParamCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="SnParamName" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsDualUOM" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsMultyUOM" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PriceUOM" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PriceUOMName" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PriceUOMCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsATP" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="LotProduceTime" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="LotControlType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="SnProduceTime" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="SnControlType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="LowLevelCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="SupplySource" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="DemandTransType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="SalesUOM" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="SalesUOM_Code" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="SalesUOM_Name" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="SalesUOM_Round_Precision" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="SalesUOM_Round_RoundType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="SalesUOM_Round_RoundValue" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PriceUOM_Round_Precision" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PriceUOM_Round_RoundType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PriceUOM_Round_RoundValue" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ReceiptModeAllowModify" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ReceiptMode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="Buyer" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="Buyer_Code" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="Buyer_Name" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PurchaseDepartment" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PurchaseDepartment_Code" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PurchaseDepartment_Name" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsAllowExcessMaterial" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="StandardMaterialScale" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="Code1" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="Code2" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsBOMEnable" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="InquireRule" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="InquireFixedPeriod" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="InquireCount" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="StatisticPeriod" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsInventoryEnable" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsPurchaseEnable" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsSalesEnable" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsBuildEnable" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsOutsideOperationEnable" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsMRPEnable" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsSpecialItem" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ManufactureUOM_RatioToBase" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ManufactureUOM_BaseUOM_ID" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ManufactureUOM_BaseUOM_Code" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ManufactureUOM_BaseUOM_Name" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="MaterialOutUOM_RatioToBase" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="MaterialOutUOM_BaseUOM_ID" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="MaterialOutUOM_BaseUOM_Code" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="MaterialOutUOM_BaseUOM_Name" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsCTP" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PurchaseUOM_RatioToBase" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PurchaseUOM_BaseUOM_Code" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PurchaseUOM_BaseUOM_Name" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PurchaseUOM_BaseUOM_ID" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="TimeUom_Round_Precision" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="TimeUom_Round_RoundType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="TimeUom_Round_RoundValue" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="TimeUom_BaseUOM_ID" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="TimeUom_BaseUOM_Code" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="TimeUom_BaseUOM_Name" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PreOffsetTime" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="TimeUom" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="TimeUom_Code" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="TimeUom_Name" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ManufactureUOM_UOMClass" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="MaterialOutUOM_UOMClass" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PurchaseUOM_UOMClass" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="InventoryUOM_BaseUOM" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="InventoryUOM_BaseUOM_Code" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="InventoryUOM_BaseUOM_Name" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="BulkUom" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="BulkUom_Code" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="BulkUom_Name" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="BulkUom_Round_Precision" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="BulkUom_Round_RoundType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="BulkUom_Round_RoundValue" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="Weight" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="WeightUom" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="WeightUom_Code" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="WeightUom_Name" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="WeightUom_Round_Precision" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="WeightUom_Round_RoundType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="WeightUom_Round_RoundValue" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="MinRcvQty" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="MRPPlanningType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="TimeUom_BaseUOM_RatioToBase" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ProduceWasteRateType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ImmovableWaste" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="FluctuantWaste" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsMixLotControl" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsSueOverType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="StandardMaterialQty" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ProductDepartment" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ProductDepartmentCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ProductDepartmentName" />
+          <Parameter ContextID="" ControlID="Item1109" ControlProperty="Key" ControlType="ReferenceModel" Name="ID" />
+          <Parameter ContextID="" ControlID="Item1109" ControlProperty="Value" ControlType="ReferenceModel" Name="Code" />
+          <Parameter ContextID="" ControlID="Item1109" ControlProperty="Text" ControlType="ReferenceModel" Name="Name" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="SPECS" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="Effective_IsEffective" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="Effective_EffectiveDate" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="Effective_DisableDate" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="MixTradeMark" />
+        </OutParameters>
+      </FormLink>
+    </Label>
+    <Reference ID="ac458277-272a-4f0c-9da2-7cf5fed11311" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="Item1_Code" CodeFieldUIViewID="FollowService" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="6" GridY="2" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="Item1109" NameAttributeName="Name" NameFieldUIFieldID="Item1_Name" NameFieldUIViewID="FollowService" PkeyField="ID" RefType="beedebc3-5398-46b5-a237-5a3a4d13ad4f" RelationControl="lblItem1109" TabIndex="51" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="Item1" UIViewID="FollowService" Visible="True" Width="180" WindowHeight="408" WindowWidth="580" X="525" Y="49">
+      <Events />
+      <RelationControls />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="料号" ColumnID="Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="品名" ColumnID="Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="别名" ColumnID="AliasName" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="当前版本" ColumnID="Version" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="描述" ColumnID="Description" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="InventoryUOM_ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="InventoryUOM_Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="InventoryUOM_Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="料品形态" ColumnID="ItemForm" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="当前版本ID" ColumnID="VersionID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="供应商ID" ColumnID="TradeMark_ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="供应商编码" ColumnID="TradeMark_Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="供应商名称" ColumnID="TradeMark_Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <RefNameFields>
+        <RefNameField UIFieldID="Name" />
+      </RefNameFields>
+      <UIFilterBar Name="ReferenceFilter" />
+      <Events />
+    </Reference>
+    <Label ID="81257752-fe72-420b-ad8a-30464433cb6d" Enabled="True" GridHeight="1" GridWidth="1" GridX="4" GridY="3" Height="20" IsNull="True" IsSequence="False" Name="lblItem2118" RelationControl="Item2118" TabIndex="52" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="152" X="368" Y="74">
+      <Events />
+      <RelationControls />
+      <Events />
+      <FormLink FormRefID="053a1be3-2c56-428b-b221-b5291644f2cb" FormRefName="ItemMainUIForm.ubfform" FormRefPath="ItemMainUIForm.ubfform" FormRefProjectPath="D:\U9Cust\UFIDA\U9Proj\UBFV30\U9.VOB.Product.Metadata\UI\UFIDA.U9.CBO.Pub.Item.ItemUI.MetaData.dll" Height="520" IsShowStateBar="True" Name="FormLink5" Width="992">
+        <InParameters>
+          <Parameter ContextID="" ControlID="Item2118" ControlProperty="Key" ControlType="ReferenceModel" Name="ID" ParameterBindType="Bind2Control" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsDisableAdd" />
+        </InParameters>
+        <OutParameters>
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="InventoryUOMID" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="InventoryUOMCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="InventoryUOMName" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ItemForm" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ManufactureUOM" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ManufactureUOM_Code" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ManufactureUOM_Name" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PurchaseUOM" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PurchaseUOM_Code" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PurchaseUOM_Name" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="BuildQuanSelectType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="BuildBatch" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="BomControlMode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="Version" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="VersionID" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsNegativeInventory" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="InventoryPlanningMethod" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="CostUOM" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="CostUOMCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="CostUOMName" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ItemFormAttribute" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsGradeControl" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="StartGrade" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="EndGrade" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsPotencyControl" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="StartPotency" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="EndPotency" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="LotParam" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsVersionQtyControl" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsLimitBin" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="MeterialOut" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="MeterialOutUOMCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="MeterialOutUOMName" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="MeterialOutUOMPrecision" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="MeterialOutUOMRoundType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="MeterialOutUOMRoundValue" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="StandardGrade" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="StandardPotency" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="CostUOMPrecision" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="CostUOMRoundType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="CostUOMRoundValue" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="InventoryUOMPrcision" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="InventoryUOMRoundType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="InventoryUOMRoundValue" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PurchaseUOMPrecision" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PurchaseUOMRoundType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PurchaseUOMRoundValue" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ManufactureUOMPrecision" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ManufactureUOMRoundType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ManufactureUOMRoundValue" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsEcnControl" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsTrademark" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="Warehouse" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="WarehouseCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="WarehouseName" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="Bin" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="BinCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="BinName" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsVarRatio" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsMisc" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="LotPOVType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsDualQuantity" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsLimitWarehouse" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="LotValidDate" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ChargeProcessMode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="SnParamID" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="SnParamCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="SnParamName" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsDualUOM" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsMultyUOM" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PriceUOM" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PriceUOMName" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PriceUOMCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsATP" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="LotProduceTime" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="LotControlType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="SnProduceTime" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="SnControlType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="LowLevelCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="SupplySource" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="DemandTransType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="SalesUOM" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="SalesUOM_Code" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="SalesUOM_Name" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="SalesUOM_Round_Precision" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="SalesUOM_Round_RoundType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="SalesUOM_Round_RoundValue" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PriceUOM_Round_Precision" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PriceUOM_Round_RoundType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PriceUOM_Round_RoundValue" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ReceiptModeAllowModify" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ReceiptMode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="Buyer" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="Buyer_Code" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="Buyer_Name" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PurchaseDepartment" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PurchaseDepartment_Code" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PurchaseDepartment_Name" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsAllowExcessMaterial" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="StandardMaterialScale" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="Code1" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="Code2" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsBOMEnable" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="InquireRule" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="InquireFixedPeriod" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="InquireCount" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="StatisticPeriod" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsInventoryEnable" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsPurchaseEnable" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsSalesEnable" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsBuildEnable" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsOutsideOperationEnable" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsMRPEnable" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsSpecialItem" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ManufactureUOM_RatioToBase" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ManufactureUOM_BaseUOM_ID" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ManufactureUOM_BaseUOM_Code" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ManufactureUOM_BaseUOM_Name" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="MaterialOutUOM_RatioToBase" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="MaterialOutUOM_BaseUOM_ID" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="MaterialOutUOM_BaseUOM_Code" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="MaterialOutUOM_BaseUOM_Name" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsCTP" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PurchaseUOM_RatioToBase" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PurchaseUOM_BaseUOM_Code" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PurchaseUOM_BaseUOM_Name" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PurchaseUOM_BaseUOM_ID" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="TimeUom_Round_Precision" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="TimeUom_Round_RoundType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="TimeUom_Round_RoundValue" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="TimeUom_BaseUOM_ID" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="TimeUom_BaseUOM_Code" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="TimeUom_BaseUOM_Name" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PreOffsetTime" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="TimeUom" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="TimeUom_Code" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="TimeUom_Name" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ManufactureUOM_UOMClass" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="MaterialOutUOM_UOMClass" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PurchaseUOM_UOMClass" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="InventoryUOM_BaseUOM" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="InventoryUOM_BaseUOM_Code" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="InventoryUOM_BaseUOM_Name" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="BulkUom" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="BulkUom_Code" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="BulkUom_Name" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="BulkUom_Round_Precision" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="BulkUom_Round_RoundType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="BulkUom_Round_RoundValue" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="Weight" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="WeightUom" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="WeightUom_Code" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="WeightUom_Name" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="WeightUom_Round_Precision" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="WeightUom_Round_RoundType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="WeightUom_Round_RoundValue" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="MinRcvQty" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="MRPPlanningType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="TimeUom_BaseUOM_RatioToBase" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ProduceWasteRateType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ImmovableWaste" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="FluctuantWaste" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsMixLotControl" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsSueOverType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="StandardMaterialQty" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ProductDepartment" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ProductDepartmentCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ProductDepartmentName" />
+          <Parameter ContextID="" ControlID="Item2118" ControlProperty="Key" ControlType="ReferenceModel" Name="ID" />
+          <Parameter ContextID="" ControlID="Item2118" ControlProperty="Value" ControlType="ReferenceModel" Name="Code" />
+          <Parameter ContextID="" ControlID="Item2118" ControlProperty="Text" ControlType="ReferenceModel" Name="Name" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="SPECS" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="Effective_IsEffective" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="Effective_EffectiveDate" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="Effective_DisableDate" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="MixTradeMark" />
+        </OutParameters>
+      </FormLink>
+    </Label>
+    <Reference ID="a17b5113-03e8-43e1-adbc-1b51d8cc2b83" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="Item2_Code" CodeFieldUIViewID="FollowService" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="6" GridY="3" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="Item2118" NameAttributeName="Name" NameFieldUIFieldID="Item2_Name" NameFieldUIViewID="FollowService" PkeyField="ID" RefType="beedebc3-5398-46b5-a237-5a3a4d13ad4f" RelationControl="lblItem2118" TabIndex="53" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="Item2" UIViewID="FollowService" Visible="True" Width="180" WindowHeight="408" WindowWidth="580" X="525" Y="74">
+      <Events />
+      <RelationControls />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="料号" ColumnID="Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="品名" ColumnID="Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="别名" ColumnID="AliasName" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="当前版本" ColumnID="Version" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="描述" ColumnID="Description" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="InventoryUOM_ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="InventoryUOM_Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="InventoryUOM_Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="料品形态" ColumnID="ItemForm" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="当前版本ID" ColumnID="VersionID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="供应商ID" ColumnID="TradeMark_ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="供应商编码" ColumnID="TradeMark_Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="供应商名称" ColumnID="TradeMark_Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <RefNameFields>
+        <RefNameField UIFieldID="Name" />
+      </RefNameFields>
+      <UIFilterBar Name="ReferenceFilter" />
+      <Events />
+    </Reference>
+    <Label ID="fb254e16-1bfa-46e1-98c2-cf62cf3719cf" Enabled="True" GridHeight="1" GridWidth="1" GridX="4" GridY="4" Height="20" IsNull="True" IsSequence="False" Name="lblItem3121" RelationControl="Item3121" TabIndex="54" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="152" X="368" Y="99">
+      <Events />
+      <RelationControls />
+      <Events />
+      <FormLink FormRefID="053a1be3-2c56-428b-b221-b5291644f2cb" FormRefName="ItemMainUIForm.ubfform" FormRefPath="ItemMainUIForm.ubfform" FormRefProjectPath="D:\U9Cust\UFIDA\U9Proj\UBFV30\U9.VOB.Product.Metadata\UI\UFIDA.U9.CBO.Pub.Item.ItemUI.MetaData.dll" Height="520" IsShowStateBar="True" Name="FormLink6" Width="992">
+        <InParameters>
+          <Parameter ContextID="" ControlID="Item3121" ControlProperty="Key" ControlType="ReferenceModel" Name="ID" ParameterBindType="Bind2Control" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsDisableAdd" />
+        </InParameters>
+        <OutParameters>
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="InventoryUOMID" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="InventoryUOMCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="InventoryUOMName" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ItemForm" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ManufactureUOM" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ManufactureUOM_Code" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ManufactureUOM_Name" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PurchaseUOM" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PurchaseUOM_Code" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PurchaseUOM_Name" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="BuildQuanSelectType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="BuildBatch" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="BomControlMode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="Version" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="VersionID" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsNegativeInventory" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="InventoryPlanningMethod" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="CostUOM" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="CostUOMCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="CostUOMName" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ItemFormAttribute" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsGradeControl" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="StartGrade" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="EndGrade" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsPotencyControl" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="StartPotency" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="EndPotency" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="LotParam" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsVersionQtyControl" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsLimitBin" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="MeterialOut" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="MeterialOutUOMCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="MeterialOutUOMName" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="MeterialOutUOMPrecision" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="MeterialOutUOMRoundType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="MeterialOutUOMRoundValue" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="StandardGrade" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="StandardPotency" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="CostUOMPrecision" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="CostUOMRoundType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="CostUOMRoundValue" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="InventoryUOMPrcision" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="InventoryUOMRoundType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="InventoryUOMRoundValue" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PurchaseUOMPrecision" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PurchaseUOMRoundType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PurchaseUOMRoundValue" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ManufactureUOMPrecision" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ManufactureUOMRoundType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ManufactureUOMRoundValue" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsEcnControl" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsTrademark" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="Warehouse" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="WarehouseCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="WarehouseName" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="Bin" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="BinCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="BinName" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsVarRatio" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsMisc" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="LotPOVType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsDualQuantity" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsLimitWarehouse" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="LotValidDate" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ChargeProcessMode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="SnParamID" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="SnParamCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="SnParamName" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsDualUOM" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsMultyUOM" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PriceUOM" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PriceUOMName" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PriceUOMCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsATP" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="LotProduceTime" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="LotControlType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="SnProduceTime" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="SnControlType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="LowLevelCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="SupplySource" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="DemandTransType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="SalesUOM" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="SalesUOM_Code" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="SalesUOM_Name" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="SalesUOM_Round_Precision" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="SalesUOM_Round_RoundType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="SalesUOM_Round_RoundValue" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PriceUOM_Round_Precision" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PriceUOM_Round_RoundType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PriceUOM_Round_RoundValue" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ReceiptModeAllowModify" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ReceiptMode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="Buyer" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="Buyer_Code" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="Buyer_Name" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PurchaseDepartment" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PurchaseDepartment_Code" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PurchaseDepartment_Name" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsAllowExcessMaterial" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="StandardMaterialScale" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="Code1" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="Code2" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsBOMEnable" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="InquireRule" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="InquireFixedPeriod" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="InquireCount" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="StatisticPeriod" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsInventoryEnable" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsPurchaseEnable" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsSalesEnable" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsBuildEnable" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsOutsideOperationEnable" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsMRPEnable" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsSpecialItem" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ManufactureUOM_RatioToBase" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ManufactureUOM_BaseUOM_ID" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ManufactureUOM_BaseUOM_Code" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ManufactureUOM_BaseUOM_Name" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="MaterialOutUOM_RatioToBase" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="MaterialOutUOM_BaseUOM_ID" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="MaterialOutUOM_BaseUOM_Code" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="MaterialOutUOM_BaseUOM_Name" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsCTP" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PurchaseUOM_RatioToBase" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PurchaseUOM_BaseUOM_Code" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PurchaseUOM_BaseUOM_Name" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PurchaseUOM_BaseUOM_ID" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="TimeUom_Round_Precision" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="TimeUom_Round_RoundType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="TimeUom_Round_RoundValue" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="TimeUom_BaseUOM_ID" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="TimeUom_BaseUOM_Code" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="TimeUom_BaseUOM_Name" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PreOffsetTime" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="TimeUom" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="TimeUom_Code" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="TimeUom_Name" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ManufactureUOM_UOMClass" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="MaterialOutUOM_UOMClass" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="PurchaseUOM_UOMClass" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="InventoryUOM_BaseUOM" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="InventoryUOM_BaseUOM_Code" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="InventoryUOM_BaseUOM_Name" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="BulkUom" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="BulkUom_Code" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="BulkUom_Name" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="BulkUom_Round_Precision" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="BulkUom_Round_RoundType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="BulkUom_Round_RoundValue" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="Weight" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="WeightUom" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="WeightUom_Code" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="WeightUom_Name" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="WeightUom_Round_Precision" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="WeightUom_Round_RoundType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="WeightUom_Round_RoundValue" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="MinRcvQty" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="MRPPlanningType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="TimeUom_BaseUOM_RatioToBase" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ProduceWasteRateType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ImmovableWaste" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="FluctuantWaste" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsMixLotControl" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="IsSueOverType" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="StandardMaterialQty" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ProductDepartment" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ProductDepartmentCode" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="ProductDepartmentName" />
+          <Parameter ContextID="" ControlID="Item3121" ControlProperty="Key" ControlType="ReferenceModel" Name="ID" />
+          <Parameter ContextID="" ControlID="Item3121" ControlProperty="Value" ControlType="ReferenceModel" Name="Code" />
+          <Parameter ContextID="" ControlID="Item3121" ControlProperty="Text" ControlType="ReferenceModel" Name="Name" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="SPECS" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="Effective_IsEffective" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="Effective_EffectiveDate" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="Effective_DisableDate" />
+          <Parameter ContextID="" ControlID="" ControlProperty="" ControlType="" Name="MixTradeMark" />
+        </OutParameters>
+      </FormLink>
+    </Label>
+    <Reference ID="7554ec4c-815c-4e64-b7a6-0549a99dc03e" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="Item3_Code" CodeFieldUIViewID="FollowService" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="6" GridY="4" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="Item3121" NameAttributeName="Name" NameFieldUIFieldID="Item3_Name" NameFieldUIViewID="FollowService" PkeyField="ID" RefType="beedebc3-5398-46b5-a237-5a3a4d13ad4f" RelationControl="lblItem3121" TabIndex="55" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="Item3" UIViewID="FollowService" Visible="True" Width="180" WindowHeight="408" WindowWidth="580" X="525" Y="99">
+      <Events />
+      <RelationControls />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="料号" ColumnID="Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="品名" ColumnID="Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="别名" ColumnID="AliasName" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="当前版本" ColumnID="Version" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="描述" ColumnID="Description" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="InventoryUOM_ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="InventoryUOM_Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="InventoryUOM_Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="料品形态" ColumnID="ItemForm" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="当前版本ID" ColumnID="VersionID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="供应商ID" ColumnID="TradeMark_ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="供应商编码" ColumnID="TradeMark_Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="供应商名称" ColumnID="TradeMark_Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <RefNameFields>
+        <RefNameField UIFieldID="Name" />
+      </RefNameFields>
+      <UIFilterBar Name="ReferenceFilter" />
+      <Events />
+    </Reference>
+    <Label ID="eef5ee15-ab54-46d5-88c9-6b6e7ab67a9d" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="9" Height="20" IsNull="True" IsSequence="False" Name="lblPageItem_Operators85" RelationControl="PageItem_Operators85" TabIndex="56" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="153" X="10" Y="224">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <Reference ID="9548bbb2-f838-4db9-8c8d-a8f2f85ad8cf" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="DeliveryMan_Code" CodeFieldUIViewID="FollowService" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="2" GridY="9" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="PageItem_Operators85" NameAttributeName="Name" NameFieldUIFieldID="DeliveryMan_Name" NameFieldUIViewID="FollowService" PkeyField="ID" RefType="e299db39-afea-41b7-a3a3-ebcae9e5c52f" RelationControl="lblPageItem_Operators85" TabIndex="57" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="PageItem_Operators" UIViewID="FollowService" Visible="True" Width="180" WindowHeight="408" WindowWidth="580" X="168" Y="224">
+      <Events />
+      <RelationControls />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="部门" ColumnID="Dept_Name" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="业务员描述" ColumnID="Description" TargetControlType="TextBoxModel" TargetID="DeliveryMan156" TargetProperty="Value" />
+      <RefNameFields>
+        <RefNameField UIFieldID="Name" />
+      </RefNameFields>
+      <UIFilterBar Name="ReferenceFilter" />
+      <Events />
+    </Reference>
+    <Label ID="4c269603-cdcc-4ea6-8dc0-246caddf18e7" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblDeliveryMan156" RelationControl="DeliveryMan156" TabIndex="58" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="False" Width="152" X="368" Y="275">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <TextBox ID="d89d3ace-ee7b-4855-b3cb-1a8ff3d69972" DisplayFormat="500" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="DeliveryMan156" RelationControl="lblDeliveryMan156" TabIndex="59" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="DeliveryMan" UIViewID="FollowService" Visible="False" Width="180" X="525" Y="275">
+      <Events />
+      <RelationControls />
+    </TextBox>
+    <FlexFieldPicker ID="2f833ce9-1da1-4107-bf5b-e080d8885c4d" Enabled="True" GridHeight="1" GridWidth="1" GridX="6" GridY="11" Height="20" IsNull="True" Name="FlexFieldPicker0" TabIndex="60" TabStop="True" TitleAlign="Left" TitleLocation="Left" Visible="True" Width="180" X="525" Y="274">
+      <Events />
+      <RelationControls />
+    </FlexFieldPicker>
+  </Card>
+  <Events />
+</View>

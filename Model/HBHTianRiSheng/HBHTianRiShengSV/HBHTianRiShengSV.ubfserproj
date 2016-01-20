@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project id="b1a79efb-488b-4a83-a12c-793a350b2b22" name="HBHTianRiShengSV" displayName="HBHTianRiShengSV" description="" help="" type="SV" assemblyName="U9.VOB.Cus.HBHTianRiSheng.HBHTianRiShengSV" mapProject="" resourceName="" projectVersion="Normal">
+  <Imports>
+    <Import id="1eded215-ea9f-4588-95f3-621b677a6103" name="HBHTianRiShengBE" displayName="HBHTianRiShengBE" description="" help="" componentid="33c351f8-85e9-40af-a005-45d195b3e1b6" path="..\..\..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\Unconfiged\Metadata\U9.VOB.Cus.HBHTianRiSheng.HBHTianRiShengBE.MetaData.dll" type="BE" isRuntime="True" />
+  </Imports>
+  <SourceControl />
+  <ItemGroup>
+    <Item id="3ed2a5b3-17d9-4c1d-85e1-4306364099af" name="HBHTianRiShengSV.ubfsvr" displayName="HBHTianRiShengSV.ubfsvr" description="" help="" include="HBHTianRiShengSV.ubfsvr" type="BE" />
+  </ItemGroup>
+</Project>

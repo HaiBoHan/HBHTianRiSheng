@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ReferenceComponent id="e299db39-afea-41b7-a3a3-ebcae9e5c52f" name="MultiOperatorRef" displayName="业务员" description="" help="" refType="1" isMultiSelect="True" isDefault="False" isClientReturn="False" width="580" height="408" isBinding="False" displayNameResourceID="" URI="U9.VOB.Cus.HBHTianRiSheng.HBHTianRiShengUI.MultiOperatorRef" Classify="" ForMultOrg="False">
+  <References>
+    <Reference id="2fe2df2f-d8cf-407c-9069-6d842539ab62" name="cRef" displayName="cRef" description="" help="业务员" refEntityId="198b0f81-207e-4707-8a8c-e0475b7674bd" refEntityName="UFIDA.U9.CBO.HR.Operator.Operators" refType="1" isMain="False">
+      <RefFields>
+        <RefField id="d29de1cd-44f7-44ec-81ae-97b1bd62ebbd" name="ID" displayName="ID" description="" help="业务员.Key.ID" isKey="True" isEdit="False" isName="False" isVisible="False" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.CBO.HR.Operator.Operators:ID" displayNameIndexStr="2" />
+        <RefField id="556334f5-4a16-46ed-a1cf-7b704050f558" name="Code" displayName="编码" description="" help="业务员.Misc.编码" isKey="False" isEdit="True" isName="False" isVisible="True" isParent="False" sequence="0" length="120" refAttributeName="UFIDA.U9.CBO.HR.Operator.Operators:Code" displayNameIndexStr="2" />
+        <RefField id="5c2f306a-cd16-4edf-83df-b22c2c71ca2e" name="Name" displayName="名称" description="" help="业务员.Misc.名称" isKey="False" isEdit="False" isName="True" isVisible="True" isParent="False" sequence="0" length="120" refAttributeName="UFIDA.U9.CBO.HR.Operator.Operators:Name" displayNameIndexStr="2" />
+        <RefField id="96333543-b1ff-4600-9c0a-e9825c43968e" name="Dept_Name" displayName="部门" description="" help="部门.Misc.名称" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="150" refAttributeName="UFIDA.U9.CBO.HR.Operator.Operators:Dept.Name" displayNameIndexStr="0" />
+        <RefField id="9fd4b305-66c6-4f0e-b2f6-da1bc9242077" name="Description" displayName="业务员描述" description="" help="业务员.Misc.描述" isKey="False" isEdit="False" isName="False" isVisible="False" isParent="False" sequence="0" length="2000" refAttributeName="UFIDA.U9.CBO.HR.Operator.Operators:Description" displayNameIndexStr="" />
+      </RefFields>
+      <OrderFields>
+        <OrderField id="679beaf8-90c4-4413-aef9-e9cdd0851a71" name="Code" displayName="编码" description="" help="业务员.Misc.编码" direction="0" sequence="0" refAttributeName="UFIDA.U9.CBO.HR.Operator.Operators:Code" />
+      </OrderFields>
+      <Filter>Effective.IsEffective=1 and Effective.EffectiveDate&lt;='#Context.DateTime#' and Effective.DisableDate&gt;='#Context.DateTime#' and Org=#Context.OrgID# </Filter>
+    </Reference>
+  </References>
+</ReferenceComponent>

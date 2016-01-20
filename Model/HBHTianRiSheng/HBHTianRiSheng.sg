@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceGroup>
+  <ServiceGroupInfo id="075f789f-d5df-404e-be82-fd61bc8713dd" name="HBHTianRiSheng" displayName="HBHTianRiSheng" description="" help="" fullPath="D:\U9Cust\UFIDA\U9Proj\U9AppCode\U9.VOB.Apps.Cus\CusApp\HBHTianRiSheng\Model\HBHTianRiSheng\HBHTianRiSheng.sg" applicationID="" />
+  <AssemblyGroup>
+    <Assembly ID="33c351f8-85e9-40af-a005-45d195b3e1b6" name="U9.VOB.Cus.HBHTianRiSheng.HBHTianRiShengBE" type="BE" path="" />
+    <Assembly ID="294616ff-f4f8-4411-96a2-ca68d1a2d45e" name="U9.VOB.Cus.HBHTianRiSheng.HBHTianRiShengUI" type="UI" path="" />
+    <Assembly ID="b1a79efb-488b-4a83-a12c-793a350b2b22" name="U9.VOB.Cus.HBHTianRiSheng.HBHTianRiShengSV" type="SV" path="" />
+    <Assembly ID="881766a2-d79e-48c8-a348-6804da71c91f" name="U9.VOB.Cus.HBHTianRiSheng.HBHTianRiShengUIList" type="UI" path="" />
+    <Assembly ID="e20b593f-5c47-4b02-85bf-93807ce08f95" name="HBHJianLiYuanListBP" type="BP" path="" />
+    <Assembly ID="dfae4cdc-fa63-409f-9c71-77cf5b666525" name="HBHTianRiShengQuery" type="" path="" />
+  </AssemblyGroup>
+</ServiceGroup>

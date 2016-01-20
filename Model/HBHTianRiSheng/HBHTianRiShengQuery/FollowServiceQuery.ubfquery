@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<QueryComponent id="68c69ef2-434a-4525-8eed-bff397213da0" name="FollowServiceQuery" displayName="FollowServiceQuery" description="" help="" QueryType="List" QueryURI="8c9606e3-4a10-4e4c-ad1b-dac89654bec3" QuerySourceFullName="U9.VOB.Cus.HBHTianRiSheng.FollowService" UIViewDragType="DragDown" RefInfoLoadType="Cache">
+  <BasicInfo id="3ba313e1-f29f-4dbb-96ff-87abceb2a195" name="" displayName="" description="" help="" RefToken="" RootDescContextValue="" FilterTabVisible="True" ColumnTabVisible="True" SortTabVisible="True" FilterExpandLevel="3" ColumnExpandLevel="3" SortExpandLevel="3" />
+  <BPRefInfo id="21374746-e878-49b7-aae6-204ba2b8e8a0" name="" displayName="" description="" help="" ProjectID="" ProjectPath="" BPItemID="" BPOperationID="" DTOID="" BPAgentDll="" BPAgentProxy="" />
+  <UIRefInfo id="73c63819-984e-4899-a1d3-5400e57f1097" name="" displayName="" description="" help="" ProjectID="" ProjectPath="" UIModelItemID="49f197b3-b869-43d6-9bb4-7e3a4a230747" UIFormItemID="bdd7f676-4850-4672-8d8f-e44de019b305" UIModelID="2c5f9006-e923-4649-a9d3-8c766d79fc99" />
+  <FilterDefines>
+    <FilterDefine id="2c52802a-1780-4240-8a18-995337a48335" name="DocNo" displayName="DocNo" description="" help="" ParentName="" Alias="DocNo" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+    <FilterDefine id="16c86a56-3c97-44e0-8992-b9e8046b8d8a" name="BusinessDate" displayName="BusinessDate" description="" help="" ParentName="" Alias="BusinessDate" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="DateTime" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+    <FilterDefine id="0c89bb96-7e02-4de9-8660-92b43b7802b0" name="Status" displayName="Status" description="" help="" ParentName="" Alias="Status" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+  </FilterDefines>
+  <ColumnDefines>
+    <ColumnDefine id="3e599322-bd2b-4965-8ae3-2dc9805bd358" name="DocNo" displayName="DocNo" description="" help="" ParentName="" Alias="DocNo" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+    <ColumnDefine id="efced10c-326b-440b-a03f-84288f2c1a46" name="BusinessDate" displayName="BusinessDate" description="" help="" ParentName="" Alias="BusinessDate" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="Date" Point="2" />
+    <ColumnDefine id="d7a03263-6ed2-4d4b-8cb6-84aaed76d3a1" name="Status" displayName="Status" description="" help="" ParentName="" Alias="Status" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+    <ColumnDefine id="633560ad-552e-4562-919f-98895974132a" name="PayMoney" displayName="PayMoney" description="" help="" ParentName="" Alias="PayMoney" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" PrecisionType="Static" NumericType="Numberic" Point="2" />
+  </ColumnDefines>
+  <SortDefines>
+    <SortDefine id="aff043a5-05c8-4beb-93d0-e9456ee90624" name="DocNo" displayName="" description="" help="" ParentName="" Alias="DocNo" IsFixed="False" Visible="True" DescFieldContextValue="" />
+    <SortDefine id="52eb9dbf-b095-490a-960d-d8444aaf4691" name="BusinessDate" displayName="" description="" help="" ParentName="" Alias="BusinessDate" IsFixed="False" Visible="True" DescFieldContextValue="" />
+  </SortDefines>
+  <DefaultCase>
+    <BasicFilters>
+      <BasicFilter id="a350dee5-35b7-4718-8e1b-f899df3e62df" name="DocNo" displayName="单据编号" description="" help="" />
+      <BasicFilter id="44381784-b141-4890-950e-7f259e00877d" name="BusinessDate" displayName="业务日期" description="" help="" />
+      <BasicFilter id="f987f285-e1f5-462b-a480-e1552590d724" name="Status" displayName="状态" description="" help="" />
+    </BasicFilters>
+    <DefaultColumns>
+      <Column id="cecdf1d6-01f2-40b7-b76d-e4e85355a55e" name="DocNo" displayName="单据编号" description="" help="" />
+      <Column id="4876651f-ae49-45d2-b94e-fbddef3988ba" name="BusinessDate" displayName="业务日期" description="" help="" />
+      <Column id="8ac0fd7a-cd9a-4a63-a21d-d7a42625293e" name="Status" displayName="状态" description="" help="" />
+    </DefaultColumns>
+    <DefaultSorts>
+      <Sort id="28fb0380-5fa3-49f3-b27a-bf4c8e884cd3" name="DocNo" displayName="" description="" help="" SortType="ASC" />
+      <Sort id="ffb2dc06-4131-4129-ac75-049a62317a7e" name="BusinessDate" displayName="" description="" help="" SortType="ASC" />
+    </DefaultSorts>
+  </DefaultCase>
+</QueryComponent>

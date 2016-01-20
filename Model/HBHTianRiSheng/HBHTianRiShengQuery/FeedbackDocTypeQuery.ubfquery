@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<QueryComponent id="1a07fc55-53e9-467d-bbd0-0e2e908946ac" name="FeedbackDocTypeQuery" displayName="FeedbackDocTypeQuery" description="" help="" QueryType="List" QueryURI="9b66e5e4-29f8-4622-93cb-55663b8cce7e" QuerySourceFullName="U9.VOB.Cus.HBHTianRiSheng.FeedbackDocType" UIViewDragType="DragUp" RefInfoLoadType="Cache">
+  <BasicInfo id="1ba8c223-27af-4fd6-9a7f-1ce077bfe1c6" name="" displayName="" description="" help="" RefToken="" RootDescContextValue="" FilterTabVisible="True" ColumnTabVisible="True" SortTabVisible="True" FilterExpandLevel="3" ColumnExpandLevel="3" SortExpandLevel="3" />
+  <BPRefInfo id="4c0f7b7c-37de-42b5-98af-69192cc5e434" name="" displayName="" description="" help="" ProjectID="" ProjectPath="" BPItemID="" BPOperationID="" DTOID="" BPAgentDll="" BPAgentProxy="" />
+  <UIRefInfo id="8e4c6123-99cb-4d9a-a219-6476ba00a4ba" name="" displayName="" description="" help="" ProjectID="" ProjectPath="" UIModelItemID="4580c00a-b9ae-46cc-a560-02a4772af84c" UIFormItemID="30dec9f3-fc26-46d8-9b30-d7941b7df868" UIModelID="04daf2e8-f761-42cc-b5a5-473bcda0c2e6" />
+  <FilterDefines>
+    <FilterDefine id="0933792d-0011-405d-b4ff-81d0d8a9f936" name="Code" displayName="Code" description="" help="" ParentName="" Alias="Code" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+    <FilterDefine id="1acc1077-6f11-4d84-a8b4-f3fb026a4baf" name="Name" displayName="Name" description="" help="" ParentName="" Alias="Name" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+    <FilterDefine id="fe7302bc-86fa-40d3-853e-3a4a3d9767df" name="DocHeaderSequenceStyle" displayName="DocHeaderSequenceStyle" description="" help="" ParentName="" Alias="DocHeaderSequenceStyle" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+  </FilterDefines>
+  <ColumnDefines>
+    <ColumnDefine id="787d6e1f-159a-4659-ad76-bc24d26fe9d3" name="Code" displayName="Code" description="" help="" ParentName="" Alias="Code" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+    <ColumnDefine id="c93238d3-9aaf-4e70-b4ff-dca820210b43" name="Name" displayName="Name" description="" help="" ParentName="" Alias="Name" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+    <ColumnDefine id="4bf5e4d1-8156-4a6f-8e4e-7905be5db473" name="DocHeaderSequenceStyle" displayName="DocHeaderSequenceStyle" description="" help="" ParentName="" Alias="DocHeaderSequenceStyle" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+  </ColumnDefines>
+  <SortDefines>
+    <SortDefine id="08ee30f5-7987-4bd1-b252-f76dd413e176" name="Code" displayName="" description="" help="" ParentName="" Alias="Code" IsFixed="False" Visible="True" DescFieldContextValue="" />
+    <SortDefine id="03c2ef1c-3029-4ef1-888f-6253b4843e62" name="Name" displayName="" description="" help="" ParentName="" Alias="Name" IsFixed="False" Visible="True" DescFieldContextValue="" />
+  </SortDefines>
+  <DefaultCase>
+    <BasicFilters>
+      <BasicFilter id="1bb8d2da-ae23-42a7-92a4-7b097e44fedc" name="Code" displayName="编码" description="" help="" />
+      <BasicFilter id="dbc5b7b7-e6bb-4038-8218-3311e09bc2bb" name="Name" displayName="名称" description="" help="" />
+      <BasicFilter id="e2b0aabe-ea92-4a0b-9363-92e6bc570a67" name="DocHeaderSequenceStyle" displayName="单据编号方式" description="" help="" />
+    </BasicFilters>
+    <DefaultColumns>
+      <Column id="036af7ab-7d35-4d46-b7a1-409257b8eee4" name="Code" displayName="编码" description="" help="" />
+      <Column id="1960da71-2381-4ce5-be20-af05b67b423a" name="Name" displayName="名称" description="" help="" />
+      <Column id="9b867807-90cc-4f8c-9394-d6400a4711a3" name="DocHeaderSequenceStyle" displayName="单据编号方式" description="" help="" />
+    </DefaultColumns>
+    <DefaultSorts>
+      <Sort id="38cffa64-3588-4b63-b140-7d1bcb8b08b5" name="Code" displayName="" description="" help="" SortType="ASC" />
+      <Sort id="38eb2662-6461-4aff-b15a-33f7cb10e53f" name="Name" displayName="" description="" help="" SortType="ASC" />
+    </DefaultSorts>
+  </DefaultCase>
+</QueryComponent>

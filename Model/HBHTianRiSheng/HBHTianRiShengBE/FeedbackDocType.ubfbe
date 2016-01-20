@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Component id="5edc8979-db39-4cd3-85f8-735736e78b23" name="U9.VOB.Cus.HBHTianRiSheng.FeedbackDocType" displayName="FeedbackDocType" description="" help="" type="BE" assemblyName="U9.VOB.Cus.HBHTianRiSheng.HBHTianRiShengBE">
+  <Namespace id="2a7ee6aa-e63e-4e49-96b5-cd0598186684" name="U9.VOB.Cus.HBHTianRiSheng" displayName="U9.VOB.Cus.HBHTianRiSheng" description="U9.VOB.Cus.HBHTianRiSheng" help="">
+    <Entity id="db278747-244e-49c3-9a8d-45599f9b0ef9" name="FeedbackDocType" displayName="售后回报单单据类型" description="售后回报单单据类型" help="" mD_ParentClass_ID="009a5f75-27f1-484d-bf96-7305a7aaf7dd" isFactEntity="True" defaultTable="Cust_FeedbackDocType" isMain="True" inheritanceMapKind="0" discriminator="FeedbackDocType" isQuery="True" isAbstract="False" isSealed="False" isModifyControl="True" hasImpressibleAttribute="True" isInCache="False" isAuthorization="True" isPKClustered="True" forOBAImport="True">
+      <Groups>
+        <Group id="fb37472f-96f0-48ac-b34e-30071cd7c9dc" name="Misc" displayName="Misc" description="" help="" />
+      </Groups>
+      <Attributes>
+        <Attribute id="08f052ce-b964-48de-b0d0-17ef7b3a580b" name="Status" displayName="状态" description="" help="售后回报单单据类型.Misc.状态" dataTypeID="34af30f0-a7d9-4005-962e-21076f509a72" isKey="False" defaultValue="0" length="50" precise="5" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="0" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="True" />
+      </Attributes>
+      <BEIndecs>
+        <BEIndex id="c77b296b-2361-4365-8ab8-52ea828f6bdf" name="U9_VOB_Cus_HBHTianRiSheng_FeedbackDocType_BusinessKey_Index" displayName="U9_VOB_Cus_HBHTianRiSheng_FeedbackDocType_BusinessKey_Index" description="" help="" isUnique="True" isClustered="False" isForBusinessKeys="True">
+          <BEIndexAttributes>
+            <BEIndexAttribute id="8e2bb312-200b-4b49-b756-b419f602ceb6" name="Code" displayName="编码" description="" help="" isAscend="True" attributeID="af88133a-092b-4d68-bb36-9e3909bc1f20" sequence="0" attributeFullName="Code" />
+            <BEIndexAttribute id="84d456a3-7173-4a94-b848-8e47fdaf4498" name="Org" displayName="组织" description="" help="" isAscend="True" attributeID="1b2b4b47-1271-4282-b9e5-dc55e227f12c" sequence="0" attributeFullName="Org" />
+          </BEIndexAttributes>
+        </BEIndex>
+      </BEIndecs>
+    </Entity>
+    <Diagram id="942342b2-69cb-42aa-b456-c3e095ab3d03" name="FeedbackDocType" displayName="FeedbackDocType">
+      <Class Editable="True" ID="805c4241-45ae-4817-a2d3-f2fbf6fd40d1" Type="Entity" ADID="db278747-244e-49c3-9a8d-45599f9b0ef9">
+        <Location X="139" Y="155" />
+        <Size width="120" height="58" />
+      </Class>
+      <Class Editable="False" ID="a591edc9-4bb0-4134-b98f-c7c254fcf6e0" Type="Entity" ADID="009a5f75-27f1-484d-bf96-7305a7aaf7dd">
+        <Location X="441" Y="74" />
+        <Size width="120" height="58" />
+      </Class>
+    </Diagram>
+  </Namespace>
+</Component>

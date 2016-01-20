@@ -1,0 +1,13 @@
+<Solution>
+  <SourceControl>
+  </SourceControl>
+  <ItemGroup>
+    <Item id="56f9c79c-0529-4515-8254-dd6ec52a8c44" include="HBHTianRiShengBE\HBHTianRiShengBE.ubfmlproj" />
+    <Item id="0becfd39-e22f-4ba0-bb01-d9419ccf1c62" include="HBHTianRiShengUI\HBHTianRiShengUI.ubfuiproj" />
+    <Item id="8f41c25b-9f75-4b38-983c-bcc97193da56" include="HBHTianRiShengSV\HBHTianRiShengSV.ubfserproj" />
+    <Item id="270c9ee6-e0cf-45be-b43f-e46fa1bfcae7" include="HBHTianRiShengUIList\HBHTianRiShengUIList.ubfuiproj" />
+    <Item id="f8d1779a-9aac-4501-a5f5-dd08f2d6c86d" include="HBHJianLiYuanListBP\HBHJianLiYuanListBP.ubfbpproj" />
+    <Item id="3ad49b4e-675e-4d82-9e2e-e59e01102b67" include="HBHTianRiShengQuery\HBHTianRiShengQuery.ubfqueryproj" />
+  </ItemGroup>
+  <ServiceGroupInfo id="075f789f-d5df-404e-be82-fd61bc8713dd" name="HBHTianRiSheng" displayName="HBHTianRiSheng" description="" help="" fullPath="D:\U9Cust\UFIDA\U9Proj\U9AppCode\U9.VOB.Apps.Cus\CusApp\HBHTianRiSheng\Model\HBHTianRiSheng\HBHTianRiSheng.ubfsln" applicationID="" />
+</Solution>

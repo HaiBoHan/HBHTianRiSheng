@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ReferenceComponent id="d4d63d11-cec4-45e1-b71f-ca9537887624" name="FollowServiceDocTypeRef" displayName="售后服务单据类型" description="" help="" refType="1" isMultiSelect="False" isDefault="False" isClientReturn="False" width="580" height="408" isBinding="False" displayNameResourceID="" URI="HBHTianRiShengUI.FollowServiceDocTypeRef" Classify="" ForMultOrg="False">
+  <References>
+    <Reference id="e29c4259-4412-4f73-a32c-638dc7ed5fe0" name="cRef" displayName="cRef" description="" help="售后服务单据类型" refEntityId="d843ae0d-18b6-4889-866c-32e106114576" refEntityName="U9.VOB.Cus.HBHTianRiSheng.FollowServiceDocType" refType="1" isMain="False">
+      <RefFields>
+        <RefField id="0756ed4d-1187-4bba-8004-bf4ba9af32a6" name="ID" displayName="ID" description="" help="单据类型基类.Key.ID" isKey="True" isEdit="False" isName="False" isVisible="False" isParent="False" sequence="0" length="80" refAttributeName="U9.VOB.Cus.HBHTianRiSheng.FollowServiceDocType:ID" displayNameIndexStr="2" />
+        <RefField id="b9d4e83f-289e-42d7-b25e-6a8e89b5c2be" name="Code" displayName="编码" description="" help="单据类型基类.Misc.编码" isKey="False" isEdit="True" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="U9.VOB.Cus.HBHTianRiSheng.FollowServiceDocType:Code" displayNameIndexStr="2" />
+        <RefField id="09c94691-6e37-4f22-99de-b503ec218ffb" name="Name" displayName="名称" description="" help="单据类型基类.Misc.名称" isKey="False" isEdit="False" isName="True" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="U9.VOB.Cus.HBHTianRiSheng.FollowServiceDocType:Name" displayNameIndexStr="2" />
+        <RefField id="13095f69-f7ae-462f-9589-abf2b4b93edc" name="ShortName" displayName="简称" description="" help="单据类型基类.Misc.简称" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="U9.VOB.Cus.HBHTianRiSheng.FollowServiceDocType:ShortName" displayNameIndexStr="2" />
+        <RefField id="8132df68-d236-43f1-8a3d-fd0df8312ef5" name="DocHeaderSequenceStyle" displayName="编号方式" description="" help="单据类型基类.编号.编号方式" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="U9.VOB.Cus.HBHTianRiSheng.FollowServiceDocType:DocHeaderSequenceStyle" displayNameIndexStr="2" />
+        <RefField id="a048f13c-6258-43f2-b902-172db4f6a87a" name="PrintStyle" displayName="打印时机" description="" help="单据类型基类.打印.打印时机" isKey="False" isEdit="False" isName="False" isVisible="False" isParent="False" sequence="0" length="80" refAttributeName="U9.VOB.Cus.HBHTianRiSheng.FollowServiceDocType:PrintStyle" displayNameIndexStr="2" />
+        <RefField id="036e3c0f-4d31-4671-99cd-1f4887e20c69" name="MaxAmountOfPrint" displayName="单据类型基类最大打印份数" description="" help="单据类型基类.打印.最大打印份数" isKey="False" isEdit="False" isName="False" isVisible="False" isParent="False" sequence="0" length="80" refAttributeName="U9.VOB.Cus.HBHTianRiSheng.FollowServiceDocType:MaxAmountOfPrint" displayNameIndexStr="" />
+        <RefField id="85de0b2a-2b17-40ad-9275-409bfc65de81" name="IsCopyPrinted" displayName="单据类型基类打印副本" description="" help="单据类型基类.打印.打印副本" isKey="False" isEdit="False" isName="False" isVisible="False" isParent="False" sequence="0" length="80" refAttributeName="U9.VOB.Cus.HBHTianRiSheng.FollowServiceDocType:IsCopyPrinted" displayNameIndexStr="" />
+        <RefField id="5604edd7-456b-4b88-98fc-6b5de71801c8" name="PrintTemplate_ID" displayName="打印模版ID" description="" help="打印模版.Key.ID" isKey="False" isEdit="False" isName="False" isVisible="False" isParent="False" sequence="0" length="80" refAttributeName="U9.VOB.Cus.HBHTianRiSheng.FollowServiceDocType:PrintTemplate.ID" displayNameIndexStr="" />
+        <RefField id="55856ab2-ca58-46bf-80e8-bb3ca1bda4a8" name="PrintTemplate_TemplateID" displayName="打印模版模版ID" description="" help="打印模版.Misc.模版ID" isKey="False" isEdit="False" isName="False" isVisible="False" isParent="False" sequence="0" length="80" refAttributeName="U9.VOB.Cus.HBHTianRiSheng.FollowServiceDocType:PrintTemplate.TemplateID" displayNameIndexStr="" />
+        <RefField id="19797951-ddc9-4e37-a3fa-b202893a0d7c" name="PrintMode" displayName="打印方式" description="" help="单据类型基类.打印.打印方式" isKey="False" isEdit="False" isName="False" isVisible="False" isParent="False" sequence="0" length="80" refAttributeName="U9.VOB.Cus.HBHTianRiSheng.FollowServiceDocType:PrintMode" displayNameIndexStr="2" />
+      </RefFields>
+      <OrderFields>
+        <OrderField id="bb9aad0b-a433-49a9-83c1-07b1e501b25a" name="Code" displayName="编码" description="" help="单据类型基类.Misc.编码" direction="0" sequence="0" refAttributeName="U9.VOB.Cus.HBHTianRiSheng.FollowServiceDocType:Code" />
+      </OrderFields>
+      <Filter />
+    </Reference>
+  </References>
+</ReferenceComponent>

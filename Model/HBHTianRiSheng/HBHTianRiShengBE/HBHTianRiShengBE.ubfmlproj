@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project id="33c351f8-85e9-40af-a005-45d195b3e1b6" name="HBHTianRiShengBE" displayName="HBHTianRiShengBE" description="" help="" type="BE" assemblyName="U9.VOB.Cus.HBHTianRiSheng.HBHTianRiShengBE" mapProject=".\..\HBHTianRiShengBE_DB\HBHTianRiShengBE_DB.ubfdbproj" resourceName="" projectVersion="Normal">
+  <Imports>
+    <Import id="f6aaf655-c79a-48fe-b52b-b5fbd803c707" name="BaseBE" displayName="BaseBE" description="" help="" componentid="2402fd32-810a-4130-811d-f1e6183a5a26" path="..\..\..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\UBF\UFIDA.U9.Base.BaseBE.MetaData.dll" type="BE" isRuntime="True" />
+    <Import id="cbc3f252-554d-4fb3-9bca-dea992900d9f" name="CBO_PubBE" displayName="CBO_PubBE" description="" help="" componentid="fe8dc9a2-365d-41c0-8f48-c02abb016910" path="..\..\..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\App\UFIDA.U9.CBO.PubBE.MetaData.dll" type="BE" isRuntime="True" />
+    <Import id="89274d2f-9a37-4f3c-b40d-7f26e442a781" name="CBO_SCMBE" displayName="CBO_SCMBE" description="" help="" componentid="b6f24ded-125b-492b-8292-c000f06ad453" path="..\..\..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\App\UFIDA.U9.CBO.SCMBE.MetaData.dll" type="BE" isRuntime="True" />
+    <Import id="1140d976-1633-4b47-90b7-969c2481e085" name="U9CommonBE" displayName="U9CommonBE" description="" help="" componentid="a952c547-7b63-4c00-a775-ee62609639eb" path="..\..\..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\HBHCommon\U9.VOB.HBHCommon.U9CommonBE.MetaData.dll" type="BE" isRuntime="True" />
+    <Import id="caf720a6-fb3a-4f0a-a917-557283f42834" name="SMBE" displayName="SMBE" description="" help="" componentid="c901c367-9f35-425c-812e-9a9966cb21a3" path="..\..\..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\App\UFIDA.U9.SM.SMBE.MetaData.dll" type="BE" isRuntime="True" />
+  </Imports>
+  <SourceControl />
+  <ItemGroup>
+    <Item id="1b42a7ff-e8b0-4e31-b39a-f0040e58d109" name="FollowService.ubfbe" displayName="HBHTianRiShengBE.ubfbe" description="" help="" include="FollowService.ubfbe" type="BE" />
+    <Item id="81693049-7483-48de-9532-aaaba32cc787" name="FollowServiceDocType.ubfbe" displayName="FollowServiceDocType.ubfbe" description="" help="" include="FollowServiceDocType.ubfbe" type="BE" />
+    <Item id="2c04cb64-4359-4688-a2c4-58e25f3d94f8" name="PubEnum.ubfbe" displayName="PubEnum.ubfbe" description="" help="" include="PubEnum.ubfbe" type="BE" />
+    <Item id="c09eff20-8815-4fce-b328-47ee5934a2b8" name="Feedback.ubfbe" displayName="Feedback.ubfbe" description="" help="" include="Feedback.ubfbe" type="BE" />
+    <Item id="ae41de24-f31d-4c90-a7c6-2c7eccfcb166" name="FeedbackDocType.ubfbe" displayName="FeedbackDocType.ubfbe" description="" help="" include="FeedbackDocType.ubfbe" type="BE" />
+  </ItemGroup>
+</Project>

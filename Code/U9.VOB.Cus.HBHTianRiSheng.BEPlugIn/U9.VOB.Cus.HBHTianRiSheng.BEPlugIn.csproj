@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0661E9C7-0630-4709-A436-FD5593B22E84}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>U9.VOB.Cus.HBHTianRiSheng.BEPlugIn</RootNamespace>
+    <AssemblyName>U9.VOB.Cus.HBHTianRiSheng.BEPlugIn</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="HBH.DoNet.DevPlatform.EntityMapping">
+      <HintPath>..\..\..\..\..\..\U9Product\U9.VOB.Product.Component\HBHCommon\HBH.DoNet.DevPlatform.EntityMapping.dll</HintPath>
+    </Reference>
+    <Reference Include="HBH.DoNet.DevPlatform.U9Mapping">
+      <HintPath>..\..\..\..\..\..\U9Product\U9.VOB.Product.Component\HBHCommon\HBH.DoNet.DevPlatform.U9Mapping.dll</HintPath>
+    </Reference>
+    <Reference Include="U9.VOB.Cus.HBHTianRiSheng.HBHHelper">
+      <HintPath>..\..\..\..\..\..\UBFV30\U9.VOB.Product.Component\Unconfiged\Component\U9.VOB.Cus.HBHTianRiSheng.HBHHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="U9.VOB.Cus.HBHTianRiSheng.HBHTianRiShengBE">
+      <HintPath>..\..\..\..\..\..\UBFV30\U9.VOB.Product.Component\Unconfiged\Component\U9.VOB.Cus.HBHTianRiSheng.HBHTianRiShengBE.dll</HintPath>
+    </Reference>
+    <Reference Include="U9.VOB.Cus.HBHTianRiSheng.HBHTianRiShengBE.Deploy">
+      <HintPath>..\..\..\..\..\..\UBFV30\U9.VOB.Product.Component\Unconfiged\Component\U9.VOB.Cus.HBHTianRiSheng.HBHTianRiShengBE.Deploy.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.Base.BaseBP.Agent">
+      <HintPath>..\..\..\..\..\..\U9Product\U9.VOB.Product.Component\UBF\UFIDA.U9.Base.BaseBP.Agent.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.Base.BaseBP.Deploy">
+      <HintPath>..\..\..\..\..\..\U9Product\U9.VOB.Product.Component\UBF\UFIDA.U9.Base.BaseBP.Deploy.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.CBO.PubBP.Agent">
+      <HintPath>..\..\..\..\..\..\U9Product\U9.VOB.Product.Component\App\UFIDA.U9.CBO.PubBP.Agent.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.CBO.PubBP.Deploy">
+      <HintPath>..\..\..\..\..\..\U9Product\U9.VOB.Product.Component\App\UFIDA.U9.CBO.PubBP.Deploy.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.CBO.PubSV.Agent">
+      <HintPath>..\..\..\..\..\..\U9Product\U9.VOB.Product.Component\App\UFIDA.U9.CBO.PubSV.Agent.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.CBO.PubSV.Deploy">
+      <HintPath>..\..\..\..\..\..\U9Product\U9.VOB.Product.Component\App\UFIDA.U9.CBO.PubSV.Deploy.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.InvDoc.InvDocBE">
+      <HintPath>..\..\..\..\..\..\U9Product\U9.VOB.Product.Component\App\UFIDA.U9.InvDoc.InvDocBE.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.ISV.TransferInISV.Agent">
+      <HintPath>..\..\..\..\..\..\U9Product\U9.VOB.Product.Component\App\UFIDA.U9.ISV.TransferInISV.Agent.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.ISV.TransferInISV.Deploy">
+      <HintPath>..\..\..\..\..\..\U9Product\U9.VOB.Product.Component\App\UFIDA.U9.ISV.TransferInISV.Deploy.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.PM.PMIssueBE">
+      <HintPath>..\..\..\..\..\..\U9Product\U9.VOB.Product.Component\App\UFIDA.U9.PM.PMIssueBE.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.PR.PRBE">
+      <HintPath>..\..\..\..\..\..\U9Product\U9.VOB.Product.Component\App\UFIDA.U9.PR.PRBE.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.PR.PRBE.Deploy">
+      <HintPath>..\..\..\..\..\..\U9Product\U9.VOB.Product.Component\App\UFIDA.U9.PR.PRBE.Deploy.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.SM.SMBP">
+      <HintPath>..\..\..\..\..\..\U9Product\U9.VOB.Product.Component\App\UFIDA.U9.SM.SMBP.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.UBF.MD.Entity">
+      <HintPath>..\..\..\..\..\..\U9Product\U9.VOB.Product.Component\UBF\UFIDA.UBF.MD.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="UFSoft.UBF.Util.DataAccess">
+      <HintPath>..\..\..\..\..\..\U9Product\U9.VOB.Product.UBF\UBFStudio\Runtime\UFSoft.UBF.Util.DataAccess.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ship_AfterUpdated.cs" />
+    <Compile Include="SO_AfterValidate.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="U9.VOB.Cus.HBHTianRiSheng.BEPlugIn.sub.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="HBH.BEPlugIn.target" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

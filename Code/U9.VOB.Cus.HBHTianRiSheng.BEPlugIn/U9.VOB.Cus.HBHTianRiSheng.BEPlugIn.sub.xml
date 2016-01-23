@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pub-sub>
+
+  <!--  销售出货,生成 售后任务单 -->
+  <subcription event="UFIDA.U9.SM.Ship.Ship.AfterUpdated">
+    <subscriber type="U9.VOB.Cus.HBHTianRiSheng.BEPlugIn.Ship_AfterUpdated,U9.VOB.Cus.HBHTianRiSheng.BEPlugIn.dll"/>
+  </subcription>
+
+  <!--  销售订单,校验 整单原始金额 与 折扣是否匹配 -->
+  <subcription event="UFIDA.U9.SM.SO.SO.AfterValidate">
+    <subscriber type="U9.VOB.Cus.HBHTianRiSheng.BEPlugIn.SO_AfterValidate,U9.VOB.Cus.HBHTianRiSheng.BEPlugIn.dll"/>
+  </subcription>
+
+
+</pub-sub>

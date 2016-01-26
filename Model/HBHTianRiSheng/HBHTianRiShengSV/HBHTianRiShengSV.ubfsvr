@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Component id="24285723-18fe-48c5-ac2f-faf0e630ff68" name="HBHTianRiShengSV" displayName="HBHTianRiShengSV" description="" help="" type="SV" assemblyName="U9.VOB.Cus.HBHTianRiSheng.HBHTianRiShengSV">
   <Namespace id="2a353548-ff01-487b-87bb-98ae0b8cd6eb" name="U9.VOB.Cus.HBHTianRiSheng" displayName="U9.VOB.Cus.HBHTianRiSheng" description="U9.VOB.Cus.HBHTianRiSheng" help="">
-    <Operation id="b245b3c5-4b44-458c-aa13-c6bdeee2a8cf" name="Follow2FeedbackSV" displayName="任务单转回报单服务" description="任务单转回报单服务" help="" mD_ParentClass_ID="" isFactEntity="False" returnTypeID="378d45b4-375d-4b5d-8748-abc9575c26b3" isService="True" isDefault="False" isEntityKey="False" transactionType="0" isAuthorization="True" isISV="False">
+    <Operation id="b245b3c5-4b44-458c-aa13-c6bdeee2a8cf" name="Follow2FeedbackSV" displayName="任务单转回报单服务" description="任务单转回报单服务" help="" mD_ParentClass_ID="" isFactEntity="False" returnTypeID="5aec0814-d6f3-4f0f-a095-3f9d1299af1b" isService="True" isDefault="False" isReturnCollection="True" isEntityKey="True" transactionType="0" isAuthorization="True" isISV="False">
       <Groups>
         <Group id="9a37f5a8-7fd2-4015-90bd-903955399549" name="Misc" displayName="Misc" description="" help="" />
       </Groups>

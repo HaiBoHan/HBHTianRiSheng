@@ -24,6 +24,7 @@ using UFSoft.UBF.UI.ActionProcess;
 using UFSoft.UBF.UI.WebControls.ClientCallBack;
 using System.Collections.Generic;
 using U9.VOB.Cus.HBHTianRiSheng.Proxy;
+using System.Collections.Specialized;
 
 
 
@@ -112,6 +113,7 @@ namespace FollowServiceBListUIModel
             //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
             //BtnToFeedback_Click_DefaultImpl(sender, e);
 
+            this.CurrentState[FeedbackBListUIModel.FeedbackBListUIFormWebPart.Const_Feedbacks] = null;
 
             long[] selIDs = this.Model.FollowService.GetSelectedRecordIDs();
 
@@ -130,8 +132,27 @@ namespace FollowServiceBListUIModel
 
                 proxy.FollowIDs = lstSelected;
 
-                proxy.Do();
+                List<long> lstFeedback = proxy.Do();
 
+                if (lstFeedback != null
+                    && lstFeedback.Count > 0
+                    )
+                {
+                    this.CurrentState[FeedbackBListUIModel.FeedbackBListUIFormWebPart.Const_Feedbacks] = lstFeedback;
+                    
+                    NameValueCollection nv = new NameValueCollection();
+                    //nv.Add("SrcDoc", focused.ID.ToString());
+                    //nv.Add("HBHListType", "PullFollowService");
+                    this.ShowModalDialog("910f434c-9933-4910-9f03-d4502cae2285", "售后回报单结果", "992", "504", string.Empty
+                            , nv);
+
+
+                    // 如果是弹出式的列表，则关闭弹出窗口
+                    if (this.PartShowType == UFSoft.UBF.UI.IView.PartShowType.TitleLink)
+                    {
+                        this.CloseDialog(false);
+                    }
+                }
             }
         }
 
@@ -189,7 +210,8 @@ namespace FollowServiceBListUIModel
 
 
             U9.VOB.HBHCommon.HBHCommonUI.HBHUIHelper.UIList_SetDocNoTitleClick(this, this.DataGrid1
-                , "ID"
+                //, "ID"
+                , "MainID"
                 , "DocNo"
                 , "096e1e2a-8249-4512-a1dd-51128a0865c1"
                 , "售后服务单"

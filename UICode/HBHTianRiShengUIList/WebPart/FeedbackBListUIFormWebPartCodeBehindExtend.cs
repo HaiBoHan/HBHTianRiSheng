@@ -33,6 +33,8 @@ namespace FeedbackBListUIModel
 {
     public partial class FeedbackBListUIFormWebPart
     {
+        public const string Const_Feedbacks = "Const_Feedbacks";
+
         #region Custome eventBind
 	
 		 
@@ -158,7 +160,8 @@ namespace FeedbackBListUIModel
 
 
             U9.VOB.HBHCommon.HBHCommonUI.HBHUIHelper.UIList_SetDocNoTitleClick(this, this.DataGrid1
-                , "ID"
+                //, "ID"
+                , "MainID"
                 , "DocNo"
                 , "d5d270d8-ba8a-4a9d-98c3-c3e7cac03135"
                 , "售后服务单"

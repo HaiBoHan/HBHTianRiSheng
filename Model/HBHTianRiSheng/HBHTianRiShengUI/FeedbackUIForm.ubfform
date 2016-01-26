@@ -336,12 +336,12 @@
         <Events />
         <RelationControls />
       </TextBox>
-      <Label ID="8083bedf-c6e4-4e35-9b81-871a8b9bcea7" Enabled="True" GridHeight="1" GridWidth="1" GridX="4" GridY="1" Height="20" IsNull="True" IsSequence="False" Name="lblExecuteMan94" RelationControl="ExecuteMan94" TabIndex="14" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="110" X="325" Y="25">
+      <Label ID="8083bedf-c6e4-4e35-9b81-871a8b9bcea7" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblExecuteMan94" RelationControl="ExecuteMan94" TabIndex="14" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="False" Width="110" X="325" Y="25">
         <Events />
         <RelationControls />
         <Events />
       </Label>
-      <TextBox ID="f9247cac-b856-4143-9900-63d15f3724c9" DisplayFormat="50" Enabled="True" GridHeight="1" GridWidth="1" GridX="6" GridY="1" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="ExecuteMan94" RelationControl="lblExecuteMan94" TabIndex="15" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="ExecuteMan" UIViewID="Feedback" Visible="True" Width="180" X="440" Y="25">
+      <TextBox ID="f9247cac-b856-4143-9900-63d15f3724c9" DisplayFormat="50" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="ExecuteMan94" RelationControl="lblExecuteMan94" TabIndex="15" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="ExecuteMan" UIViewID="Feedback" Visible="False" Width="180" X="440" Y="25">
         <Events />
         <RelationControls />
       </TextBox>
@@ -429,7 +429,7 @@
         <RelationControls />
         <Events />
       </Label>
-      <TextBox ID="2f9cce56-9858-45c0-aaaa-b549edbc2e52" DisplayFormat="500" Enabled="True" GridHeight="2" GridWidth="1" GridX="10" GridY="4" Height="45" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="True" Name="Memo193" RelationControl="lblMemo193" TabIndex="33" TabStop="True" TextAlign="Left" TextBoxMode="MultiLine" TitleAlign="Left" TitleLocation="Left" UIFieldID="Memo" UIViewID="Feedback" Visible="True" Width="160" X="755" Y="100">
+      <TextBox ID="2f9cce56-9858-45c0-aaaa-b549edbc2e52" DisplayFormat="500" Enabled="True" GridHeight="1" GridWidth="1" GridX="10" GridY="5" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="True" Name="Memo193" RelationControl="lblMemo193" TabIndex="33" TabStop="True" TextAlign="Left" TextBoxMode="MultiLine" TitleAlign="Left" TitleLocation="Left" UIFieldID="Memo" UIViewID="Feedback" Visible="True" Width="160" X="755" Y="125">
         <Events />
         <RelationControls />
       </TextBox>
@@ -550,6 +550,34 @@
         <Events />
         <RelationControls />
       </FlexFieldPicker>
+      <Label ID="0f62b862-df2c-4701-b6e8-d3bba03ba90d" Enabled="True" GridHeight="1" GridWidth="1" GridX="4" GridY="1" Height="20" IsNull="True" IsSequence="False" Name="lblPageItem_Operators56" RelationControl="PageItem_Operators56" TabIndex="49" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="110" X="325" Y="25">
+        <Events />
+        <RelationControls />
+        <Events />
+      </Label>
+      <Reference ID="45102beb-8e65-4c7a-9590-cd2cecedb399" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="DeliveryMan_Code" CodeFieldUIViewID="Feedback" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="6" GridY="1" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="PageItem_Operators56" NameAttributeName="Name" NameFieldUIFieldID="DeliveryMan_Name" NameFieldUIViewID="Feedback" PkeyField="ID" RefType="e299db39-afea-41b7-a3a3-ebcae9e5c52f" RelationControl="lblPageItem_Operators56" TabIndex="50" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="PageItem_Operators" UIViewID="Feedback" Visible="True" Width="180" WindowHeight="408" WindowWidth="580" X="440" Y="25">
+        <Events />
+        <RelationControls />
+        <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
+        <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" TargetControlType="" TargetID="" TargetProperty="" />
+        <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" TargetControlType="" TargetID="" TargetProperty="" />
+        <ReferenceRelation Action="Clear" ColumnDisplayName="部门" ColumnID="Dept_Name" TargetControlType="" TargetID="" TargetProperty="" />
+        <ReferenceRelation Action="Clear" ColumnDisplayName="业务员描述" ColumnID="Description" TargetControlType="TextBoxModel" TargetID="DeliveryMan95" TargetProperty="Value" />
+        <RefNameFields>
+          <RefNameField UIFieldID="Name" />
+        </RefNameFields>
+        <UIFilterBar Name="ReferenceFilter" />
+        <Events />
+      </Reference>
+      <Label ID="a57e4fec-f19e-4cbc-bc21-119e963938d0" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblDeliveryMan95" RelationControl="DeliveryMan95" TabIndex="51" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="False" Width="110" X="640" Y="100">
+        <Events />
+        <RelationControls />
+        <Events />
+      </Label>
+      <TextBox ID="2f06fe3c-73d1-474f-ab66-070a735a82c5" DisplayFormat="500" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="DeliveryMan95" RelationControl="lblDeliveryMan95" TabIndex="52" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="DeliveryMan" UIViewID="Feedback" Visible="False" Width="160" X="755" Y="100">
+        <Events />
+        <RelationControls />
+      </TextBox>
     </Card>
     <TabControl ID="aad27ddd-6d74-4af7-8348-88117aee4cc1" GridHeight="1" GridWidth="1" GridX="0" GridY="2" Height="195" Name="TabControl0" TabIndex="3" TabStop="True" Width="970" X="10" Y="205">
       <TabPage ID="293f1266-503a-4b7d-ae5c-91b7d742ddc1" ChildLabelWidth="60" ChildRefWidth="20" DisplayName="收费行" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridBottomMargin="5" GridColumnCount="1" GridColumnSpace="0" GridLeftMargin="5" GridRightMargin="5" GridRowCount="1" GridRowSpace="5" GridTopMargin="5" Height="162" Name="TabPageFee" TabStop="False" Width="962" X="0" Y="0">

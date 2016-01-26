@@ -40,6 +40,7 @@
 			//and if you Implement replace this Exception Code...
             //throw new NotImplementedException();
 
+            List<Feedback.EntityKey> lstResult = new List<Feedback.EntityKey>();
             if (bpObj.FollowIDs != null
                 && bpObj.FollowIDs.Count > 0
                 )
@@ -92,6 +93,7 @@
                                     feedback.Memo = entity.Memo;
 
 
+                                    lstResult.Add(feedback.Key);
                                 }
                                 else
                                 {
@@ -110,7 +112,7 @@
             }
 
 
-            return null;
+            return lstResult;
 		}		
 	}
 

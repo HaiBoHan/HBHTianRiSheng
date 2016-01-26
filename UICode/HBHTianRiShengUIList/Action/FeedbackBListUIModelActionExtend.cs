@@ -19,6 +19,7 @@ using UFSoft.UBF.UI.ControlModel;
 using UFIDA.UBF.Query.CommonService.QueryStrategy;
 using UFIDA.UBF.Query.CaseModel;
 using UFIDA.U9.UI.PDHelper;
+using HBH.DoNet.DevPlatform.EntityMapping;
 
 
 
@@ -114,6 +115,55 @@ this.OnLoadData_DefaultImpl(sender,e);
         
         private string CustomFilterOpath_Extend(string filterOpath)
         {
+            List<long> lstFeedbacks = this.CurrentState[FeedbackBListUIModel.FeedbackBListUIFormWebPart.Const_Feedbacks] as List<long>;
+
+            if (lstFeedbacks != null
+                && lstFeedbacks.Count > 0
+                )
+            {
+                string addOpath = string.Format("ID in ({0})"
+                    //, PubClass.GetOpathFromList(lstFeedbacks)
+                    , lstFeedbacks.GetOpathFromList()
+                    );
+
+                if (!PubClass.IsNull(filterOpath)
+                    && !filterOpath.Trim().ToLower().StartsWith("order by")
+                    )
+                {
+                    filterOpath = string.Format("({0}) and {1}"
+                        , addOpath
+                        , filterOpath
+                        );
+                }
+                else
+                {
+                    filterOpath = string.Format("{0} {1}"
+                        , addOpath
+                        , filterOpath
+                        );
+                }
+            }
+
+            //if (!PubClass.IsNull(addOpath))
+            //{
+            //    if (!PubClass.IsNull(filterOpath)
+            //        && !filterOpath.Trim().ToLower().StartsWith("order by")
+            //        )
+            //    {
+            //        filterOpath = string.Format("({0}) and {1}"
+            //            , addOpath
+            //            , filterOpath
+            //            );
+            //    }
+            //    else
+            //    {
+            //        filterOpath = string.Format("{0} {1}"
+            //            , addOpath
+            //            , filterOpath
+            //            );
+            //    }
+            //}
+
             return filterOpath;
         }
         

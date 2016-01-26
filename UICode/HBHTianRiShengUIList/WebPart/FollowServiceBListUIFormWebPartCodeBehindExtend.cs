@@ -148,7 +148,9 @@ namespace FollowServiceBListUIModel
 
 
                     // 如果是弹出式的列表，则关闭弹出窗口
-                    if (this.PartShowType == UFSoft.UBF.UI.IView.PartShowType.TitleLink)
+                    if (this.PartShowType == UFSoft.UBF.UI.IView.PartShowType.TitleLink
+                        || this.PartShowType == UFSoft.UBF.UI.IView.PartShowType.ShowModal
+                        )
                     {
                         this.CloseDialog(false);
                     }

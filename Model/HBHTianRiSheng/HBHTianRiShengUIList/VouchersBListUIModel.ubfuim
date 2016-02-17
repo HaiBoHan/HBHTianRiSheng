@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UIModelComponent id="3d39b2bf-e38d-4419-b5cc-99d4407ca9c6" name="VouchersBListUIModel" displayName="VouchersBListUIModel" description="" help="">
+  <UIModels>
+    <UIModel id="3c203461-07d6-4d3d-a944-f4302a233d0e" name="VouchersBListUIModel" displayName="VouchersBListUIModel" description="" help="" Namespace="VouchersBListUIModel" QueryInfo="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" UseType="ForQuery">
+      <UIModelInfos>
+        <UIModelInfo id="633a9871-8674-4c58-9d4b-bb02324e16ae" name="VouchersBListUIModel" displayName="VouchersBListUIModel" description="" help="" FullName="VouchersBListUIModel" DataTypeID="" MappingID="" MappingName="" IsMap="False">
+          <UIModelInfo id="8779f11f-4d27-49b6-820c-c76d7b39a560" name="QueryView" displayName="QueryView" description="" help="" FullName="VouchersBListUIModel.QueryView" DataTypeID="4e384b67-536c-4038-b62a-59112f70892d" MappingID="" MappingName="" IsMap="False">
+            <UIModelInfo id="9f93da7e-0e8e-4350-9b1e-215179a5a631" name="ID" displayName="ID" description="" help="" FullName="VouchersBListUIModel.QueryView.ID" DataTypeID="ba391065-6c27-4c82-acc8-b52b1c93a910" MappingID="" MappingName="" IsMap="False" />
+          </UIModelInfo>
+          <UIModelInfo id="dcdd7b3e-8a9a-4b65-9bf1-52dd6a3ed6f0" name="Vouchers" displayName="Vouchers" description="" help="" FullName="VouchersBListUIModel.Vouchers" DataTypeID="61f2eca4-8d99-460a-83a0-93082db0a9da" MappingID="" MappingName="U9::VOB::Cus::HBHTianRiSheng::Vouchers" IsMap="True">
+            <UIModelInfo id="c552ac58-534c-4d48-b0e6-d2e38619ac96" name="ID" displayName="ID" description="" help="" FullName="VouchersBListUIModel.Vouchers.ID" DataTypeID="ba391065-6c27-4c82-acc8-b52b1c93a910" MappingID="14e25cb1-20e1-4eb5-b815-83214d3d6564" MappingName="ID" IsMap="True" />
+          </UIModelInfo>
+        </UIModelInfo>
+      </UIModelInfos>
+      <Views>
+        <UIViewInfo id="4693cfb6-74df-4557-9ed8-0ab6df09f80e" name="Vouchers" displayName="抵用劵" description="抵用劵" RootFullName="VouchersBListUIModel.Vouchers">
+          <Groups>
+            <Group id="75feba2e-7740-4937-8cab-dbe2b04c7e38" name="Key" displayName="Key" description="" help="" />
+            <Group id="a732f289-0e8d-42c2-998c-605d882b6373" name="Misc" displayName="Misc" description="" help="" />
+          </Groups>
+          <Fields>
+            <UIFieldInfo id="f9de2df4-fc16-4e45-9124-9e9993b4a8f6" name="ID" displayName="ID" description="" DefaultValue="" GroupName="Key" DisplayRule="19.0" IsNullable="False" IsReadOnly="False" IsEnableReference="False" IsLink="False" ControlID="68095607-50d1-4296-a35a-623b21d654f1" DataTypeID="ba391065-6c27-4c82-acc8-b52b1c93a910" EnumTypeID="" BindingFullName="VouchersBListUIModel.Vouchers.ID" Expression="" Sequence="0" Length="8" IsBinding="False" IsGlobalized="False" CustomIsLoadable="False" CustomAttrName="" />
+          </Fields>
+        </UIViewInfo>
+      </Views>
+      <ActionGroups>
+        <Group id="46436edd-d931-473b-84f5-11139f84ca4c" name="Case" displayName="Case" description="" help="" />
+      </ActionGroups>
+      <Actions>
+        <UIActionInfo id="990d83de-bcb1-49e5-9243-5ac44732b853" name="OnLookCase" displayName="查询" description="" help="" CodeTemplate=".\UITpls\UICommonAction.tpl" TemplateParameter="QryClick" GroupName="Case" DictionaryItemKey="" IsSyncDictionary="True" />
+        <UIActionInfo id="9e9c2adf-73a7-4d34-90f4-eac80b9647e6" name="OnCaseChanged" displayName="改变方案" description="" help="" CodeTemplate="" TemplateParameter="" GroupName="Case" DictionaryItemKey="" IsSyncDictionary="True" />
+        <UIActionInfo id="1d05e6ea-efe0-4c79-8e5b-3c564715d852" name="OnOutPut" displayName="输出" description="" help="" CodeTemplate=".\UITpls\UICommonAction.tpl" TemplateParameter="OnOutPut" GroupName="Case" DictionaryItemKey="" IsSyncDictionary="True" />
+        <UIActionInfo id="6530b527-2b15-4600-bc97-c6fbd8ff9da0" name="OnGridRowDbClick" displayName="双击网格行" description="" help="" CodeTemplate="" TemplateParameter="" GroupName="Case" DictionaryItemKey="" IsSyncDictionary="True" />
+        <UIActionInfo id="41981a53-4279-4146-b97c-2acb2273a60b" name="OnNew" displayName="新增" description="" help="" CodeTemplate="" TemplateParameter="" GroupName="Case" DictionaryItemKey="" IsSyncDictionary="True" />
+        <UIActionInfo id="e1c0b17b-25af-4ce1-8043-cdb23d51fa2c" name="OnPrint" displayName="打印" description="" help="" CodeTemplate=".\UITpls\UICommonAction.tpl" TemplateParameter="OnPrint" GroupName="Case" DictionaryItemKey="" IsSyncDictionary="True" />
+        <UIActionInfo id="8c558e31-bbb0-4589-8333-2d513f17f312" name="OnDelete" displayName="删除" description="" help="" CodeTemplate=".\UITpls\UICommonAction.tpl" TemplateParameter="ListDeleteClick" GroupName="Case" DictionaryItemKey="" IsSyncDictionary="True" />
+      </Actions>
+    </UIModel>
+  </UIModels>
+</UIModelComponent>

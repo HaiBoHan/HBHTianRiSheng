@@ -13,5 +13,7 @@
     <Item id="87e458f0-47cd-44de-885d-2c2e54c1d105" name="FeedbackBListUIForm.ubfform" displayName="FeedbackBListUIForm.ubfform" description="" help="" include="FeedbackBListUIForm.ubfform" type="" />
     <Item id="4580c00a-b9ae-46cc-a560-02a4772af84c" name="FeedbackDocTypeBListUIModel.ubfuim" displayName="FeedbackDocTypeBListUIModel.ubfuim" description="" help="" include="FeedbackDocTypeBListUIModel.ubfuim" type="" />
     <Item id="30dec9f3-fc26-46d8-9b30-d7941b7df868" name="FeedbackDocTypeBListUIForm.ubfform" displayName="FeedbackDocTypeBListUIForm.ubfform" description="" help="" include="FeedbackDocTypeBListUIForm.ubfform" type="" />
+    <Item id="44613961-b23f-43b1-97b9-db8fd8e01979" name="VouchersBListUIModel.ubfuim" displayName="VouchersBListUIModel.ubfuim" description="" help="" include="VouchersBListUIModel.ubfuim" type="" />
+    <Item id="1895f754-c6dc-4fde-88e5-a796be6bf1bc" name="VouchersBListUIForm.ubfform" displayName="VouchersBListUIForm.ubfform" description="" help="" include="VouchersBListUIForm.ubfform" type="" />
   </ItemGroup>
 </Project>

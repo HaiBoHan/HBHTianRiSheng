@@ -10,5 +10,6 @@
     <Item id="fb4dbcae-f2e2-4d2e-a3bd-0071d5a7310d" name="FollowServiceDocTypeQuery.ubfquery" displayName="FollowServiceDocTypeQuery.ubfquery" description="" help="" include="FollowServiceDocTypeQuery.ubfquery" type="" />
     <Item id="687ee20c-b181-40b8-a839-a437aa2ae96f" name="FeedbackQuery.ubfquery" displayName="FeedbackQuery.ubfquery" description="" help="" include="FeedbackQuery.ubfquery" type="" />
     <Item id="a92e1e8c-51af-4c18-950c-95957b3a6425" name="FeedbackDocTypeQuery.ubfquery" displayName="FeedbackDocTypeQuery.ubfquery" description="" help="" include="FeedbackDocTypeQuery.ubfquery" type="" />
+    <Item id="9c0b3d7e-5f32-4abb-8cb4-1fedc5428029" name="Vouchers.ubfquery" displayName="Vouchers.ubfquery" description="" help="" include="Vouchers.ubfquery" type="" />
   </ItemGroup>
 </Project>

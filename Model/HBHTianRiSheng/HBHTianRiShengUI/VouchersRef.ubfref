@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ReferenceComponent id="5c4c763c-9c31-4c1c-a897-ff74385158b3" name="VouchersRef" displayName="抵用劵" description="" help="" refType="1" isMultiSelect="False" isDefault="False" isClientReturn="False" width="580" height="408" isBinding="False" displayNameResourceID="" URI="U9.VOB.Cus.HBHTianRiSheng.HBHTianRiShengUI.VouchersRef" Classify="" ForMultOrg="False">
+  <References>
+    <Reference id="93781ce7-9d63-47a0-9cd3-8559e85e6fca" name="cRef" displayName="cRef" description="" help="抵用劵" refEntityId="61f2eca4-8d99-460a-83a0-93082db0a9da" refEntityName="U9.VOB.Cus.HBHTianRiSheng.Vouchers" refType="1" isMain="False">
+      <RefFields>
+        <RefField id="3feda874-6c8e-478d-907c-b8a43a9cacc7" name="ID" displayName="ID" description="" help="抵用劵.Key.ID" isKey="True" isEdit="False" isName="False" isVisible="False" isParent="False" sequence="0" length="80" refAttributeName="U9.VOB.Cus.HBHTianRiSheng.Vouchers:ID" displayNameIndexStr="2" />
+        <RefField id="2fa40a0a-dcaa-40a0-a200-b3f0a81d39c1" name="DocNo" displayName="抵用劵单号" description="" help="抵用劵.Misc.单号" isKey="False" isEdit="True" isName="True" isVisible="True" isParent="False" sequence="0" length="100" refAttributeName="U9.VOB.Cus.HBHTianRiSheng.Vouchers:DocNo" displayNameIndexStr="" />
+        <RefField id="e41923fe-41da-4f4e-bffa-a3a08cf8f5d5" name="VouchersType" displayName="抵用劵类型" description="" help="抵用劵.Misc.抵用劵类型" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="90" refAttributeName="U9.VOB.Cus.HBHTianRiSheng.Vouchers:VouchersType" displayNameIndexStr="2" />
+        <RefField id="cc7cb102-f1df-4c60-aa9e-64fd02a0d06a" name="Status" displayName="状态" description="" help="抵用劵.Misc.状态" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="U9.VOB.Cus.HBHTianRiSheng.Vouchers:Status" displayNameIndexStr="2" />
+        <RefField id="26f959ff-91ff-4b80-95f5-02c0eace73a9" name="Memo" displayName="抵用劵备注" description="" help="抵用劵.Misc.备注" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="100" refAttributeName="U9.VOB.Cus.HBHTianRiSheng.Vouchers:Memo" displayNameIndexStr="" />
+      </RefFields>
+      <OrderFields>
+        <OrderField id="5a0de427-322a-4cdb-b803-237f6d985575" name="DocNo" displayName="单号" description="" help="抵用劵.Misc.单号" direction="1" sequence="0" refAttributeName="U9.VOB.Cus.HBHTianRiSheng.Vouchers:DocNo" />
+      </OrderFields>
+      <Filter />
+    </Reference>
+  </References>
+</ReferenceComponent>

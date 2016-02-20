@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project id="881766a2-d79e-48c8-a348-6804da71c91f" name="HBHTianRiShengUIList" displayName="HBHTianRiShengUIList" description="" help="" type="UI" assemblyName="U9.VOB.Cus.HBHTianRiSheng.HBHTianRiShengUIList" mapProject="" resourceName="" projectVersion="Normal">
+  <Imports>
+    <Import id="85f6b794-fc1e-4fb6-8bdb-566522ddbe9d" name="HBHTianRiShengBE" displayName="HBHTianRiShengBE" description="" help="" componentid="33c351f8-85e9-40af-a005-45d195b3e1b6" path="..\..\..\U9.VOB.Product.Metadata\Unconfiged\Metadata\U9.VOB.Cus.HBHTianRiSheng.HBHTianRiShengBE.MetaData.dll" type="BE" isRuntime="True" />
+    <Import id="9b56b4ba-653a-49ea-8f96-ab4950fed241" name="CBOReferenceUI" displayName="CBOReferenceUI" description="" help="" componentid="2ac4288d-af64-42a9-bbd2-285464e8f707" path="..\..\..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\UI\UFIDA.U9.CBO.Ref.CBOReferenceUI.MetaData.dll" type="UI" isRuntime="True" />
+    <Import id="cbc515ca-bb24-4995-9460-7740d5d29004" name="BaseReferenceUI" displayName="BaseReferenceUI" description="" help="" componentid="870381ee-cd66-4b78-8b3b-6c60e5ec43e5" path="..\..\..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\UI\UFIDA.U9.CBO.Ref.BaseReferenceUI.MetaData.dll" type="UI" isRuntime="True" />
+    <Import id="d378be48-a7bc-4e1a-9895-ddcbaa8993ee" name="SDPubRef" displayName="SDPubRef" description="" help="" componentid="a4e651f8-eeba-4fd9-87c3-5b65e89ae58a" path="..\..\..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\UI\UFIDA.U9.SCM.Ref.SDPubRef.MetaData.dll" type="UI" isRuntime="True" />
+  </Imports>
+  <SourceControl />
+  <ItemGroup>
+    <Item id="49f197b3-b869-43d6-9bb4-7e3a4a230747" name="FollowServiceBListUIModel.ubfuim" displayName="FollowServiceBListUIModel.ubfuim" description="" help="" include="FollowServiceBListUIModel.ubfuim" type="" />
+    <Item id="bdd7f676-4850-4672-8d8f-e44de019b305" name="FollowServiceBListUIForm.ubfform" displayName="FollowServiceBListUIForm.ubfform" description="" help="" include="FollowServiceBListUIForm.ubfform" type="" />
+    <Item id="79516647-3f90-4ecf-bfa4-2f4706e61d96" name="FollowServiceDocTypeBListUIModel.ubfuim" displayName="FollowServiceDocTypeBListUIModel.ubfuim" description="" help="" include="FollowServiceDocTypeBListUIModel.ubfuim" type="" />
+    <Item id="d23adb83-4287-4719-8937-d922207070d2" name="FollowServiceDocTypeBListUIForm.ubfform" displayName="FollowServiceDocTypeBListUIForm.ubfform" description="" help="" include="FollowServiceDocTypeBListUIForm.ubfform" type="" />
+    <Item id="9bb90267-7de0-42f7-9de9-9e87f3d2cf5f" name="FeedbackBListUIModel.ubfuim" displayName="FeedbackBListUIModel.ubfuim" description="" help="" include="FeedbackBListUIModel.ubfuim" type="" />
+    <Item id="87e458f0-47cd-44de-885d-2c2e54c1d105" name="FeedbackBListUIForm.ubfform" displayName="FeedbackBListUIForm.ubfform" description="" help="" include="FeedbackBListUIForm.ubfform" type="" />
+    <Item id="4580c00a-b9ae-46cc-a560-02a4772af84c" name="FeedbackDocTypeBListUIModel.ubfuim" displayName="FeedbackDocTypeBListUIModel.ubfuim" description="" help="" include="FeedbackDocTypeBListUIModel.ubfuim" type="" />
+    <Item id="30dec9f3-fc26-46d8-9b30-d7941b7df868" name="FeedbackDocTypeBListUIForm.ubfform" displayName="FeedbackDocTypeBListUIForm.ubfform" description="" help="" include="FeedbackDocTypeBListUIForm.ubfform" type="" />
+    <Item id="4c734bc8-fa0e-4ad5-93dd-3c5ea88b2aa2" name="VouchersUIModel.ubfuim" displayName="VouchersUIModel.ubfuim" description="" help="" include="VouchersUIModel.ubfuim" type="" />
+    <Item id="c1eebfab-e9a8-47c2-9770-ff963e9e15f3" name="VochersUIForm.ubfform" displayName="VochersUIForm.ubfform" description="" help="" include="VochersUIForm.ubfform" type="" />
+  </ItemGroup>
+</Project>

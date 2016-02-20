@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<QueryComponent id="f56ccc41-9f8a-47a0-8a3a-d83df9cf9f13" name="Vouchers" displayName="Vouchers" description="" help="" QueryType="List" QueryURI="782641f2-16a8-4782-aea3-5c891fd0fe19" QuerySourceFullName="U9.VOB.Cus.HBHTianRiSheng.Vouchers" UIViewDragType="DragDown" RefInfoLoadType="Cache">
+  <BasicInfo id="0945e87a-5a27-4933-b5b9-be2f8f172c65" name="" displayName="" description="" help="" RefToken="" RootDescContextValue="" FilterTabVisible="True" ColumnTabVisible="True" SortTabVisible="True" FilterExpandLevel="3" ColumnExpandLevel="3" SortExpandLevel="3" />
+  <BPRefInfo id="a2deae6d-b97e-43a9-ac25-02d47185ade8" name="" displayName="" description="" help="" ProjectID="" ProjectPath="" BPItemID="" BPOperationID="" DTOID="" BPAgentDll="" BPAgentProxy="" />
+  <UIRefInfo id="37ab675a-fbf7-4d79-89aa-e53b46cac185" name="" displayName="" description="" help="" ProjectID="" ProjectPath="" UIModelItemID="44613961-b23f-43b1-97b9-db8fd8e01979" UIFormItemID="1895f754-c6dc-4fde-88e5-a796be6bf1bc" UIModelID="3c203461-07d6-4d3d-a944-f4302a233d0e" />
+  <FilterDefines>
+    <FilterDefine id="bcb2b364-69ce-476c-b2fe-d7a7d5ddb7bc" name="DocNo" displayName="DocNo" description="" help="" ParentName="" Alias="DocNo" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+    <FilterDefine id="fd02130f-df1b-4df3-a4a0-3b910b04e85a" name="VouchersType" displayName="VouchersType" description="" help="" ParentName="" Alias="VouchersType" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+    <FilterDefine id="836d9d41-68d4-4123-90ae-909e5c9879b6" name="Status" displayName="Status" description="" help="" ParentName="" Alias="Status" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+  </FilterDefines>
+  <ColumnDefines>
+    <ColumnDefine id="ef8a9980-e0fb-4627-9f87-a4ffcb62485b" name="DocNo" displayName="DocNo" description="" help="" ParentName="" Alias="DocNo" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+    <ColumnDefine id="012e17cb-95d2-4b39-a2a7-af80facf9da7" name="VouchersType" displayName="VouchersType" description="" help="" ParentName="" Alias="VouchersType" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+    <ColumnDefine id="676d85b9-20c5-48d8-b377-dbbbb043b12d" name="Status" displayName="Status" description="" help="" ParentName="" Alias="Status" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+  </ColumnDefines>
+  <SortDefines>
+    <SortDefine id="111237fe-4c42-4e00-9e79-4d414ad4f516" name="DocNo" displayName="" description="" help="" ParentName="" Alias="DocNo" IsFixed="False" Visible="True" DescFieldContextValue="" />
+  </SortDefines>
+  <DefaultCase>
+    <BasicFilters>
+      <BasicFilter id="00fc8db3-ff19-4e2d-b15a-5dacc284a884" name="DocNo" displayName="单号" description="" help="" />
+      <BasicFilter id="6823051d-1a12-417e-ba6d-bd42479216f5" name="VouchersType" displayName="抵用劵类型" description="" help="" />
+      <BasicFilter id="45be250b-2ba7-439b-bd2d-916eb72946db" name="Status" displayName="状态" description="" help="" />
+    </BasicFilters>
+    <DefaultColumns>
+      <Column id="d7542161-c408-4b1c-98ad-66ecd44ffd2b" name="DocNo" displayName="单号" description="" help="" />
+      <Column id="ae469326-78fc-4628-86b9-4309c7d23370" name="VouchersType" displayName="抵用劵类型" description="" help="" />
+      <Column id="3f495954-a0e7-46fd-87b0-3b7c574b92a5" name="Status" displayName="状态" description="" help="" />
+    </DefaultColumns>
+    <DefaultSorts>
+      <Sort id="6fcdeea1-0259-4bc5-bc49-0adfd799708a" name="DocNo" displayName="" description="" help="" SortType="DESC" />
+    </DefaultSorts>
+  </DefaultCase>
+</QueryComponent>

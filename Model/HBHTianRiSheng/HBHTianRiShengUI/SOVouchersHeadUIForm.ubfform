@@ -1,0 +1,205 @@
+<View ID="7f428875-185e-4ff8-886c-d22615c74ab8" ChildLabelWidth="56" ChildRefWidth="20" GridBottomMargin="5" GridColumnCount="1" GridColumnSpace="24" GridLeftMargin="0" GridRightMargin="0" GridRowCount="3" GridRowSpace="10" GridTopMargin="0" Height="504" LayoutType="GridBag" Name="SOVouchersHeadUIForm" Namespace="SOVouchersHeadUIModel" TabStop="False" TemplateCode="D:\U9Cust\UFIDA\U9Proj\U9AppCode\U9.VOB.Apps.Cus\CusApp\HBHTianRiSheng\Model\HBHTianRiSheng\HBHTianRiShengUI\SOVouchersUIForm.ubfform" TemplateType="CopyForms" UIModelID="bdd3a9ea-2d87-4375-8926-3f0ee21a6913" URI=".UI_单表_686_504WebPart" ViewID="4983" Width="686" X="10" Y="85">
+  <Columns>
+    <Column Fixed="False" Name="Column0" Type="Title" Width="686" />
+  </Columns>
+  <Rows>
+    <Row Fixed="True" Height="60" Name="Row0" />
+    <Row Fixed="False" Height="380" Name="Row1" />
+    <Row Fixed="True" Height="25" Name="Row3" />
+  </Rows>
+  <Providers />
+  <InParameters />
+  <Card ID="8f0d2305-8b2a-4b30-a238-427708eb3b6b" ChildLabelWidth="60" ChildRefWidth="20" FunctionBar="FunctionBar" GridBottomMargin="2" GridColumnCount="16" GridColumnSpace="0" GridHeight="1" GridLeftMargin="10" GridRightMargin="10" GridRowCount="1" GridRowSpace="5" GridTopMargin="3" GridWidth="1" GridX="0" GridY="2" Height="25" LayoutType="GridBag" Name="Card0" TabIndex="3" TabStop="False" Width="686" X="0" Y="460">
+    <Columns>
+      <Column Fixed="True" Name="Column0" Type="Value" Width="80" />
+      <Column Fixed="True" Name="Column1" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column2" Type="Title" Width="80" />
+      <Column Fixed="True" Name="Column3" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column4" Type="Title" Width="80" />
+      <Column Fixed="True" Name="Column5" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column6" Type="Title" Width="80" />
+      <Column Fixed="True" Name="Column18" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column17" Type="Title" Width="80" />
+      <Column Fixed="True" Name="Column21" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column22" Type="Value" Width="35" />
+      <Column Fixed="True" Name="Column16" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column15" Type="Title" Width="80" />
+      <Column Fixed="True" Name="Column14" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column7" Type="Title" Width="80" />
+      <Column Fixed="False" Name="Column8" Type="Spacing" Width="1" />
+    </Columns>
+    <Rows>
+      <Row Fixed="True" Height="20" Name="Row0" />
+    </Rows>
+    <Button ID="96cf4ee2-da7e-4594-9807-7447d5b6d999" AccessKey="S" DisplayNameResourceID="626ebf9b-f65a-4dd5-8f32-96f84919878c" DisplaySrcType="PublicResource" GridHeight="1" GridWidth="1" GridX="12" GridY="0" Height="20" Name="BtnOk" TabIndex="6" TabStop="True" Width="80" X="505" Y="3">
+      <Events>
+        <Event ActionName="SaveClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="SaveClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="42da156e-ae14-4012-af5c-0ba0cc123ad9" AccessKey="" DisplayNameResourceID="020a5365-8f12-4970-b8df-17ce3ae60a68" DisplaySrcType="PublicResource" GridHeight="1" GridWidth="1" GridX="14" GridY="0" Height="20" Name="BtnClose" TabIndex="7" TabStop="True" Width="80" X="595" Y="3">
+      <Events>
+        <Event EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="" Template="" />
+      </Events>
+    </Button>
+    <Button ID="45d87baf-72ab-44a4-ad2f-68c20feb7436" AccessKey="S" DisplayName="" DisplayNameResourceID="8288c5a3-3b19-48d3-b139-f7018d2782ee" DisplaySrcType="PublicResource" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" Name="BtnSave" TabIndex="8" TabStop="True" Width="80" X="10" Y="3">
+      <Events>
+        <Event ActionName="SaveClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="SaveClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="164cc111-8d71-4082-8095-583b087c2957" AccessKey="" DisplayName="清空行" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="1" GridX="4" GridY="0" Height="20" Name="BtnClearLine" TabIndex="9" TabStop="True" Width="80" X="190" Y="3">
+      <Events>
+        <Event EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="" Template="" />
+      </Events>
+    </Button>
+  </Card>
+  <Card ID="10de9f41-4a3c-424c-8e9b-358df0d897eb" ChildLabelWidth="60" ChildRefWidth="20" GridBottomMargin="0" GridColumnCount="2" GridColumnSpace="0" GridHeight="1" GridLeftMargin="10" GridRightMargin="10" GridRowCount="2" GridRowSpace="10" GridTopMargin="0" GridWidth="1" GridX="0" GridY="1" Height="380" LayoutType="GridBag" Name="Card1" TabIndex="2" TabStop="False" Width="686" X="0" Y="70">
+    <Columns>
+      <Column Fixed="True" Name="Column0" Type="Title" Width="665" />
+      <Column Fixed="False" Name="Column1" Type="Spacing" Width="1" />
+    </Columns>
+    <Rows>
+      <Row Fixed="True" Height="365" Name="Row0" />
+      <Row Fixed="False" Height="1" Name="Row1" />
+    </Rows>
+    <DataGrid ID="383e1d80-db36-472d-aa35-02adcc9d578b" EditStatus="edit" Enabled="True" GridHeight="2" GridWidth="1" GridX="0" GridY="0" HasSum="False" Height="376" Name="DataGrid0" PageSize="20" Paging="True" TabIndex="1" TabStop="True" Width="665" X="10" Y="0">
+      <Events />
+      <Header ID="064346bb-2973-4200-9e12-5ba407b7d0de" Name="Header0">
+        <HeaderRow Name="DefaultRow">
+          <HeaderCell ID="c9b1a324-fe39-43c7-986c-d41157fbe887" ColSpan="1" Name="HeaderCell0" OwnerColName="ID0" RowSpan="1" />
+          <HeaderCell ID="371f4e7b-1378-4886-b6d9-66c8f8840b35" ColSpan="1" Name="HeaderCell1" OwnerColName="DocLineNo0" RowSpan="1" />
+          <HeaderCell ID="cd05d6ee-4fce-4506-8edd-c196f954885a" ColSpan="1" Name="HeaderCell2" OwnerColName="VouchersLine0" RowSpan="1" />
+          <HeaderCell ID="c61304f9-3b9f-4c63-ab64-38da25b9a34c" ColSpan="1" Name="HeaderCell3" OwnerColName="VouchersLine_Money0" RowSpan="1" />
+          <HeaderCell ID="cf299a4b-e6f0-4fab-9f3c-ae6385c854cf" ColSpan="1" Name="HeaderCell4" OwnerColName="VouchersLine_EffectiveDate0" RowSpan="1" />
+          <HeaderCell ID="d1fd717c-7cf3-486d-9902-12a767e546bf" ColSpan="1" Name="HeaderCell5" OwnerColName="VouchersLine_DisabledDate0" RowSpan="1" />
+          <HeaderCell ID="2e18ba7d-607f-427d-b3fc-70ac0f727872" ColSpan="1" Name="HeaderCell6" OwnerColName="VouchersLine_Seller0" RowSpan="1" />
+          <HeaderCell ID="8945e654-13ad-468c-bbca-55eaa3059937" ColSpan="1" Name="HeaderCell7" OwnerColName="VouchersLine_IsEffectived0" RowSpan="1" />
+          <HeaderCell ID="cb0e3f9f-46c6-4dd6-aebf-9a7e47aca46d" ColSpan="1" Name="HeaderCell8" OwnerColName="VouchersLine_IsUsed0" RowSpan="1" />
+        </HeaderRow>
+      </Header>
+      <UIFilterBar Name="LocateBar" />
+      <Columns>
+        <NumberColumn ID="f4712e8b-29d9-48a1-9dfb-07e0a11a7d65" DefaultValue="" DisplayFormat="19.0" Enabled="True" Help="订单抵用劵行.Key.ID" IsNull="False" IsProperty="False" IsSequence="True" Name="ID0" NPos="1" Point="0" UIFieldID="ID" UIViewID="SOVouchersHead_SOVouchersLine" Visible="False">
+          <PrecisionBind Name="PrecisionBind0" />
+          <RoundRuleBind Name="RoundRuleBind0" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind0" />
+          <CurrencyType Name="CurrencyType0" />
+          <Events />
+        </NumberColumn>
+        <NumberColumn ID="6c7223b1-0dc4-45d4-8c28-137f46a20edc" DefaultValue="0" DisplayFormat="10.0" Enabled="True" Help="订单抵用劵行.Misc.行号" IsNull="True" IsProperty="False" IsSequence="False" MinValue="0" Name="DocLineNo0" NPos="2" Point="0" Sequence="True" SequenceStart="10" SequenceStep="10" UIFieldID="DocLineNo" UIViewID="SOVouchersHead_SOVouchersLine" Visible="True">
+          <PrecisionBind Name="PrecisionBind1" />
+          <RoundRuleBind Name="RoundRuleBind1" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind1" />
+          <CurrencyType Name="CurrencyType1" />
+          <Events />
+        </NumberColumn>
+        <ReferenceColumn ID="758dbd4f-d53b-4fb6-99da-760f280a074d" CodeAttributeName="VouchersNo" CodeField="VouchersNo" CodeFieldUIFieldID="VouchersLine_VouchersNo" CodeFieldUIViewID="SOVouchersHead_SOVouchersLine" DefaultValue="" DisplayFormat="19.0" Enabled="True" EntityName="ID" Help="订单抵用劵行.Misc.抵用券" IsNull="True" IsProperty="False" IsSequence="False" Name="VouchersLine0" NameAttributeName="VouchersNo" NameFieldUIFieldID="VouchersLine_VouchersNo" NameFieldUIViewID="SOVouchersHead_SOVouchersLine" NPos="3" PkeyField="ID" Point="0" RefType="e0a0250a-beda-4789-9d2f-e32f5281144c" TextAlign="Right" UIFieldID="VouchersLine" UIViewID="SOVouchersHead_SOVouchersLine" Visible="True" WindowHeight="408" WindowWidth="580">
+          <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="劵号" ColumnID="VouchersNo" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="面值" ColumnID="Money" TargetControlType="NumberColumnModel" TargetID="VouchersLine_Money" TargetProperty="Value" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="生效日期" ColumnID="EffectiveDate" TargetControlType="DatePickerColumnModel" TargetID="VouchersLine_EffectiveDate" TargetProperty="Value" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="失效日期" ColumnID="DisabledDate" TargetControlType="DatePickerColumnModel" TargetID="VouchersLine_DisabledDate" TargetProperty="Value" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="生效" ColumnID="IsEffectived" TargetControlType="CheckBoxColumnModel" TargetID="VouchersLine_IsEffectived" TargetProperty="Value" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="已使用" ColumnID="IsUsed" TargetControlType="CheckBoxColumnModel" TargetID="VouchersLine_IsUsed" TargetProperty="Value" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="抵用劵单号" ColumnID="Vouchers_DocNo" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="行号" ColumnID="DocLineNo" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="业务员ID" ColumnID="Seller_ID" TargetControlType="ReferenceColumnModel" TargetID="VouchersLine_Seller" TargetProperty="Key" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="业务员编码" ColumnID="Seller_Code" TargetControlType="ReferenceColumnModel" TargetID="VouchersLine_Seller" TargetProperty="Value" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="业务员名称" ColumnID="Seller_Name" TargetControlType="ReferenceColumnModel" TargetID="VouchersLine_Seller" TargetProperty="Text" />
+          <RefNameFields>
+            <RefNameField UIFieldID="VouchersNo" />
+          </RefNameFields>
+          <UIFilterBar Name="ReferenceFilter">
+            <Parameter ContextID="" ControlID="VouchersTypeIDs210" ControlProperty="Value" ControlType="TextBoxModel" Name="VouchersType" ParameterBindType="Bind2Control" />
+          </UIFilterBar>
+          <Events />
+        </ReferenceColumn>
+        <NumberColumn ID="81046c5a-0298-4eff-a802-c68405f07809" DefaultValue="0" DisplayFormat="24.9" Enabled="False" Help="抵用劵行.Misc.面值" IsNull="True" IsProperty="False" IsSequence="False" Name="VouchersLine_Money0" NPos="4" Point="0" UIFieldID="VouchersLine_Money" UIViewID="SOVouchersHead_SOVouchersLine" Visible="True">
+          <PrecisionBind Name="PrecisionBind2" />
+          <RoundRuleBind Name="RoundRuleBind2" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind2" />
+          <CurrencyType Name="CurrencyType2" />
+          <Events />
+        </NumberColumn>
+        <DatePickerColumn ID="1a15b33b-8c2b-4963-b849-f605da25a5c6" DefaultValue="" DisplayFormat="19" Enabled="False" Help="抵用劵行.Misc.生效日期" IsNull="True" IsProperty="False" IsSequence="False" Name="VouchersLine_EffectiveDate0" NPos="5" Point="0" UIFieldID="VouchersLine_EffectiveDate" UIViewID="SOVouchersHead_SOVouchersLine" Visible="True">
+          <Events />
+        </DatePickerColumn>
+        <DatePickerColumn ID="26a88a36-b2b5-4380-9b93-aa479adf61c8" DefaultValue="" DisplayFormat="19" Enabled="False" Help="抵用劵行.Misc.失效日期" IsNull="True" IsProperty="False" IsSequence="False" Name="VouchersLine_DisabledDate0" NPos="6" Point="0" UIFieldID="VouchersLine_DisabledDate" UIViewID="SOVouchersHead_SOVouchersLine" Visible="True">
+          <Events />
+        </DatePickerColumn>
+        <ReferenceColumn ID="2f46bd24-6136-4aa9-88c7-79c407cd409b" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="VouchersLine_Seller_Code" CodeFieldUIViewID="SOVouchersHead_SOVouchersLine" DefaultValue="" DisplayFormat="19.0" Enabled="False" EntityName="ID" Help="抵用劵行.Misc.销售人员" IsNull="True" IsProperty="False" IsSequence="False" Name="VouchersLine_Seller0" NameAttributeName="Name" NameFieldUIFieldID="VouchersLine_Seller_Name" NameFieldUIViewID="SOVouchersHead_SOVouchersLine" NPos="7" PkeyField="ID" Point="0" RefType="997aa662-cd68-48cc-9e6e-ac0fa0396433" TextAlign="Right" UIFieldID="VouchersLine_Seller" UIViewID="SOVouchersHead_SOVouchersLine" Visible="True" WindowHeight="408" WindowWidth="580">
+          <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" Name="ReferenceRelation12" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" Name="ReferenceRelation13" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" Name="ReferenceRelation14" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="简称" ColumnID="ShortName" Name="ReferenceRelation15" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="Dept_ID" Name="ReferenceRelation16" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Dept_Code" Name="ReferenceRelation17" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="部门" ColumnID="Dept_Name" Name="ReferenceRelation18" TargetControlType="" TargetID="" TargetProperty="" />
+          <RefNameFields>
+            <RefNameField UIFieldID="Name" />
+          </RefNameFields>
+          <UIFilterBar Name="ReferenceFilter">
+            <Parameter ContextID="OrgID" ControlID="" ControlProperty="Value" ControlType="ContextItemModel" Name="CurrentOrgID" ParameterBindType="Bind2Context" />
+          </UIFilterBar>
+          <Events />
+        </ReferenceColumn>
+        <CheckBoxColumn ID="205f7df3-4b23-4e4a-99fc-2e57e01789b5" DefaultValue="false" DisplayFormat="1" Enabled="False" Help="抵用劵行.Misc.生效" IsNull="True" IsProperty="False" IsSequence="False" Name="VouchersLine_IsEffectived0" NPos="8" Point="0" UIFieldID="VouchersLine_IsEffectived" UIViewID="SOVouchersHead_SOVouchersLine" Visible="True" Width="55">
+          <Events />
+        </CheckBoxColumn>
+        <CheckBoxColumn ID="f6cb9ffe-4bbd-4fbc-beb8-3065b6e0dc6c" DefaultValue="false" DisplayFormat="1" Enabled="False" Help="抵用劵行.Misc.已使用" IsNull="True" IsProperty="False" IsSequence="False" Name="VouchersLine_IsUsed0" NPos="9" Point="0" UIFieldID="VouchersLine_IsUsed" UIViewID="SOVouchersHead_SOVouchersLine" Visible="True" Width="55">
+          <Events />
+        </CheckBoxColumn>
+      </Columns>
+    </DataGrid>
+  </Card>
+  <Card ID="b4ee1bf9-2d73-4892-9b6c-8d22d83edd1a" ChildLabelWidth="60" ChildRefWidth="20" GridBottomMargin="5" GridColumnCount="10" GridColumnSpace="0" GridHeight="1" GridLeftMargin="10" GridRightMargin="10" GridRowCount="2" GridRowSpace="5" GridTopMargin="10" GridWidth="1" GridX="0" GridY="0" Height="60" Name="Card2" TabStop="False" Width="686" X="0" Y="0">
+    <Columns>
+      <Column Fixed="True" Name="Column0" Type="Title" Width="90" />
+      <Column Fixed="True" Name="Column1" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column2" Width="190" />
+      <Column Fixed="True" Name="Column3" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column4" Type="Title" Width="80" />
+      <Column Fixed="True" Name="Column5" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column6" Width="100" />
+      <Column Fixed="True" Name="Column7" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column8" Type="Title" Width="80" />
+      <Column Fixed="True" Name="Column9" Type="Spacing" Width="10" />
+    </Columns>
+    <Rows>
+      <Row Fixed="False" Height="20" Name="Row0" />
+      <Row Fixed="False" Height="20" Name="Row1" />
+    </Rows>
+    <Label ID="7bc588c5-1efa-47ca-8810-fbf86aa01d98" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblSO_DocNo111" RelationControl="SO_DocNo111" TabIndex="0" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="90" X="10" Y="10">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <TextBox ID="10e57e61-7351-47c6-8d03-09815d8183db" DisplayFormat="50" Enabled="False" GridHeight="1" GridWidth="1" GridX="2" GridY="0" Height="20" IsNull="False" IsProperty="False" IsSequence="False" MultiLine="False" Name="SO_DocNo111" RelationControl="lblSO_DocNo111" TabIndex="1" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="SO_DocNo" UIViewID="SOVouchersHead" Visible="True" Width="190" X="110" Y="10">
+      <Events />
+      <RelationControls />
+    </TextBox>
+    <Label ID="09cc4a1c-fc85-4b53-aa82-8c18bb7ae79b" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="1" Height="20" IsNull="True" IsSequence="False" Name="lblVouchersTypeRef87" RelationControl="VouchersTypeRef87" TabIndex="2" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="90" X="10" Y="35">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <Reference ID="416c87e9-ac82-4363-a961-bd8571b3f116" CodeAttributeName="Name" CodeField="Name" CodeFieldUIFieldID="VouchersTypeCodes" CodeFieldUIViewID="SOVouchersHead" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="2" GridY="1" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="VouchersTypeRef87" NameAttributeName="DisplayName" NameFieldUIFieldID="VouchersTypeNames" NameFieldUIViewID="SOVouchersHead" PkeyField="ID" RefType="f89dff38-00d1-4e28-8573-9053c3af4934" RelationControl="lblVouchersTypeRef87" TabIndex="3" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="VouchersTypeRef" UIViewID="SOVouchersHead" Visible="True" Width="190" WindowHeight="408" WindowWidth="580" X="110" Y="35">
+      <Events />
+      <RelationControls />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="DisplayName" TargetControlType="TextBoxModel" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Name" TargetControlType="TextBoxModel" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="值" ColumnID="DefaultValue" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="属性描述" ColumnID="Description" TargetControlType="TextBoxModel" TargetID="VouchersTypeIDs210" TargetProperty="Value" />
+      <RefNameFields>
+        <RefNameField UIFieldID="DisplayName" />
+      </RefNameFields>
+      <UIFilterBar Name="ReferenceFilter" />
+      <Events />
+    </Reference>
+    <TextBox ID="1d11aa40-6f68-4d60-8a59-65e1bfbc0392" DisplayFormat="500" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="VouchersTypeIDs210" RelationControl="" TabIndex="5" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="VouchersTypeIDs" UIViewID="SOVouchersHead" Visible="False" Width="100" X="340" Y="10">
+      <Events />
+      <RelationControls />
+    </TextBox>
+  </Card>
+  <Events />
+</View>

@@ -33,10 +33,11 @@
     <WarningLevel>4</WarningLevel>
     <IncrementalBuild>false</IncrementalBuild>
   </PropertyGroup>
-
-
-
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />  
-  <Import Project="U9.VOB.Cus.HBHTianRiSheng.HBHTianRiShengBE.target" />  
-
+  <ItemGroup>
+    <Reference Include="HBH.DoNet.DevPlatform.EntityMapping">
+      <HintPath>..\..\..\..\..\..\..\UBFV30\U9.VOB.Product.Component\HBHCommon\HBH.DoNet.DevPlatform.EntityMapping.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="U9.VOB.Cus.HBHTianRiSheng.HBHTianRiShengBE.target" />
 </Project>

@@ -14,5 +14,8 @@
     <Item id="2c04cb64-4359-4688-a2c4-58e25f3d94f8" name="PubEnum.ubfbe" displayName="PubEnum.ubfbe" description="" help="" include="PubEnum.ubfbe" type="BE" />
     <Item id="c09eff20-8815-4fce-b328-47ee5934a2b8" name="Feedback.ubfbe" displayName="Feedback.ubfbe" description="" help="" include="Feedback.ubfbe" type="BE" />
     <Item id="ae41de24-f31d-4c90-a7c6-2c7eccfcb166" name="FeedbackDocType.ubfbe" displayName="FeedbackDocType.ubfbe" description="" help="" include="FeedbackDocType.ubfbe" type="BE" />
+    <Item id="4537766e-3bd5-4e3e-902c-7703090ef992" name="Vouchers.ubfbe" displayName="Vouchers.ubfbe" description="" help="" include="Vouchers.ubfbe" type="BE" />
+    <Item id="a729b904-b4fd-45af-ac29-f58c23afd848" name="SOVouchers.ubfbe" displayName="SOVouchers.ubfbe" description="" help="" include="SOVouchers.ubfbe" type="BE" />
+    <Item id="99699799-5ff9-41df-b539-994161c88ce5" name="SOVouchersHead.ubfbe" displayName="SOVouchersHead.ubfbe" description="" help="" include="SOVouchersHead.ubfbe" type="BE" />
   </ItemGroup>
 </Project>

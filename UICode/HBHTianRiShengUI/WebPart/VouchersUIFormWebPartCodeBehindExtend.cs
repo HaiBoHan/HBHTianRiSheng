@@ -86,27 +86,36 @@ namespace VouchersUIModel
         private void BtnSubmit_Click_Extend(object sender, EventArgs e)
         {
             //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
+            //BtnSubmit_Click_DefaultImpl(sender,e);
 
-
-            BtnSubmit_Click_DefaultImpl(sender, e);
+            U9.VOB.HBHCommon.HBHCommonUI.HBHUIHelper.UIForm_UpdateStatus(this, this.Model.Vouchers, U9.VOB.HBHCommon.U9CommonBE.DocStatusData.Approving);
         }
 
         //BtnApprove_Click...
         private void BtnApprove_Click_Extend(object sender, EventArgs e)
         {
             //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
+            //BtnApprove_Click_DefaultImpl(sender,e);
 
+            U9.VOB.HBHCommon.HBHCommonUI.HBHUIHelper.UIForm_UpdateStatus(this, this.Model.Vouchers, U9.VOB.HBHCommon.U9CommonBE.DocStatusData.Approved);
+        }
 
-            BtnApprove_Click_DefaultImpl(sender, e);
+        //BtnRecovery_Click...
+        private void BtnRecovery_Click_Extend(object sender, EventArgs e)
+        {
+            //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
+            //BtnRecovery_Click_DefaultImpl(sender,e);
+
+            U9.VOB.HBHCommon.HBHCommonUI.HBHUIHelper.UIForm_UpdateStatus(this, this.Model.Vouchers, U9.VOB.HBHCommon.U9CommonBE.DocStatusData.Opened);
         }
 
         //BtnUndoApprove_Click...
         private void BtnUndoApprove_Click_Extend(object sender, EventArgs e)
         {
             //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
+            //BtnUndoApprove_Click_DefaultImpl(sender,e);
 
-
-            BtnUndoApprove_Click_DefaultImpl(sender, e);
+            U9.VOB.HBHCommon.HBHCommonUI.HBHUIHelper.UIForm_UpdateStatus(this, this.Model.Vouchers, U9.VOB.HBHCommon.U9CommonBE.DocStatusData.Opened);
         }
 
         //BtnFind_Click...
@@ -122,9 +131,9 @@ namespace VouchersUIModel
         private void BtnList_Click_Extend(object sender, EventArgs e)
         {
             //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
+            //BtnList_Click_DefaultImpl(sender, e);
 
-
-            BtnList_Click_DefaultImpl(sender, e);
+            U9.VOB.HBHCommon.HBHCommonUI.HBHUIHelper.UIForm_BtnList_Click(this);
         }
 
         //BtnFirstPage_Click...
@@ -203,20 +212,58 @@ namespace VouchersUIModel
         private void BtnOk_Click_Extend(object sender, EventArgs e)
         {
             //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
+            //BtnOk_Click_DefaultImpl(sender,e);
 
-
-            BtnOk_Click_DefaultImpl(sender, e);
+            this.CloseDialog(true);
         }
 
         //BtnClose_Click...
         private void BtnClose_Click_Extend(object sender, EventArgs e)
         {
             //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
+            //BtnClose_Click_DefaultImpl(sender,e);
 
-
-            BtnClose_Click_DefaultImpl(sender, e);
+            this.CloseDialog(false);
         }
 
+        public void ContainUsed125_TextChanged_Extend(object sender, EventArgs e)
+        {
+            //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
+            //ContainUsed125_TextChanged_DefaultImpl(sender,e);
+
+            VouchersRecord head = this.Model.Vouchers.FocusedRecord;
+
+            if (head != null
+                )
+            {
+                if (!head.ContainUsed.GetValueOrDefault(true))
+                {
+                    foreach (Vouchers_VouchersLineRecord line in head.GetChildRecords(this.Model.Vouchers_VouchersLine))
+                    {
+                        if (line != null)
+                        {
+                            if (line.IsUsed.GetValueOrDefault(false))
+                            {
+                                line.Hidden = true;
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    foreach (Vouchers_VouchersLineRecord line in head.GetChildRecords(this.Model.Vouchers_VouchersLine))
+                    {
+                        if (line != null)
+                        {
+                            if (line.IsUsed.GetValueOrDefault(false))
+                            {
+                                line.Hidden = false;
+                            }
+                        }
+                    }
+                }
+            }
+        }
 
         #endregion
 
@@ -254,7 +301,7 @@ namespace VouchersUIModel
             // 启用页面个性化 
             UFIDA.U9.UI.PDHelper.PersonalizationHelper.SetPersonalizationEnable(this, true);
             //// 启用弹性域
-            //UFIDA.U9.UI.PDHelper.FlexFieldHelper.SetDescFlexField(new UFIDA.U9.UI.PDHelper.DescFlexFieldParameter(this.FlexFieldPicker0, this.Model.FollowService)
+            //UFIDA.U9.UI.PDHelper.FlexFieldHelper.SetDescFlexField(new UFIDA.U9.UI.PDHelper.DescFlexFieldParameter(this.FlexFieldPicker0, this.Model.Vouchers)
             //    );
 
             // 绑定注册弹出对话框到按钮 
@@ -302,6 +349,7 @@ namespace VouchersUIModel
             this.BtnOk.Visible = false;
             this.BtnClose.Visible = false;
 
+            this.Status89.Enabled = false;
         }
 
 

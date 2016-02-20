@@ -424,6 +424,34 @@
                         <PartRelations />
                         <Parameters />
                     </Page>
+                    <Page id="bfcf8851-eb5f-47ad-8813-57eae2d9a700" code="Cust_Vouchers" name="抵用劵" shortName="" displayName="抵用劵" description="" title="抵用劵" uri="Cust_Vouchers" topMargine="10" bottomMargine="10" leftMargine="10" rightMargine="10" columnSpace="10" orientation="Vertical" defaultEntity="">
+                        <Columns>
+                            <Column id="933f5c43-85e1-49f5-8e12-1576c41312d8" code="" name="" shortName="" displayName="" description="" widthProportion="100" heightProportion="0" title="" IsMainRegion="True">
+                                <Parts>
+                                    <Part>36073910-435c-4c3e-a396-f1427b36ba54</Part>
+                                </Parts>
+                            </Column>
+                        </Columns>
+                        <Parts>
+                            <Part id="36073910-435c-4c3e-a396-f1427b36ba54" code="36073910-435c-4c3e-a396-f1427b36ba54" name="VouchersUIFormWebPart" shortName="VouchersUIFormWebPart" displayName="VouchersUIFormWebPart" description="VouchersUIFormWebPart" title="抵用劵" bindedFormID="dc906bd3-950d-4189-99d4-2ea7abf11fe4" bindedFormName="VouchersUIFormWebPart" height="504" width="992" />
+                        </Parts>
+                        <PartRelations />
+                        <Parameters />
+                    </Page>
+                    <Page id="753d7e73-80ad-4cc9-948c-ae70e5f4e42c" code="Cust_Vouchers_UIList" name="抵用劵列表" shortName="" displayName="抵用劵列表" description="" title="抵用劵列表" uri="Cust_Vouchers_UIList" topMargine="10" bottomMargine="10" leftMargine="10" rightMargine="10" columnSpace="10" orientation="Vertical" defaultEntity="">
+                        <Columns>
+                            <Column id="a74b7dab-7e12-4bba-9975-850a06b0bb9b" code="" name="" shortName="" displayName="" description="" widthProportion="100" heightProportion="0" title="" IsMainRegion="True">
+                                <Parts>
+                                    <Part>2d403b0d-5651-435f-8b7d-bb482d49882c</Part>
+                                </Parts>
+                            </Column>
+                        </Columns>
+                        <Parts>
+                            <Part id="2d403b0d-5651-435f-8b7d-bb482d49882c" code="2d403b0d-5651-435f-8b7d-bb482d49882c" name="VouchersBListUIFormWebPart" shortName="VouchersBListUIFormWebPart" displayName="VouchersBListUIFormWebPart" description="VouchersBListUIFormWebPart" title="抵用劵列表" bindedFormID="29a82b11-c346-4372-8ac6-a1891754a7a8" bindedFormName="VouchersBListUIFormWebPart" height="504" width="992" />
+                        </Parts>
+                        <PartRelations />
+                        <Parameters />
+                    </Page>
                 </Pages>
                 <BEComponents>
                     <BEComponent assemblyName="U9.VOB.Cus.HBHTianRiSheng.HBHTianRiShengBE.dll" assemblyID="33c351f8-85e9-40af-a005-45d195b3e1b6" />
@@ -444,6 +472,10 @@
                         <Menu id="529d4018-d462-4e7e-b622-02a6c133ca90" code="529d4018-d462-4e7e-b622-02a6c133ca90" name="售后任务单" shortName="new menu" displayName="售后任务单" description="new menu" image="" isDialog="False" pageURI="Cust_FollowService" pageParameter="" sequence="1" kind="Task" theApp="" />
                         <Menu id="63139a1b-2320-4b9f-8064-84ef283c4062" code="63139a1b-2320-4b9f-8064-84ef283c4062" name="售后回报单据类型" shortName="new menu" displayName="售后回报单据类型" description="new menu" image="" isDialog="False" pageURI="Cust_FeedbackDocType" pageParameter="" sequence="2" kind="Task" theApp="" />
                         <Menu id="7549fd32-3967-4463-abaf-1d0e14050778" code="7549fd32-3967-4463-abaf-1d0e14050778" name="售后回报单" shortName="new menu" displayName="售后回报单" description="new menu" image="" isDialog="False" pageURI="Cust_Feedback" pageParameter="" sequence="3" kind="Task" theApp="" />
+                    </Menu>
+                    <Menu id="e5aced6e-a829-4ae9-a81c-d07f45722246" code="e5aced6e-a829-4ae9-a81c-d07f45722246" name="抵用劵管理" shortName="new menu" displayName="抵用劵管理" description="new menu" image="" isDialog="False" pageURI="" pageParameter="" sequence="1" kind="Task" theApp="3015">
+                        <Menu id="a17957b9-8f46-44d2-8956-88599bb7e09f" code="a17957b9-8f46-44d2-8956-88599bb7e09f" name="抵用劵" shortName="new menu" displayName="抵用劵" description="new menu" image="" isDialog="False" pageURI="Cust_Vouchers" pageParameter="" sequence="0" kind="Task" theApp="3015" />
+                        <Menu id="f0e8cde1-a141-48b9-9dec-9ad881217620" code="f0e8cde1-a141-48b9-9dec-9ad881217620" name="抵用劵列表" shortName="new menu" displayName="抵用劵列表" description="new menu" image="" isDialog="False" pageURI="Cust_Vouchers_UIList" pageParameter="" sequence="1" kind="Task" theApp="3015" />
                     </Menu>
                 </PrePlacedMenu>
             </App>

@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UFSoft.UBF.UI.ControlModel;
+using UFSoft.UBF.UI.WebControlAdapter;
+using U9.VOB.HBHCommon.HBHCommonUI;
+using UFIDA.U9.SM.SO;
+using System.Collections.Specialized;
 
 namespace U9.VOB.Cus.HBHTianRiSheng.UIPlugin
 {
@@ -12,6 +16,8 @@ namespace U9.VOB.Cus.HBHTianRiSheng.UIPlugin
         UFIDA.U9.SCM.SM.SOUIModel.StandardSOMainUIFormWebPart _strongPart;
         IUFDataGrid dgLine;
         List<IUFControl> lstPriceCtrl = new List<IUFControl>();
+        IUFButton btnHBHRefresh;
+        IUFButton btnSOVouchers;
 
         //public const string Const_SaleDeptID = "SaleDept259";
         //IUFDataGrid DataGrid10;
@@ -135,8 +141,78 @@ namespace U9.VOB.Cus.HBHTianRiSheng.UIPlugin
                         }
                     }
                 }
+            }
 
 
+            // Card0    19
+            string card0Name = "Card0";
+            IUFCard card0 = (IUFCard)part.GetUFControlByName(part.TopLevelContainer, card0Name);
+
+            btnHBHRefresh = new UFWebButtonAdapter();
+            btnHBHRefresh.Text = "刷新";
+            btnHBHRefresh.ID = "btnHBHRefresh";
+            btnHBHRefresh.AutoPostBack = true;
+            btnHBHRefresh.Visible = false;
+            btnHBHRefresh.Click += new EventHandler(btnHBHRefresh_Click);
+
+            card0.Controls.Add(btnHBHRefresh);
+            UICommonHelper.Layout(card0, btnHBHRefresh, 18, 0);
+
+
+            btnSOVouchers = new UFWebButtonAdapter();
+            btnSOVouchers.Text = "抵用劵";
+            btnSOVouchers.ID = "btnSOVouchers";
+            btnSOVouchers.AutoPostBack = true;
+            btnSOVouchers.Visible = true;
+            btnSOVouchers.Click += new EventHandler(btnSOVouchers_Click);
+
+            card0.Controls.Add(btnSOVouchers);
+            UICommonHelper.Layout(card0, btnSOVouchers, 18, 0);
+
+
+        }
+
+
+        void btnHBHRefresh_Click(object sender, EventArgs e)
+        {
+            _strongPart.Action.NavigateAction.Refresh(null);
+        }
+
+        void btnSOVouchers_Click(object sender, EventArgs e)
+        {
+            _strongPart.Model.ClearErrorMessage();
+
+            UFIDA.U9.SCM.SM.SOUIModel.SORecord head = _strongPart.Model.SO.FocusedRecord;
+
+            if (head != null
+                && head.Status == (int)SODocStatusEnumData.Open
+                )
+            {
+                _strongPart.BtnSave_Click(sender, e);
+
+                //curPart.CurrentState[Const_PriceModifyTable] = null;
+
+                //curPart.ShowAtlasModalDialog(btnHBHRefresh,"23ff31c2-e6af-4eda-b1ce-e82432f90c18", "采购订单调价", "800", "390", curPart.TaskId.ToString(), null, true, false, true,PartShowType.ShowModal,true);
+
+
+                head = _strongPart.Model.SO.FocusedRecord;
+
+                if (head.ID > 0
+                    && !_strongPart.Model.ErrorMessage.hasErrorMessage
+                    )
+                {
+                    NameValueCollection nvc = new NameValueCollection();
+                    nvc.Add("SOID", head.ID.ToString());
+                    nvc.Add("SODocNo", head.DocNo);
+
+                    // [FormRegister("U9.VOB.Cus.HBHTianRiSheng.HBHTianRiShengUI","SOVouchersUIModel.SOVouchersUIFormWebPart", "U9.VOB.Cus.HBHTianRiSheng.HBHTianRiShengUI.WebPart", "4ef54a6c-9ad1-41a7-a0f6-e9915e38112c","WebPart", "False", 686, 504)] 
+                    _strongPart.ShowAtlasModalDialog(
+                        // curPart.GetUFControlByName(curPart.TopLevelContainer, "btnReLoad")
+                        btnHBHRefresh
+                        , "7f428875-185e-4ff8-886c-d22615c74ab8", "订单抵用劵", "690", "510"
+                        , _strongPart.TaskId.ToString(), nvc, true, false, false
+                        );
+                }
             }
         }
 

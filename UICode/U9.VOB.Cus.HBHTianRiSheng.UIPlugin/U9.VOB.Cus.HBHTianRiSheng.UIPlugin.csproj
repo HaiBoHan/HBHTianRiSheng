@@ -42,6 +42,9 @@
     <Reference Include="U9.VOB.Cus.HBHTianRiSheng.HBHHelper">
       <HintPath>..\..\..\..\..\..\UBFV30\U9.VOB.Product.Component\Unconfiged\Component\U9.VOB.Cus.HBHTianRiSheng.HBHHelper.dll</HintPath>
     </Reference>
+    <Reference Include="U9.VOB.HBHCommon.HBHCommonUI.WebPart">
+      <HintPath>..\..\..\..\..\..\UBFV30\U9.VOB.Product.WebPart\HBHCommon\U9.VOB.HBHCommon.HBHCommonUI.WebPart.dll</HintPath>
+    </Reference>
     <Reference Include="UFIDA.U9.SCM.Ref.SDSORef.WebPart">
       <HintPath>..\..\..\..\..\..\UBFV30\U9.VOB.Product.WebPart\UFIDA.U9.SCM.Ref.SDSORef.WebPart.dll</HintPath>
     </Reference>

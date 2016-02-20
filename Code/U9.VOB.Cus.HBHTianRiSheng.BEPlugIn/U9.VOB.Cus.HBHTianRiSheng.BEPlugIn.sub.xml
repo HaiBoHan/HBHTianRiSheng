@@ -11,5 +11,9 @@
     <subscriber type="U9.VOB.Cus.HBHTianRiSheng.BEPlugIn.SO_AfterValidate,U9.VOB.Cus.HBHTianRiSheng.BEPlugIn.dll"/>
   </subcription>
 
+  
+  <subcription event="UFIDA.U9.SM.SO.SO.AfterDefaultValue">
+    <subscriber type="U9.VOB.Cus.HBHTianRiSheng.BEPlugIn.SO_AfterDefaultValue,U9.VOB.Cus.HBHTianRiSheng.BEPlugIn.dll"/>
+  </subcription>
 
 </pub-sub>

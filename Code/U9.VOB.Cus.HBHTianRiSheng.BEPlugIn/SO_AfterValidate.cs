@@ -21,7 +21,8 @@ namespace U9.VOB.Cus.HBHTianRiSheng.BEPlugIn
             if (key != null)
             {
                 SO entity = key.GetEntity() as SO;
-
+                //UFIDA.UBF.MD.Business.Attribute attr; attr.MD_Class_ID;
+                //UFIDA.UBF.MD.Business.Entity en; en.UID;
                 // 校验 整单原始金额 与 折扣是否匹配
                 if (entity != null
                     //&& entity.OriginalData != null

@@ -15,6 +15,7 @@
     <Import id="5c68e99e-0181-49e2-a289-a4bf84006153" name="OperatorUI" displayName="OperatorUI" description="" help="" componentid="7b57b553-0671-4319-9f13-f22c4e5ada23" path="..\..\..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\UI\UFIDA.U9.CBO.Pub.Operator.OperatorUI.MetaData.dll" type="UI" isRuntime="True" />
     <Import id="9c308b40-fb80-4b96-b0fe-f89c1c08d197" name="PrintReferenceBE" displayName="PrintReferenceBE" description="" help="" componentid="f869213e-313e-4731-ab7d-e98b72f00ba8" path="..\..\..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\UBF\UFSoft.UBF.ExportService.PrintReferenceBE.MetaData.dll" type="BE" isRuntime="True" />
     <Import id="d378be48-a7bc-4e1a-9895-ddcbaa8993ee" name="SDPubRef" displayName="SDPubRef" description="" help="" componentid="a4e651f8-eeba-4fd9-87c3-5b65e89ae58a" path="..\..\..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\UI\UFIDA.U9.SCM.Ref.SDPubRef.MetaData.dll" type="UI" isRuntime="True" />
+    <Import id="dbe58f99-4c73-401f-865c-102bab31825a" name="UBFMetadataBE" displayName="UBFMetadataBE" description="" help="" componentid="ed7faf65-e0e9-432b-a939-ea0712a0b4b3" path="..\..\..\..\..\..\..\UBFV30\U9.VOB.Product.Metadata\UBF\UFIDA.UBF.MD.Entity.MetaData.dll" type="BE" isRuntime="True" />
   </Imports>
   <SourceControl />
   <ItemGroup>
@@ -36,5 +37,11 @@
     <Item id="4c734bc8-fa0e-4ad5-93dd-3c5ea88b2aa2" name="VouchersUIModel.ubfuim" displayName="VouchersUIModel.ubfuim" description="" help="" include="VouchersUIModel.ubfuim" type="" />
     <Item id="c1eebfab-e9a8-47c2-9770-ff963e9e15f3" name="VouchersUIForm.ubfform" displayName="VochersUIForm.ubfform" description="" help="" include="VouchersUIForm.ubfform" type="" />
     <Item id="e162e4b2-4d4c-403f-93f0-0e70bea9f018" name="VouchersRef.ubfref" displayName="VochersRef.ubfref" description="" help="" include="VouchersRef.ubfref" type="" />
+    <Item id="3f8e7619-1a4c-4098-9892-74105a6af1e1" name="SOVouchersUIModel.ubfuim" displayName="SOVouchersUIModel.ubfuim" description="" help="" include="SOVouchersUIModel.ubfuim" type="" />
+    <Item id="381124ae-f64b-4816-bd1d-862c6b7eda3f" name="SOVouchersUIForm.ubfform" displayName="SOVouchersUIForm.ubfform" description="" help="" include="SOVouchersUIForm.ubfform" type="" />
+    <Item id="7b6214ab-07d5-4b18-8020-1d4540f10a16" name="VouchersLineRef.ubfref" displayName="VouchersLineRef.ubfref" description="" help="" include="VouchersLineRef.ubfref" type="" />
+    <Item id="8f4e4071-e728-449d-9350-8aa7afa6a418" name="SOVouchersHeadUIModel.ubfuim" displayName="SOVouchersHeadUIModel.ubfuim" description="" help="" include="SOVouchersHeadUIModel.ubfuim" type="" />
+    <Item id="a41f2175-3ca1-4ecb-9105-56b24414a15c" name="SOVouchersHeadUIForm.ubfform" displayName="SOVouchersHeadUIForm.ubfform" description="" help="" include="SOVouchersHeadUIForm.ubfform" type="" />
+    <Item id="48cda2af-8969-497e-be45-e2af0d767a4e" name="VouchersTypeRef.ubfref" displayName="VouchersTypeRef.ubfref" description="" help="" include="VouchersTypeRef.ubfref" type="" />
   </ItemGroup>
 </Project>

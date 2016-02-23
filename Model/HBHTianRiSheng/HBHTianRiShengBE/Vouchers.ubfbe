@@ -5,7 +5,7 @@
       <Groups>
         <Group id="0b75b89d-58ab-4ba3-b872-a064dfa9d0a8" name="Key" displayName="Key" description="" help="" />
         <Group id="7c1e996c-cb62-4f6e-8b69-40bdb3b57704" name="Sys" displayName="Sys" description="" help="" />
-        <Group id="9d11729e-c9c7-468f-bcd1-807dfe4138a4" name="Misc" displayName="Misc" description="" help="" />
+        <Group id="aa324b2a-bdd9-4803-9a43-7bcdc3527f76" name="Misc" displayName="Misc" description="" help="" />
       </Groups>
       <Attributes>
         <Attribute id="14e25cb1-20e1-4eb5-b815-83214d3d6564" name="ID" displayName="ID" description="" help="抵用劵.Key.ID" dataTypeID="ba391065-6c27-4c82-acc8-b52b1c93a910" isKey="True" defaultValue="" length="8" precise="19" scale="0" isNullable="False" isReadOnly="False" isHide="True" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="0" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="db" groupName="Key" isEntityKey="False" isEntityData="True" isSystem="True" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
@@ -29,7 +29,7 @@
       <Groups>
         <Group id="2d899ec2-4d45-4586-a357-08779d0a1199" name="Key" displayName="Key" description="" help="" />
         <Group id="fe05beba-a265-4e65-b7a9-c9b7be7acc0e" name="Sys" displayName="Sys" description="" help="" />
-        <Group id="b0c7355d-f294-4f52-bc15-034cb6627756" name="Misc" displayName="Misc" description="" help="" />
+        <Group id="356104b8-6300-4a3b-927e-712e79952f7d" name="Misc" displayName="Misc" description="" help="" />
       </Groups>
       <Attributes>
         <Attribute id="e74e1a91-59da-487a-b0ee-eb781c236a36" name="ID" displayName="ID" description="" help="抵用劵行.Key.ID" dataTypeID="ba391065-6c27-4c82-acc8-b52b1c93a910" isKey="True" defaultValue="" length="8" precise="19" scale="0" isNullable="False" isReadOnly="False" isHide="True" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="0" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="db" groupName="Key" isEntityKey="False" isEntityData="True" isSystem="True" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
@@ -49,6 +49,7 @@
         <Attribute id="8d15e8f1-c16d-4023-a819-0fab4967234b" name="IsEffectived" displayName="生效" description="" help="抵用劵行.Misc.生效" dataTypeID="5efeea06-cae7-4cc0-82e9-20a789e4e582" isKey="False" defaultValue="false" length="1" precise="0" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="8" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="True" />
         <Attribute id="c7158e38-959b-43c0-b047-b606e929c24a" name="IsUsed" displayName="已使用" description="" help="抵用劵行.Misc.已使用" dataTypeID="5efeea06-cae7-4cc0-82e9-20a789e4e582" isKey="False" defaultValue="false" length="1" precise="0" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="9" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="True" />
         <Attribute id="836fcf9d-aab3-4375-9049-d73e3a1b50b7" name="Memo" displayName="备注" description="" help="抵用劵行.Misc.备注" dataTypeID="3d174255-fd12-47f7-8844-3b5e4fae9e8c" isKey="False" defaultValue="" length="50" precise="5" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="10" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="True" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="True" />
+        <Attribute id="86b93aee-ce01-4c9e-97f3-aebaa7ddb584" name="StartLimit" displayName="用券起始额度" description="" help="抵用劵行.Misc.用券起始额度" dataTypeID="91031687-94bb-4988-a939-df7bf999ef4f" isKey="False" defaultValue="0" length="9" precise="24" scale="9" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="11" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="True" />
       </Attributes>
       <Associations>
         <Association id="59d294b6-b400-49af-a1f9-5548bae57c83" name="VouchersLine_1afac216-cb65-48fc-8c1a-3457cc7e1a0d_Operators" displayName="抵用劵行.销售人员--&gt;业务员" description="" help="" parent_Class_ID="2b208b3f-6953-4ad1-bb8d-763cd8f8cde3" parent_Attribute_ID="1afac216-cb65-48fc-8c1a-3457cc7e1a0d" child_Class_ID="198b0f81-207e-4707-8a8c-e0475b7674bd" child_Attribute_ID="00000000-0000-0000-0000-000000000000" parentCardinality="1" childCardinality="0" kind="0" direction="0" isCascadeDelete="False" cascadeDeleteRule="0" isCascadeUpdate="False" isEnableCascadeValidation="True" cascadeUpdateRule="0" />
@@ -56,11 +57,11 @@
     </Entity>
     <Diagram id="407bbba1-2464-469e-bf02-1a543f81e1b7" name="Vouchers" displayName="Vouchers">
       <Class Editable="True" ID="1ca87957-f121-4702-8825-3a4910cf7cd0" Type="Entity" ADID="61f2eca4-8d99-460a-83a0-93082db0a9da">
-        <Location X="167" Y="160" />
+        <Location X="181" Y="90" />
         <Size width="120" height="58" />
       </Class>
       <Class Editable="True" ID="7edd356f-5858-47c6-9da5-b152d44e7647" Type="Entity" ADID="2b208b3f-6953-4ad1-bb8d-763cd8f8cde3">
-        <Location X="459" Y="145" />
+        <Location X="449" Y="86" />
         <Size width="120" height="58" />
       </Class>
     </Diagram>

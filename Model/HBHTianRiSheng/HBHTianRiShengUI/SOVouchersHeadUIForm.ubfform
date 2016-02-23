@@ -1,4 +1,4 @@
-<View ID="7f428875-185e-4ff8-886c-d22615c74ab8" ChildLabelWidth="56" ChildRefWidth="20" GridBottomMargin="5" GridColumnCount="1" GridColumnSpace="24" GridLeftMargin="0" GridRightMargin="0" GridRowCount="3" GridRowSpace="10" GridTopMargin="0" Height="504" LayoutType="GridBag" Name="SOVouchersHeadUIForm" Namespace="SOVouchersHeadUIModel" TabStop="False" TemplateCode="D:\U9Cust\UFIDA\U9Proj\U9AppCode\U9.VOB.Apps.Cus\CusApp\HBHTianRiSheng\Model\HBHTianRiSheng\HBHTianRiShengUI\SOVouchersUIForm.ubfform" TemplateType="CopyForms" UIModelID="bdd3a9ea-2d87-4375-8926-3f0ee21a6913" URI=".UI_单表_686_504WebPart" ViewID="4983" Width="686" X="10" Y="85">
+<View ID="7f428875-185e-4ff8-886c-d22615c74ab8" ChildLabelWidth="56" ChildRefWidth="20" GridBottomMargin="5" GridColumnCount="1" GridColumnSpace="24" GridLeftMargin="0" GridRightMargin="0" GridRowCount="3" GridRowSpace="10" GridTopMargin="0" Height="504" LayoutType="GridBag" Name="SOVouchersHeadUIForm" Namespace="SOVouchersHeadUIModel" TabStop="False" TemplateCode="D:\U9Cust\UFIDA\U9Proj\U9AppCode\U9.VOB.Apps.Cus\CusApp\HBHTianRiSheng\Model\HBHTianRiSheng\HBHTianRiShengUI\SOVouchersUIForm.ubfform" TemplateType="CopyForms" UIModelID="bdd3a9ea-2d87-4375-8926-3f0ee21a6913" URI=".UI_单表_686_504WebPart" ViewID="4983" Width="686" X="10" Y="10">
   <Columns>
     <Column Fixed="False" Name="Column0" Type="Title" Width="686" />
   </Columns>
@@ -61,7 +61,7 @@
       <Row Fixed="True" Height="365" Name="Row0" />
       <Row Fixed="False" Height="1" Name="Row1" />
     </Rows>
-    <DataGrid ID="383e1d80-db36-472d-aa35-02adcc9d578b" EditStatus="edit" Enabled="True" GridHeight="2" GridWidth="1" GridX="0" GridY="0" HasSum="False" Height="376" Name="DataGrid0" PageSize="20" Paging="True" TabIndex="1" TabStop="True" Width="665" X="10" Y="0">
+    <DataGrid ID="383e1d80-db36-472d-aa35-02adcc9d578b" EditStatus="edit" Enabled="True" GridHeight="2" GridWidth="1" GridX="0" GridY="0" HasSum="True" Height="376" Name="DataGrid0" PageSize="-1" Paging="False" TabIndex="1" TabStop="True" Width="665" X="10" Y="0">
       <Events />
       <Header ID="064346bb-2973-4200-9e12-5ba407b7d0de" Name="Header0">
         <HeaderRow Name="DefaultRow">
@@ -69,11 +69,12 @@
           <HeaderCell ID="371f4e7b-1378-4886-b6d9-66c8f8840b35" ColSpan="1" Name="HeaderCell1" OwnerColName="DocLineNo0" RowSpan="1" />
           <HeaderCell ID="cd05d6ee-4fce-4506-8edd-c196f954885a" ColSpan="1" Name="HeaderCell2" OwnerColName="VouchersLine0" RowSpan="1" />
           <HeaderCell ID="c61304f9-3b9f-4c63-ab64-38da25b9a34c" ColSpan="1" Name="HeaderCell3" OwnerColName="VouchersLine_Money0" RowSpan="1" />
+          <HeaderCell ID="045848d7-445e-4599-8cea-6761ad2f74f0" ColSpan="1" DisplayName="抵用劵类型" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" Name="HeaderCell10" OwnerColName="VouchersLine_VouchersType0" RowSpan="1" />
           <HeaderCell ID="cf299a4b-e6f0-4fab-9f3c-ae6385c854cf" ColSpan="1" Name="HeaderCell4" OwnerColName="VouchersLine_EffectiveDate0" RowSpan="1" />
           <HeaderCell ID="d1fd717c-7cf3-486d-9902-12a767e546bf" ColSpan="1" Name="HeaderCell5" OwnerColName="VouchersLine_DisabledDate0" RowSpan="1" />
+          <HeaderCell ID="953ffa5d-e5a7-4a61-abc9-d2d794eb91c1" ColSpan="1" DisplayName="生效" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" Name="HeaderCell11" OwnerColName="VouchersLine_IsEffectived0" RowSpan="1" />
+          <HeaderCell ID="1c52ada2-ac7a-457a-935f-f8cf87a64eb5" ColSpan="1" DisplayName="已使用" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" Name="HeaderCell12" OwnerColName="VouchersLine_IsUsed0" RowSpan="1" />
           <HeaderCell ID="2e18ba7d-607f-427d-b3fc-70ac0f727872" ColSpan="1" Name="HeaderCell6" OwnerColName="VouchersLine_Seller0" RowSpan="1" />
-          <HeaderCell ID="8945e654-13ad-468c-bbca-55eaa3059937" ColSpan="1" Name="HeaderCell7" OwnerColName="VouchersLine_IsEffectived0" RowSpan="1" />
-          <HeaderCell ID="cb0e3f9f-46c6-4dd6-aebf-9a7e47aca46d" ColSpan="1" Name="HeaderCell8" OwnerColName="VouchersLine_IsUsed0" RowSpan="1" />
         </HeaderRow>
       </Header>
       <UIFilterBar Name="LocateBar" />
@@ -93,18 +94,19 @@
           <Events />
         </NumberColumn>
         <ReferenceColumn ID="758dbd4f-d53b-4fb6-99da-760f280a074d" CodeAttributeName="VouchersNo" CodeField="VouchersNo" CodeFieldUIFieldID="VouchersLine_VouchersNo" CodeFieldUIViewID="SOVouchersHead_SOVouchersLine" DefaultValue="" DisplayFormat="19.0" Enabled="True" EntityName="ID" Help="订单抵用劵行.Misc.抵用券" IsNull="True" IsProperty="False" IsSequence="False" Name="VouchersLine0" NameAttributeName="VouchersNo" NameFieldUIFieldID="VouchersLine_VouchersNo" NameFieldUIViewID="SOVouchersHead_SOVouchersLine" NPos="3" PkeyField="ID" Point="0" RefType="e0a0250a-beda-4789-9d2f-e32f5281144c" TextAlign="Right" UIFieldID="VouchersLine" UIViewID="SOVouchersHead_SOVouchersLine" Visible="True" WindowHeight="408" WindowWidth="580">
-          <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
-          <ReferenceRelation Action="Clear" ColumnDisplayName="劵号" ColumnID="VouchersNo" TargetControlType="" TargetID="" TargetProperty="" />
-          <ReferenceRelation Action="Clear" ColumnDisplayName="面值" ColumnID="Money" TargetControlType="NumberColumnModel" TargetID="VouchersLine_Money" TargetProperty="Value" />
-          <ReferenceRelation Action="Clear" ColumnDisplayName="生效日期" ColumnID="EffectiveDate" TargetControlType="DatePickerColumnModel" TargetID="VouchersLine_EffectiveDate" TargetProperty="Value" />
-          <ReferenceRelation Action="Clear" ColumnDisplayName="失效日期" ColumnID="DisabledDate" TargetControlType="DatePickerColumnModel" TargetID="VouchersLine_DisabledDate" TargetProperty="Value" />
-          <ReferenceRelation Action="Clear" ColumnDisplayName="生效" ColumnID="IsEffectived" TargetControlType="CheckBoxColumnModel" TargetID="VouchersLine_IsEffectived" TargetProperty="Value" />
-          <ReferenceRelation Action="Clear" ColumnDisplayName="已使用" ColumnID="IsUsed" TargetControlType="CheckBoxColumnModel" TargetID="VouchersLine_IsUsed" TargetProperty="Value" />
-          <ReferenceRelation Action="Clear" ColumnDisplayName="抵用劵单号" ColumnID="Vouchers_DocNo" TargetControlType="" TargetID="" TargetProperty="" />
-          <ReferenceRelation Action="Clear" ColumnDisplayName="行号" ColumnID="DocLineNo" TargetControlType="" TargetID="" TargetProperty="" />
-          <ReferenceRelation Action="Clear" ColumnDisplayName="业务员ID" ColumnID="Seller_ID" TargetControlType="ReferenceColumnModel" TargetID="VouchersLine_Seller" TargetProperty="Key" />
-          <ReferenceRelation Action="Clear" ColumnDisplayName="业务员编码" ColumnID="Seller_Code" TargetControlType="ReferenceColumnModel" TargetID="VouchersLine_Seller" TargetProperty="Value" />
-          <ReferenceRelation Action="Clear" ColumnDisplayName="业务员名称" ColumnID="Seller_Name" TargetControlType="ReferenceColumnModel" TargetID="VouchersLine_Seller" TargetProperty="Text" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" Name="ReferenceRelation19" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="劵号" ColumnID="VouchersNo" Name="ReferenceRelation20" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="面值" ColumnID="Money" Name="ReferenceRelation21" TargetControlType="NumberColumnModel" TargetID="VouchersLine_Money" TargetProperty="Value" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="生效日期" ColumnID="EffectiveDate" Name="ReferenceRelation22" TargetControlType="DatePickerColumnModel" TargetID="VouchersLine_EffectiveDate" TargetProperty="Value" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="失效日期" ColumnID="DisabledDate" Name="ReferenceRelation23" TargetControlType="DatePickerColumnModel" TargetID="VouchersLine_DisabledDate" TargetProperty="Value" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="生效" ColumnID="IsEffectived" Name="ReferenceRelation24" TargetControlType="CheckBoxColumnModel" TargetID="VouchersLine_IsEffectived" TargetProperty="Value" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="已使用" ColumnID="IsUsed" Name="ReferenceRelation25" TargetControlType="CheckBoxColumnModel" TargetID="VouchersLine_IsUsed" TargetProperty="Value" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="抵用劵单号" ColumnID="Vouchers_DocNo" Name="ReferenceRelation26" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="行号" ColumnID="DocLineNo" Name="ReferenceRelation27" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="业务员ID" ColumnID="Seller_ID" Name="ReferenceRelation28" TargetControlType="ReferenceColumnModel" TargetID="VouchersLine_Seller" TargetProperty="Key" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="业务员编码" ColumnID="Seller_Code" Name="ReferenceRelation29" TargetControlType="ReferenceColumnModel" TargetID="VouchersLine_Seller" TargetProperty="Value" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="业务员名称" ColumnID="Seller_Name" Name="ReferenceRelation30" TargetControlType="ReferenceColumnModel" TargetID="VouchersLine_Seller" TargetProperty="Text" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="抵用劵类型" ColumnID="VouchersType" Name="ReferenceRelation31" TargetControlType="DropDownListColumnModel" TargetID="VouchersLine_VouchersType" TargetProperty="Value" />
           <RefNameFields>
             <RefNameField UIFieldID="VouchersNo" />
           </RefNameFields>
@@ -113,20 +115,29 @@
           </UIFilterBar>
           <Events />
         </ReferenceColumn>
-        <NumberColumn ID="81046c5a-0298-4eff-a802-c68405f07809" DefaultValue="0" DisplayFormat="24.9" Enabled="False" Help="抵用劵行.Misc.面值" IsNull="True" IsProperty="False" IsSequence="False" Name="VouchersLine_Money0" NPos="4" Point="0" UIFieldID="VouchersLine_Money" UIViewID="SOVouchersHead_SOVouchersLine" Visible="True">
+        <NumberColumn ID="81046c5a-0298-4eff-a802-c68405f07809" DefaultValue="0" DisplayFormat="24.9" Enabled="False" HasSum="True" Help="抵用劵行.Misc.面值" IsNull="True" IsProperty="False" IsSequence="False" Name="VouchersLine_Money0" NPos="4" Point="0" UIFieldID="VouchersLine_Money" UIViewID="SOVouchersHead_SOVouchersLine" Visible="True">
           <PrecisionBind Name="PrecisionBind2" />
           <RoundRuleBind Name="RoundRuleBind2" />
           <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind2" />
           <CurrencyType Name="CurrencyType2" />
           <Events />
         </NumberColumn>
-        <DatePickerColumn ID="1a15b33b-8c2b-4963-b849-f605da25a5c6" DefaultValue="" DisplayFormat="19" Enabled="False" Help="抵用劵行.Misc.生效日期" IsNull="True" IsProperty="False" IsSequence="False" Name="VouchersLine_EffectiveDate0" NPos="5" Point="0" UIFieldID="VouchersLine_EffectiveDate" UIViewID="SOVouchersHead_SOVouchersLine" Visible="True">
+        <DropDownListColumn ID="124d937b-de7e-4b72-ab38-449cfbfeb0e7" DefaultValue="0" DisplayFormat="10.0" Enabled="False" EnumFullName="U9.VOB.Cus.HBHTianRiSheng.VouchersTypeEnum" EnumID="cef5bb25-17e0-4d8f-a0cb-597aea46c150" Help="抵用劵行.Misc.抵用劵类型" IsNull="True" IsProperty="False" IsSequence="False" Name="VouchersLine_VouchersType0" NPos="5" Point="0" UIFieldID="VouchersLine_VouchersType" UIViewID="SOVouchersHead_SOVouchersLine" Visible="True">
+          <Events />
+        </DropDownListColumn>
+        <DatePickerColumn ID="1a15b33b-8c2b-4963-b849-f605da25a5c6" DefaultValue="" DisplayFormat="19" Enabled="False" Help="抵用劵行.Misc.生效日期" IsNull="True" IsProperty="False" IsSequence="False" Name="VouchersLine_EffectiveDate0" NPos="6" Point="0" UIFieldID="VouchersLine_EffectiveDate" UIViewID="SOVouchersHead_SOVouchersLine" Visible="True">
           <Events />
         </DatePickerColumn>
-        <DatePickerColumn ID="26a88a36-b2b5-4380-9b93-aa479adf61c8" DefaultValue="" DisplayFormat="19" Enabled="False" Help="抵用劵行.Misc.失效日期" IsNull="True" IsProperty="False" IsSequence="False" Name="VouchersLine_DisabledDate0" NPos="6" Point="0" UIFieldID="VouchersLine_DisabledDate" UIViewID="SOVouchersHead_SOVouchersLine" Visible="True">
+        <DatePickerColumn ID="26a88a36-b2b5-4380-9b93-aa479adf61c8" DefaultValue="" DisplayFormat="19" Enabled="False" Help="抵用劵行.Misc.失效日期" IsNull="True" IsProperty="False" IsSequence="False" Name="VouchersLine_DisabledDate0" NPos="7" Point="0" UIFieldID="VouchersLine_DisabledDate" UIViewID="SOVouchersHead_SOVouchersLine" Visible="True">
           <Events />
         </DatePickerColumn>
-        <ReferenceColumn ID="2f46bd24-6136-4aa9-88c7-79c407cd409b" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="VouchersLine_Seller_Code" CodeFieldUIViewID="SOVouchersHead_SOVouchersLine" DefaultValue="" DisplayFormat="19.0" Enabled="False" EntityName="ID" Help="抵用劵行.Misc.销售人员" IsNull="True" IsProperty="False" IsSequence="False" Name="VouchersLine_Seller0" NameAttributeName="Name" NameFieldUIFieldID="VouchersLine_Seller_Name" NameFieldUIViewID="SOVouchersHead_SOVouchersLine" NPos="7" PkeyField="ID" Point="0" RefType="997aa662-cd68-48cc-9e6e-ac0fa0396433" TextAlign="Right" UIFieldID="VouchersLine_Seller" UIViewID="SOVouchersHead_SOVouchersLine" Visible="True" WindowHeight="408" WindowWidth="580">
+        <CheckBoxColumn ID="205f7df3-4b23-4e4a-99fc-2e57e01789b5" DefaultValue="false" DisplayFormat="1" Enabled="False" Help="抵用劵行.Misc.生效" IsNull="True" IsProperty="False" IsSequence="False" Name="VouchersLine_IsEffectived0" NPos="8" Point="0" UIFieldID="VouchersLine_IsEffectived" UIViewID="SOVouchersHead_SOVouchersLine" Visible="True" Width="55">
+          <Events />
+        </CheckBoxColumn>
+        <CheckBoxColumn ID="f6cb9ffe-4bbd-4fbc-beb8-3065b6e0dc6c" DefaultValue="false" DisplayFormat="1" Enabled="False" Help="抵用劵行.Misc.已使用" IsNull="True" IsProperty="False" IsSequence="False" Name="VouchersLine_IsUsed0" NPos="9" Point="0" UIFieldID="VouchersLine_IsUsed" UIViewID="SOVouchersHead_SOVouchersLine" Visible="True" Width="55">
+          <Events />
+        </CheckBoxColumn>
+        <ReferenceColumn ID="2f46bd24-6136-4aa9-88c7-79c407cd409b" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="VouchersLine_Seller_Code" CodeFieldUIViewID="SOVouchersHead_SOVouchersLine" DefaultValue="" DisplayFormat="19.0" Enabled="False" EntityName="ID" Help="抵用劵行.Misc.销售人员" IsNull="True" IsProperty="False" IsSequence="False" Name="VouchersLine_Seller0" NameAttributeName="Name" NameFieldUIFieldID="VouchersLine_Seller_Name" NameFieldUIViewID="SOVouchersHead_SOVouchersLine" NPos="10" PkeyField="ID" Point="0" RefType="997aa662-cd68-48cc-9e6e-ac0fa0396433" TextAlign="Right" UIFieldID="VouchersLine_Seller" UIViewID="SOVouchersHead_SOVouchersLine" Visible="True" WindowHeight="408" WindowWidth="580">
           <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" Name="ReferenceRelation12" TargetControlType="" TargetID="" TargetProperty="" />
           <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" Name="ReferenceRelation13" TargetControlType="" TargetID="" TargetProperty="" />
           <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" Name="ReferenceRelation14" TargetControlType="" TargetID="" TargetProperty="" />
@@ -142,12 +153,6 @@
           </UIFilterBar>
           <Events />
         </ReferenceColumn>
-        <CheckBoxColumn ID="205f7df3-4b23-4e4a-99fc-2e57e01789b5" DefaultValue="false" DisplayFormat="1" Enabled="False" Help="抵用劵行.Misc.生效" IsNull="True" IsProperty="False" IsSequence="False" Name="VouchersLine_IsEffectived0" NPos="8" Point="0" UIFieldID="VouchersLine_IsEffectived" UIViewID="SOVouchersHead_SOVouchersLine" Visible="True" Width="55">
-          <Events />
-        </CheckBoxColumn>
-        <CheckBoxColumn ID="f6cb9ffe-4bbd-4fbc-beb8-3065b6e0dc6c" DefaultValue="false" DisplayFormat="1" Enabled="False" Help="抵用劵行.Misc.已使用" IsNull="True" IsProperty="False" IsSequence="False" Name="VouchersLine_IsUsed0" NPos="9" Point="0" UIFieldID="VouchersLine_IsUsed" UIViewID="SOVouchersHead_SOVouchersLine" Visible="True" Width="55">
-          <Events />
-        </CheckBoxColumn>
       </Columns>
     </DataGrid>
   </Card>

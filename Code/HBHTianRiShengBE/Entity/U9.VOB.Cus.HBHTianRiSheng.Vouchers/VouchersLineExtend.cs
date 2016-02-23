@@ -83,11 +83,20 @@ namespace U9.VOB.Cus.HBHTianRiSheng {
 		/// <summary>
 		/// on Validate
 		/// </summary>
-		protected override void OnValidate() {
-			base.OnValidate();
-			this.SelfEntityValidator();
-			// TO DO: write your business code here...
-		}
+        protected override void OnValidate()
+        {
+            base.OnValidate();
+            this.SelfEntityValidator();
+            // TO DO: write your business code here...
+
+            //if (this.OriginalData != null)
+            //{
+            //    if (this.IsUsed)
+            //    {
+
+            //    }
+            //}
+        }
 		#endregion
 		
 		#region 异常处理，开发人员可以重新封装异常

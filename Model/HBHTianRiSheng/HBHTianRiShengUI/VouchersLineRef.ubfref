@@ -24,6 +24,6 @@
     </Reference>
   </References>
   <RefParameters>
-    <RefParam id="8054f27b-915d-4f7a-bda7-99ffd081b4f5" name="VouchersType" displayName="抵用券类型" description="" help="" dataType="String" defaultValue="" />
+    <RefParam id="ee199deb-21c1-4f41-bd01-fe904913aaef" name="VouchersType" displayName="抵用券类型" description="" help="" dataType="String" defaultValue="" />
   </RefParameters>
 </ReferenceComponent>

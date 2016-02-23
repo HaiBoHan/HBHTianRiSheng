@@ -23,6 +23,9 @@ using UFSoft.UBF.UI.MD.Runtime;
 using UFSoft.UBF.UI.ActionProcess;
 using UFSoft.UBF.UI.WebControls.ClientCallBack;
 using System.Collections.Generic;
+using UFSoft.UBF.UI.WebControls.Association;
+using UFSoft.UBF.UI.WebControls.Association.Adapter;
+using UFSoft.UBF.UI.ControlModel;
 
 
 
@@ -316,6 +319,7 @@ namespace VouchersUIModel
             //// 绑定注册弹出对话框到按钮 
             //UFIDA.U9.UI.PDHelper.PDFormMessage.ShowDelConfirmDialog(this.Page, "确认打开?", "确认打开", this.BtnDocOpen);
 
+            CellEditEnabledAssoControl();
         }
 
         public void AfterEventBind()
@@ -350,10 +354,71 @@ namespace VouchersUIModel
             this.BtnClose.Visible = false;
 
             this.Status89.Enabled = false;
+
+            IUFDataGridColumn isUsedColumn = this.DataGrid5.Columns[this.Model.Vouchers_VouchersLine.FieldIsUsed.Name];
+            //.Enabled = false;
+            if (isUsedColumn != null)
+            {
+                isUsedColumn.Enabled = false;
+            }
         }
 
 
         #endregion
+
+
+        private void CellEditEnabledAssoControl()
+        {
+            AssociationControl associationControl = new AssociationControl();
+            associationControl.SourceServerControl = this.DataGrid5;
+            associationControl.SourceControl.EventName = "OnBeforeCellFocusEnter";
+            // 触发列名
+            //((UFWebClientGridAdapter)associationControl.SourceControl).FireEventCols.Add(this.Model.Vouchers_VouchersLine.FieldMoney.Name);
+            //((UFWebClientGridAdapter)associationControl.SourceControl).FireEventCols.Add(this.Model.Vouchers_VouchersLine.FieldEffectiveDate.Name);
+            CodeBlock codeBlock = new CodeBlock();
+            StringBuilder stringBuilder = new StringBuilder(256);
+            stringBuilder.AppendFormat("var currentrow = $find('{0}').get_CurrentRowIndex(); \n", this.DataGrid5.ClientID);
+            //stringBuilder.AppendFormat("var custid     = $find('{0}').GetCellValueByFieldAndRow('Customer',currentrow).Value; \n", this.DataGrid5.ClientID);
+            //stringBuilder.AppendFormat("var custsiteid = $find('{0}').GetCellValueByFieldAndRow('CustomerSite',currentrow).Value; \n", this.DataGrid5.ClientID);
+            //stringBuilder.AppendFormat("var custcateid = $find('{0}').GetCellValueByFieldAndRow('CustomerCategory',currentrow).Value; \n", this.DataGrid5.ClientID);
+            //stringBuilder.AppendFormat("var itemid     = $find('{0}').GetCellValueByFieldAndRow('ItemInfo_ItemID',currentrow).Value; \n", this.DataGrid5.ClientID);
+            //stringBuilder.AppendFormat("var itemcateid = $find('{0}').GetCellValueByFieldAndRow('MaterialCategory',currentrow).Value; \n", this.DataGrid5.ClientID);
+            //stringBuilder.AppendFormat("var itemdepid  = $find('{0}').GetCellValueByFieldAndRow('ItemDepended',currentrow).Value; \n", this.DataGrid5.ClientID);
+            //stringBuilder.Append("if(custid == -1) \n custid = ''; \n");
+            //stringBuilder.Append("if(custsiteid == -1) \n custsiteid = ''; \n");
+            //stringBuilder.Append("if(custcateid == -1) \n custcateid = ''; \n");
+            //stringBuilder.Append("if(itemid == -1) \n itemid = ''; \n");
+            //stringBuilder.Append("if(itemcateid == -1) \n itemcateid = ''; \n");
+            //stringBuilder.Append("if(itemdepid == -1) \n itemdepid = ''; \n");
+            //stringBuilder.Append("switch(args.arg.ColField)\n");
+            //stringBuilder.Append("{ \n");
+            //stringBuilder.Append("   case 'Customer':\n");
+            //stringBuilder.Append("      if(custcateid != '') \n {args.arg.CellEditEnabled = false;} \n");
+            //stringBuilder.Append("      break; \n");
+            //stringBuilder.Append("   case 'CustomerSite':");
+            //stringBuilder.Append("      if(custid == '')    \n {args.arg.CellEditEnabled = false;} \n");
+            //stringBuilder.Append("      break; \n");
+            //stringBuilder.Append("   case 'CustomerCategory':");
+            //stringBuilder.Append("      if(custid != '')    \n {args.arg.CellEditEnabled = false;} \n");
+            //stringBuilder.Append("      break; \n");
+            //stringBuilder.Append("   case 'ItemInfo_ItemID':");
+            //stringBuilder.Append("      if(itemcateid != '') \n {args.arg.CellEditEnabled = false;} \n");
+            //stringBuilder.Append("      break; \n");
+            //stringBuilder.Append("   case 'MaterialCategory':");
+            //stringBuilder.Append("      if(itemid != '')    \n {args.arg.CellEditEnabled = false;} \n");
+            //stringBuilder.Append("      break; \n");
+            //stringBuilder.Append("   case 'Price':");
+            //stringBuilder.Append("      if(itemdepid != '')  \n {args.arg.CellEditEnabled = false;} \n");
+            //stringBuilder.Append("      break; \n");
+            //stringBuilder.Append("} \n");
+
+            stringBuilder.AppendFormat("var isUsed     = $find('{0}').GetCellValueByFieldAndRow('" + this.Model.Vouchers_VouchersLine.FieldIsUsed.Name + "',currentrow).Value; \n", this.DataGrid5.ClientID);
+
+            stringBuilder.Append("      if(isUsed == 'true') \n {args.arg.CellEditEnabled = false;} \n");
+
+            codeBlock.Condition = stringBuilder.ToString();
+            associationControl.addBlock(codeBlock);
+        }
 
     }
 }

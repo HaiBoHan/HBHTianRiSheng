@@ -6,6 +6,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
+using HBH.DoNet.DevPlatform.EntityMapping;
+using UFIDA.U9.Base;
 
 #endregion
 
@@ -37,6 +39,57 @@ namespace U9.VOB.Cus.HBHTianRiSheng {
 		protected override void OnInserting() {
 			base.OnInserting();
 			// TO DO: write your business code here...
+
+            // 自动生成单号
+            if (PubClass.IsNull(this.DocNo))
+            { 
+                // DyyyyMMdd***
+                string strPrefix = string.Format("D{0}"
+                    , Context.LoginDate.ToString("yyyyMMdd")
+                    );
+
+                /*
+                
+--select *
+--from (
+--	select 'D20160101001' as DocNo
+--	union select 'D20160101002'
+--	union select 'D20160101003'
+--	union select 'D20160101011'
+--	union select 'D20160101012'
+--	union select 'D20160101012'
+--	union select 'D20160101101'
+--	union select 'D20160101102'
+--	union select 'D20160101103'
+	
+--	union select 'D20160201001'
+--	union select 'D20160201002'
+--	union select 'D20160201003'
+--	union select 'D20160202001'
+--	union select 'D20160202002'
+--	union select 'D20160202003'
+--	union select 'D20160201001'
+--	) as tmp
+
+--order by 
+--	DocNo desc 
+
+                 */
+                string opath = string.Format("DocNo like '{0}%' order by DocNo desc"
+                    , strPrefix
+                    );
+                Vouchers vouMax = Vouchers.Finder.Find(opath);
+
+                int flow = 0;
+                if (vouMax != null
+                    && vouMax.DocNo.Length >= 12
+                    )
+                {
+                    flow = vouMax.DocNo.Substring(9, 3).GetInt();
+                }
+
+                this.DocNo = strPrefix + flow.ToString().PadLeft(3, '0');
+            }
 		}
 
 		/// <summary>

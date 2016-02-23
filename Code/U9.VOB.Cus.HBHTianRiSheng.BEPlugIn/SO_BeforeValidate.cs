@@ -9,7 +9,7 @@ using U9.VOB.Cus.HBHTianRiSheng.HBHHelper;
 
 namespace U9.VOB.Cus.HBHTianRiSheng.BEPlugIn
 {
-    public class SO_AfterDefaultValue : UFSoft.UBF.Eventing.IEventSubscriber
+    public class SO_BeforeValidate : UFSoft.UBF.Eventing.IEventSubscriber
     {
         public void Notify(params object[] args)
         {
@@ -38,11 +38,11 @@ namespace U9.VOB.Cus.HBHTianRiSheng.BEPlugIn
                                 && dVouchers > 0
                                 )
                             {
-                                throw new BusinessException(string.Format("订单{0}行{1}已分摊抵用卷金额{2}，不允许修改行数量!"
-                                    , entity.DocNo
-                                    , soline.DocLineNo
-                                    , strVouMoney
-                                    ));
+                                //throw new BusinessException(string.Format("订单{0}行{1}已分摊抵用卷金额{2}，不允许修改行数量!"
+                                //    , entity.DocNo
+                                //    , soline.DocLineNo
+                                //    , strVouMoney
+                                //    ));
                             }
 
                             if (dVouchers == 0)
@@ -54,26 +54,26 @@ namespace U9.VOB.Cus.HBHTianRiSheng.BEPlugIn
                                 }
                             }
 
-                            //// 数量有变化，重新赋值、重新算金额、扣劵
-                            //if (soline.SysState == UFSoft.UBF.PL.Engine.ObjectState.Inserted
-                            //    || soline.OriginalData == null
-                            //    || soline.OrderByQtyTU != soline.OriginalData.OrderByQtyTU
-                            //    )
-                            {
-                                //if (soline.DescFlexField.PrivateDescSeg2.IsNull())
-                                //{
-                                //    soline.DescFlexField.PrivateDescSeg3 = soline.TotalMoneyTC.ToString("G0");
-                                //}
-                                string newMoney = soline.TotalMoneyTC.ToString("G0");
-                                if (soline.DescFlexField.PrivateDescSeg3 != newMoney)
-                                {
-                                    soline.DescFlexField.PrivateDescSeg3 = newMoney;
-                                }
-                            }
-                            //else
-                            //{ 
-                                
+                            ////// 数量有变化，重新赋值、重新算金额、扣劵
+                            ////if (soline.SysState == UFSoft.UBF.PL.Engine.ObjectState.Inserted
+                            ////    || soline.OriginalData == null
+                            ////    || soline.OrderByQtyTU != soline.OriginalData.OrderByQtyTU
+                            ////    )
+                            //{
+                            //    //if (soline.DescFlexField.PrivateDescSeg2.IsNull())
+                            //    //{
+                            //    //    soline.DescFlexField.PrivateDescSeg3 = soline.TotalMoneyTC.ToString("G0");
+                            //    //}
+                            //    string newMoney = soline.TotalMoneyTC.ToString("G0");
+                            //    if (soline.DescFlexField.PrivateDescSeg3 != newMoney)
+                            //    {
+                            //        soline.DescFlexField.PrivateDescSeg3 = newMoney;
+                            //    }
                             //}
+                            ////else
+                            ////{ 
+                                
+                            ////}
                         }
                     }
 

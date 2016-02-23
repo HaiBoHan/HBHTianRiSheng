@@ -89,6 +89,17 @@
     <Reference Include="UFIDA.U9.PR.PRBE.Deploy">
       <HintPath>..\..\..\..\..\..\U9Product\U9.VOB.Product.Component\App\UFIDA.U9.PR.PRBE.Deploy.dll</HintPath>
     </Reference>
+    <Reference Include="UFIDA.U9.PriceCal.PriceCalSV">
+      <HintPath>..\..\..\..\..\..\UBFV30\U9.VOB.Product.Component\App\UFIDA.U9.PriceCal.PriceCalSV.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.PriceCal.PriceCalSV.Agent, Version=25.5401.14420.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\UBFV30\U9.VOB.Product.Component\App\UFIDA.U9.PriceCal.PriceCalSV.Agent.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.PriceCal.PriceCalSV.Deploy, Version=25.5401.14420.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\UBFV30\U9.VOB.Product.Component\App\UFIDA.U9.PriceCal.PriceCalSV.Deploy.dll</HintPath>
+    </Reference>
     <Reference Include="UFIDA.U9.SM.SMBP">
       <HintPath>..\..\..\..\..\..\U9Product\U9.VOB.Product.Component\App\UFIDA.U9.SM.SMBP.dll</HintPath>
     </Reference>
@@ -103,7 +114,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Ship_AfterUpdated.cs" />
     <Compile Include="SO_AfterValidate.cs" />
-    <Compile Include="SO_AfterDefaultValue.cs" />
+    <Compile Include="SO_BeforeValidate.cs" />
+    <Compile Include="SO_BeforeDefaultValue.cs" />
+    <Compile Include="SO_AfterDeleting.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="U9.VOB.Cus.HBHTianRiSheng.BEPlugIn.sub.xml">

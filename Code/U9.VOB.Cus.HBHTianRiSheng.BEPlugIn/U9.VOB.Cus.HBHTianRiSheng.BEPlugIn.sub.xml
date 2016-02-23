@@ -12,8 +12,16 @@
   </subcription>
 
   
-  <subcription event="UFIDA.U9.SM.SO.SO.AfterDefaultValue">
-    <subscriber type="U9.VOB.Cus.HBHTianRiSheng.BEPlugIn.SO_AfterDefaultValue,U9.VOB.Cus.HBHTianRiSheng.BEPlugIn.dll"/>
+  <subcription event="UFIDA.U9.SM.SO.SO.BeforeValidate">
+    <subscriber type="U9.VOB.Cus.HBHTianRiSheng.BEPlugIn.SO_BeforeValidate,U9.VOB.Cus.HBHTianRiSheng.BEPlugIn.dll"/>
+  </subcription>
+
+  <subcription event="UFIDA.U9.SM.SO.SO.BeforeDefaultValue">
+    <subscriber type="U9.VOB.Cus.HBHTianRiSheng.BEPlugIn.SO_BeforeDefaultValue,U9.VOB.Cus.HBHTianRiSheng.BEPlugIn.dll"/>
+  </subcription>
+
+  <subcription event="UFIDA.U9.SM.SO.SO.AfterDeleting">
+    <subscriber type="U9.VOB.Cus.HBHTianRiSheng.BEPlugIn.SO_AfterDeleting,U9.VOB.Cus.HBHTianRiSheng.BEPlugIn.dll"/>
   </subcription>
 
 </pub-sub>

@@ -12,6 +12,8 @@ namespace U9.VOB.Cus.HBHTianRiSheng.UIPlugin
 {
     public class SO_UIPlugin  : UFSoft.UBF.UI.Custom.ExtendedPartBase
     {
+        public const string Cons_SOVouchersDocTypeCode = ",SO04,SO08,SO09,";
+
         UFSoft.UBF.UI.IView.IPart part;
         UFIDA.U9.SCM.SM.SOUIModel.StandardSOMainUIFormWebPart _strongPart;
         IUFDataGrid dgLine;
@@ -188,30 +190,35 @@ namespace U9.VOB.Cus.HBHTianRiSheng.UIPlugin
                 && head.Status == (int)SODocStatusEnumData.Open
                 )
             {
-                _strongPart.BtnSave_Click(sender, e);
+                string strDocType = head.DocumentType_Code;
 
-                //curPart.CurrentState[Const_PriceModifyTable] = null;
-
-                //curPart.ShowAtlasModalDialog(btnHBHRefresh,"23ff31c2-e6af-4eda-b1ce-e82432f90c18", "采购订单调价", "800", "390", curPart.TaskId.ToString(), null, true, false, true,PartShowType.ShowModal,true);
-
-
-                head = _strongPart.Model.SO.FocusedRecord;
-
-                if (head.ID > 0
-                    && !_strongPart.Model.ErrorMessage.hasErrorMessage
-                    )
+                if (Cons_SOVouchersDocTypeCode.Contains("," + strDocType + ","))
                 {
-                    NameValueCollection nvc = new NameValueCollection();
-                    nvc.Add("SOID", head.ID.ToString());
-                    nvc.Add("SODocNo", head.DocNo);
+                    _strongPart.BtnSave_Click(sender, e);
 
-                    // [FormRegister("U9.VOB.Cus.HBHTianRiSheng.HBHTianRiShengUI","SOVouchersUIModel.SOVouchersUIFormWebPart", "U9.VOB.Cus.HBHTianRiSheng.HBHTianRiShengUI.WebPart", "4ef54a6c-9ad1-41a7-a0f6-e9915e38112c","WebPart", "False", 686, 504)] 
-                    _strongPart.ShowAtlasModalDialog(
-                        // curPart.GetUFControlByName(curPart.TopLevelContainer, "btnReLoad")
-                        btnHBHRefresh
-                        , "7f428875-185e-4ff8-886c-d22615c74ab8", "订单抵用劵", "690", "510"
-                        , _strongPart.TaskId.ToString(), nvc, true, false, false
-                        );
+                    //curPart.CurrentState[Const_PriceModifyTable] = null;
+
+                    //curPart.ShowAtlasModalDialog(btnHBHRefresh,"23ff31c2-e6af-4eda-b1ce-e82432f90c18", "采购订单调价", "800", "390", curPart.TaskId.ToString(), null, true, false, true,PartShowType.ShowModal,true);
+
+
+                    head = _strongPart.Model.SO.FocusedRecord;
+
+                    if (head.ID > 0
+                        && !_strongPart.Model.ErrorMessage.hasErrorMessage
+                        )
+                    {
+                        NameValueCollection nvc = new NameValueCollection();
+                        nvc.Add("SOID", head.ID.ToString());
+                        nvc.Add("SODocNo", head.DocNo);
+
+                        // [FormRegister("U9.VOB.Cus.HBHTianRiSheng.HBHTianRiShengUI","SOVouchersUIModel.SOVouchersUIFormWebPart", "U9.VOB.Cus.HBHTianRiSheng.HBHTianRiShengUI.WebPart", "4ef54a6c-9ad1-41a7-a0f6-e9915e38112c","WebPart", "False", 686, 504)] 
+                        _strongPart.ShowAtlasModalDialog(
+                            // curPart.GetUFControlByName(curPart.TopLevelContainer, "btnReLoad")
+                            btnHBHRefresh
+                            , "7f428875-185e-4ff8-886c-d22615c74ab8", "订单抵用劵", "690", "510"
+                            , _strongPart.TaskId.ToString(), nvc, true, false, false
+                            );
+                    }
                 }
             }
         }

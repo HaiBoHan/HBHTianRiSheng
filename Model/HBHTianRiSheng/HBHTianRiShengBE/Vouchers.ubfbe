@@ -5,7 +5,7 @@
       <Groups>
         <Group id="0b75b89d-58ab-4ba3-b872-a064dfa9d0a8" name="Key" displayName="Key" description="" help="" />
         <Group id="7c1e996c-cb62-4f6e-8b69-40bdb3b57704" name="Sys" displayName="Sys" description="" help="" />
-        <Group id="aa324b2a-bdd9-4803-9a43-7bcdc3527f76" name="Misc" displayName="Misc" description="" help="" />
+        <Group id="a102d814-a786-4200-a0af-3215a867ec7f" name="Misc" displayName="Misc" description="" help="" />
       </Groups>
       <Attributes>
         <Attribute id="14e25cb1-20e1-4eb5-b815-83214d3d6564" name="ID" displayName="ID" description="" help="抵用劵.Key.ID" dataTypeID="ba391065-6c27-4c82-acc8-b52b1c93a910" isKey="True" defaultValue="" length="8" precise="19" scale="0" isNullable="False" isReadOnly="False" isHide="True" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="0" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="db" groupName="Key" isEntityKey="False" isEntityData="True" isSystem="True" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
@@ -29,7 +29,7 @@
       <Groups>
         <Group id="2d899ec2-4d45-4586-a357-08779d0a1199" name="Key" displayName="Key" description="" help="" />
         <Group id="fe05beba-a265-4e65-b7a9-c9b7be7acc0e" name="Sys" displayName="Sys" description="" help="" />
-        <Group id="356104b8-6300-4a3b-927e-712e79952f7d" name="Misc" displayName="Misc" description="" help="" />
+        <Group id="fe72a3d8-1c1f-40b2-9ad8-b3aa57c7e0c4" name="Misc" displayName="Misc" description="" help="" />
       </Groups>
       <Attributes>
         <Attribute id="e74e1a91-59da-487a-b0ee-eb781c236a36" name="ID" displayName="ID" description="" help="抵用劵行.Key.ID" dataTypeID="ba391065-6c27-4c82-acc8-b52b1c93a910" isKey="True" defaultValue="" length="8" precise="19" scale="0" isNullable="False" isReadOnly="False" isHide="True" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="0" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="db" groupName="Key" isEntityKey="False" isEntityData="True" isSystem="True" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />

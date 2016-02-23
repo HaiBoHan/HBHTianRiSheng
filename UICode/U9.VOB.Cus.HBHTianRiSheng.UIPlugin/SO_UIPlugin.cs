@@ -11,7 +11,7 @@ using System.Collections.Specialized;
 namespace U9.VOB.Cus.HBHTianRiSheng.UIPlugin
 {
     public class SO_UIPlugin  : UFSoft.UBF.UI.Custom.ExtendedPartBase
-    {
+    {   // 特价订单、零售订单、套餐订单
         public const string Cons_SOVouchersDocTypeCode = ",SO04,SO08,SO09,";
 
         UFSoft.UBF.UI.IView.IPart part;

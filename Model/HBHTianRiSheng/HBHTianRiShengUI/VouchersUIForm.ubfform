@@ -239,7 +239,6 @@
           <HeaderCell ID="b458bb7d-bfcc-43cd-ab85-2ec49593a50f" ColSpan="1" Name="HeaderCell2" OwnerColName="VouchersType78" RowSpan="1" />
           <HeaderCell ID="31cc8999-c852-4f62-b037-9db8ea93234a" ColSpan="1" Name="HeaderCell3" OwnerColName="VouchersNo0" RowSpan="1" />
           <HeaderCell ID="bafb7bec-330a-458a-bced-1bb105167560" ColSpan="1" Name="HeaderCell4" OwnerColName="Money0" RowSpan="1" />
-          <HeaderCell ID="9155ca7e-30b4-45d5-9560-7cefc67d51df" ColSpan="1" DisplayName="用券起始额度" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" Name="HeaderCell13" OwnerColName="StartLimit28" RowSpan="1" />
           <HeaderCell ID="932d2735-c89c-40f3-ba59-26c1e2a7c718" ColSpan="1" Name="HeaderCell5" OwnerColName="EffectiveDate0" RowSpan="1" />
           <HeaderCell ID="ade2b3a8-1a44-4723-9c2e-ad8a3bc19908" ColSpan="1" Name="HeaderCell6" OwnerColName="DisabledDate0" RowSpan="1" />
           <HeaderCell ID="26795c12-8920-4427-a183-389cd76d4d04" ColSpan="1" Name="HeaderCell8" OwnerColName="IsEffectived0" RowSpan="1" />
@@ -292,26 +291,19 @@
           <CurrencyType Name="CurrencyType2" />
           <Events />
         </NumberColumn>
-        <NumberColumn ID="6b266e76-a443-4241-9999-d0f0434b3712" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="抵用劵行.Misc.用券起始额度" IsNull="True" IsProperty="False" IsSequence="False" MinValue="0" Name="StartLimit28" NPos="7" Point="0" UIFieldID="StartLimit" UIViewID="Vouchers_VouchersLine" Visible="True">
-          <PrecisionBind />
-          <RoundRuleBind />
-          <ValueOfRoundByValueBind />
-          <CurrencyType />
-          <Events />
-        </NumberColumn>
-        <DatePickerColumn ID="de4b62fe-252b-4195-aba4-c1d841d9261c" DefaultValue="" DisplayFormat="19" Enabled="True" Help="抵用劵行.Misc.生效日期" IsNull="True" IsProperty="False" IsSequence="False" Name="EffectiveDate0" NPos="8" Point="0" UIFieldID="EffectiveDate" UIViewID="Vouchers_VouchersLine" Visible="True">
+        <DatePickerColumn ID="de4b62fe-252b-4195-aba4-c1d841d9261c" DefaultValue="" DisplayFormat="19" Enabled="True" Help="抵用劵行.Misc.生效日期" IsNull="True" IsProperty="False" IsSequence="False" Name="EffectiveDate0" NPos="7" Point="0" UIFieldID="EffectiveDate" UIViewID="Vouchers_VouchersLine" Visible="True">
           <Events />
         </DatePickerColumn>
-        <DatePickerColumn ID="3c4c968f-4cdb-4e48-91a1-0364973326c2" DefaultValue="" DisplayFormat="19" Enabled="True" Help="抵用劵行.Misc.失效日期" IsNull="True" IsProperty="False" IsSequence="False" Name="DisabledDate0" NPos="9" Point="0" UIFieldID="DisabledDate" UIViewID="Vouchers_VouchersLine" Visible="True">
+        <DatePickerColumn ID="3c4c968f-4cdb-4e48-91a1-0364973326c2" DefaultValue="" DisplayFormat="19" Enabled="True" Help="抵用劵行.Misc.失效日期" IsNull="True" IsProperty="False" IsSequence="False" Name="DisabledDate0" NPos="8" Point="0" UIFieldID="DisabledDate" UIViewID="Vouchers_VouchersLine" Visible="True">
           <Events />
         </DatePickerColumn>
-        <CheckBoxColumn ID="d2907173-cf5f-42f7-9216-811c38446b0f" DefaultValue="false" DisplayFormat="1" Enabled="True" Help="抵用劵行.Misc.生效" IsNull="True" IsProperty="False" IsSequence="False" Name="IsEffectived0" NPos="10" Point="0" UIFieldID="IsEffectived" UIViewID="Vouchers_VouchersLine" Visible="True" Width="55">
+        <CheckBoxColumn ID="d2907173-cf5f-42f7-9216-811c38446b0f" DefaultValue="false" DisplayFormat="1" Enabled="True" Help="抵用劵行.Misc.生效" IsNull="True" IsProperty="False" IsSequence="False" Name="IsEffectived0" NPos="9" Point="0" UIFieldID="IsEffectived" UIViewID="Vouchers_VouchersLine" Visible="True" Width="55">
           <Events />
         </CheckBoxColumn>
-        <CheckBoxColumn ID="ee518c65-55be-448f-9e81-b1cba1f0d460" DefaultValue="false" DisplayFormat="1" Enabled="True" Help="抵用劵行.Misc.已使用" IsNull="True" IsProperty="False" IsSequence="False" Name="IsUsed0" NPos="11" Point="0" UIFieldID="IsUsed" UIViewID="Vouchers_VouchersLine" Visible="True" Width="55">
+        <CheckBoxColumn ID="ee518c65-55be-448f-9e81-b1cba1f0d460" DefaultValue="false" DisplayFormat="1" Enabled="True" Help="抵用劵行.Misc.已使用" IsNull="True" IsProperty="False" IsSequence="False" Name="IsUsed0" NPos="10" Point="0" UIFieldID="IsUsed" UIViewID="Vouchers_VouchersLine" Visible="True" Width="55">
           <Events />
         </CheckBoxColumn>
-        <TextBoxColumn ID="00da9f0f-aa99-4464-82ea-f0147adecdbc" DefaultValue="" DisplayFormat="50" Enabled="True" Help="抵用劵行.Misc.备注" IsNull="True" IsProperty="False" IsSequence="False" Name="Memo87" NPos="12" Point="0" TextAlign="Left" UIFieldID="Memo" UIViewID="Vouchers_VouchersLine" Visible="True">
+        <TextBoxColumn ID="00da9f0f-aa99-4464-82ea-f0147adecdbc" DefaultValue="" DisplayFormat="50" Enabled="True" Help="抵用劵行.Misc.备注" IsNull="True" IsProperty="False" IsSequence="False" Name="Memo87" NPos="11" Point="0" TextAlign="Left" UIFieldID="Memo" UIViewID="Vouchers_VouchersLine" Visible="True">
           <Events />
         </TextBoxColumn>
       </Columns>

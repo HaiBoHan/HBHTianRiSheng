@@ -11,6 +11,8 @@ using UFSoft.UBF.Business;
 using HBH.DoNet.DevPlatform.EntityMapping;
 using UFIDA.U9.SM.Enums;
 using UFIDA.U9.SPR.SalePriceList;
+using UFIDA.U9.Base.Profile;
+using UFSoft.UBF.PL;
 
 #endregion
 
@@ -122,29 +124,179 @@ namespace U9.VOB.Cus.HBHTianRiSheng {
                 && this.SO.SOLines.Count > 0
                 )
             {
+                string msg = string.Empty;
 
-
-
-                // 3、家博会抵用券使用张数不能大于扣除爆款及配件外的订单总数量
+                decimal soSumQty = 0;
+                decimal soOrginalMoney = 0;
+                decimal soHomeExpoTotalQty = 0;
+                StringBuilder sbItems = new StringBuilder();
+                Dictionary<long, decimal> dicItemQty = new Dictionary<long, decimal>();
+                bool isAllPart = true;
+                foreach (SOLine soline in this.SO.SOLines)
                 {
-                    decimal soTotalQty = 0;
-                    StringBuilder sbItems = new StringBuilder();
-                    Dictionary<long, decimal> dicItemQty = new Dictionary<long, decimal>();
-                    foreach (SOLine soline in this.SO.SOLines)
-                    {
-                        long itemID = soline.ItemInfo.ItemIDKey.ID;
-                        sbItems.Append(itemID).Append(",");
+                    decimal qtyOrder = soline.OrderByQtyTU;
+                    long itemID = soline.ItemInfo.ItemIDKey.ID;
+                    decimal moneyOrder = GetSOLineMoney(soline);
 
-                        if (!dicItemQty.ContainsKey(itemID))
+                    soSumQty += qtyOrder;
+                    soOrginalMoney += moneyOrder;
+                    sbItems.Append(itemID).Append(",");
+
+                    if (!dicItemQty.ContainsKey(itemID))
+                    {
+                        dicItemQty.Add(itemID, qtyOrder);
+                    }
+                    else
+                    {
+                        dicItemQty[itemID] += qtyOrder;
+                    }
+                }
+
+                int countFulfilQuota = 0;
+                int countPreFulfilQuota = 0;
+                int countHomeExpo = 0;
+                int countNewPromotion = 0;
+                foreach (SOVouchersLine sovouline in this.SOVouchersLine)
+                {
+                    if (sovouline != null
+                        && sovouline.VouchersLine != null
+                        )
+                    {
+                        switch (sovouline.VouchersLine.VouchersType.Value)
                         {
-                            dicItemQty.Add(itemID, soline.OrderByQtyTU);
+                            case (int)VouchersTypeEnumData.FulfilQuota:
+                                {
+                                    countFulfilQuota++;
+                                }
+                                break;
+                            case (int)VouchersTypeEnumData.PreFulfilQuota:
+                                {
+                                    countPreFulfilQuota++;
+                                }
+                                break;
+                            case (int)VouchersTypeEnumData.HomeExpo:
+                                {
+                                    countHomeExpo++;
+                                }
+                                break;
+                            case (int)VouchersTypeEnumData.NewPromotion:
+                                {
+                                    countNewPromotion++;
+                                }
+                                break;
+                            default:
+                                break;
                         }
-                        else
+
+                    }
+                }
+
+                // 1、满额抵用券只能在满额后限用一张；
+                if (countFulfilQuota > 0)
+                {
+                    // 抵用券满额额度
+                    decimal dFulFilQuota = 0;
+
+                    Profile prof = Profile.Finder.Find("Application = @App and Code=@Code"
+                        , new OqlParam(3015)
+                        , new OqlParam("TianRiSheng_Vouchers_FulFilQuota")
+                        );
+
+                    if (prof != null
+                        && prof.ProfileValues != null
+                        && prof.ProfileValues.Count > 0
+                        )
+                    {
+                        string profKey = prof.Code;
+                        ProfileValue profValue = prof.ProfileValues[0];
+                        if (profValue != null
+                            )
                         {
-                            dicItemQty[itemID] += soline.OrderByQtyTU;
+                            string strValue = profValue.Value;
+
+                            decimal.TryParse(strValue, out dFulFilQuota);
                         }
                     }
 
+                    if (dFulFilQuota <= 0)
+                    {
+                        dFulFilQuota = 3000;
+                    }
+
+                    if (soOrginalMoney < dFulFilQuota)
+                    {
+                        msg = string.Format("订单汇总金额[{0}]不能小于券需满额金额[{1}]，不能使用满额抵用券！"
+                            , soOrginalMoney.ToString("G0")
+                            , dFulFilQuota.ToString("G0")
+                            );
+                        throw new BusinessException(msg);
+                    }                    
+                }
+
+                // 2、每满额抵用券的抵用张数不能大于订单原价总金额除以满额标准后的向下取整数值；
+                if (countPreFulfilQuota > 0)
+                {
+                    // 满额标准 = 私有段4
+                    decimal dSOPreFulFil = this.SO.DescFlexField.PrivateDescSeg4.GetDecimal();
+
+                    if (dSOPreFulFil <= 0)
+                    {
+                        msg = string.Format("满额标准为空，不可使用每满额抵用券！");
+                        throw new BusinessException(msg);
+                    }
+                    else
+                    {
+                        decimal vouMaxCount = Math.Floor(soOrginalMoney / dSOPreFulFil);
+
+                        if (countPreFulfilQuota > vouMaxCount)
+                        {
+                            msg = string.Format("订单实际用券数量[{0}]，不能大于本单允许用券数量[{1}] (计算:{2}/{3} )！"
+                                , countPreFulfilQuota.ToString("G0")
+                                , vouMaxCount.ToString("G0")
+                                , soOrginalMoney.ToString("G0")
+                                , dSOPreFulFil.ToString("G0")
+                                );
+                            throw new BusinessException(msg);
+                        }
+                    }
+                }
+
+                //if (countHomeExpo > 0
+                //    || countNewPromotion > 0
+                //    )
+                //{
+                //    // 爆款 = 私有段1 ， 配件 = 私有段2
+                //    string priceOpath = string.Format("(DescFlexField.PrivateDescSeg1 = 'true' or DescFlexField.PrivateDescSeg2 = 'true') and ItemInfo.ItemID in ({0})"
+                //        , sbItems.GetStringRemoveLastSplit()
+                //        );
+                //    SalePriceLine.EntityList priceList = SalePriceLine.Finder.FindAll(priceOpath);
+
+                //    if (priceList != null
+                //        && priceList.Count > 0
+                //        )
+                //    {
+                //        foreach (SalePriceLine pLine in priceList)
+                //        {
+                //            if (pLine != null
+                //                && pLine.ItemInfo != null
+                //                && pLine.ItemInfo.ItemIDKey != null
+                //                )
+                //            {
+                //                long itemID = pLine.ItemInfo.ItemIDKey.ID;
+
+                //                if (dicItemQty.ContainsKey(itemID))
+                //                {
+                //                    dicItemQty.Remove(itemID);
+                //                }
+                //            }
+                //        }
+                //    }
+                //}
+
+
+                // 3、家博会抵用券使用张数不能大于扣除爆款及配件外的订单总数量
+                if(countHomeExpo > 0)
+                {
                     // 爆款 = 私有段1 ， 配件 = 私有段2
                     string priceOpath = string.Format("(DescFlexField.PrivateDescSeg1 = 'true' or DescFlexField.PrivateDescSeg2 = 'true') and ItemInfo.ItemID in ({0})"
                         , sbItems.GetStringRemoveLastSplit()
@@ -176,24 +328,78 @@ namespace U9.VOB.Cus.HBHTianRiSheng {
                     {
                         foreach (decimal qty in dicItemQty.Values)
                         {
-                            soTotalQty += qty;
+                            soHomeExpoTotalQty += qty;
                         }
                     }
 
                     decimal dHomeExpoQty = GetHomeExpoQty();
 
-                    if (dHomeExpoQty > soTotalQty )
+                    if (dHomeExpoQty > soHomeExpoTotalQty )
                     {
-                        string msg = string.Format("家博会抵用券数量[{0}]不可多于订单非爆款非配件商品数量[{1}]!"
+                        msg = string.Format("家博会抵用券数量[{0}]不可多于订单非爆款非配件商品数量[{1}]!"
                             , dHomeExpoQty
-                            , soTotalQty
+                            , soHomeExpoTotalQty
                             );
                         throw new BusinessException(msg);
                     }
                 }
 
+                // （4）	新品促销抵用券：例如水槽，销售订单发券在一定时间范围内下次购买可用，除配件什么都可以买。使用时只认券号不认人。可以配合家博会券一起使用。面值不确定。目前是500。
+                if (countNewPromotion > 0)
+                {
+                    // 爆款 = 私有段1 ， 配件 = 私有段2
+                    string priceOpath = string.Format("(DescFlexField.PrivateDescSeg2 = 'true') and ItemInfo.ItemID in ({0})"
+                        , sbItems.GetStringRemoveLastSplit()
+                        );
+                    SalePriceLine.EntityList priceList = SalePriceLine.Finder.FindAll(priceOpath);
+
+
+                    foreach (SOLine soline in this.SO.SOLines)
+                    {
+                        bool isPart = false;
+                        if (priceList != null
+                            && priceList.Count > 0
+                            )
+                        {
+                            foreach (SalePriceLine spline in priceList)
+                            {
+                                if (soline.ItemInfo.ItemIDKey.ID == spline.ItemInfo.ItemIDKey.ID)
+                                {
+                                    isPart = true;
+                                    break;
+                                }
+                            }
+                        }
+
+                        if (!isPart)
+                        {
+                            isAllPart = false;
+                        }
+                    }
+
+                    if (isAllPart)
+                    {
+                        msg = string.Format("新品促销抵用券不可用于配件购买!"
+                            );
+                        throw new BusinessException(msg);
+                    }
+                }
             }
         }
+
+        private decimal GetSOLineMoney(SOLine soline)
+        {
+            decimal money = 0;
+
+            if (soline != null)
+            { 
+                // 券分摊金额 = 私有段2
+                money = soline.TotalMoneyTC + soline.DescFlexField.PrivateDescSeg2.GetDecimal();
+            }
+
+            return money;
+        }
+        
 
         private decimal GetHomeExpoQty()
         {

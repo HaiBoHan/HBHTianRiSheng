@@ -83,5 +83,29 @@ begin
 	)
 end ;
 
+set @ID = 2016022300100001
+if not exists(select 1 from Base_Profile where ID = @ID)
+begin
+	insert into Base_Profile
+	(ID,SysVersion,CreatedOn,CreatedBy,ModifiedOn,ModifiedBy
+	,Code,ShortName,ProfileValueType,SubTypeName,DefaultValue
+	,Application,ControlScope,SensitiveType,Sort
+	,ValidateSV,CanBeUpdatedSV,UpdatedProcessSV,ReferenceID,Hidden,ShowPecent,IsSend,IsModify
+	)values(
+	@ID,1,'2015-12-23','hbh','2015-12-23','hbh'
+	,'TianRiSheng_Vouchers_FulFilQuota','µÖÓÃÈ¯Âú¶î¶î¶È',0,'int','3000'
+	,3015,1,0,0
+	,null,null,null,null,0,0,0,0
+	)
+
+	insert into Base_Profile_Trl
+	(ID,SysMLFlag,ProfileGroup,Name,Description
+	)values(
+	@ID,'zh-CN','µÖÓÃÈ¯²ÎÊý','µÖÓÃÈ¯Âú¶î¶î¶È','µÖÓÃÈ¯Âú¶î¶î¶È'
+	)
+end ;
+
+
+
 
 

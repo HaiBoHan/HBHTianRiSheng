@@ -125,10 +125,10 @@
         <DropDownListColumn ID="124d937b-de7e-4b72-ab38-449cfbfeb0e7" DefaultValue="0" DisplayFormat="10.0" Enabled="False" EnumFullName="U9.VOB.Cus.HBHTianRiSheng.VouchersTypeEnum" EnumID="cef5bb25-17e0-4d8f-a0cb-597aea46c150" Help="抵用劵行.Misc.抵用劵类型" IsNull="True" IsProperty="False" IsSequence="False" Name="VouchersLine_VouchersType0" NPos="5" Point="0" UIFieldID="VouchersLine_VouchersType" UIViewID="SOVouchersHead_SOVouchersLine" Visible="True">
           <Events />
         </DropDownListColumn>
-        <DatePickerColumn ID="1a15b33b-8c2b-4963-b849-f605da25a5c6" DefaultValue="" DisplayFormat="19" Enabled="False" Help="抵用劵行.Misc.生效日期" IsNull="True" IsProperty="False" IsSequence="False" Name="VouchersLine_EffectiveDate0" NPos="6" Point="0" UIFieldID="VouchersLine_EffectiveDate" UIViewID="SOVouchersHead_SOVouchersLine" Visible="True">
+        <DatePickerColumn ID="1a15b33b-8c2b-4963-b849-f605da25a5c6" DateTimeFormat="Date" DefaultValue="" DisplayFormat="19" Enabled="False" Help="抵用劵行.Misc.生效日期" IsNull="True" IsProperty="False" IsSequence="False" Name="VouchersLine_EffectiveDate0" NPos="6" Point="0" UIFieldID="VouchersLine_EffectiveDate" UIViewID="SOVouchersHead_SOVouchersLine" Visible="True">
           <Events />
         </DatePickerColumn>
-        <DatePickerColumn ID="26a88a36-b2b5-4380-9b93-aa479adf61c8" DefaultValue="" DisplayFormat="19" Enabled="False" Help="抵用劵行.Misc.失效日期" IsNull="True" IsProperty="False" IsSequence="False" Name="VouchersLine_DisabledDate0" NPos="7" Point="0" UIFieldID="VouchersLine_DisabledDate" UIViewID="SOVouchersHead_SOVouchersLine" Visible="True">
+        <DatePickerColumn ID="26a88a36-b2b5-4380-9b93-aa479adf61c8" DateTimeFormat="Date" DefaultValue="" DisplayFormat="19" Enabled="False" Help="抵用劵行.Misc.失效日期" IsNull="True" IsProperty="False" IsSequence="False" Name="VouchersLine_DisabledDate0" NPos="7" Point="0" UIFieldID="VouchersLine_DisabledDate" UIViewID="SOVouchersHead_SOVouchersLine" Visible="True">
           <Events />
         </DatePickerColumn>
         <CheckBoxColumn ID="205f7df3-4b23-4e4a-99fc-2e57e01789b5" DefaultValue="false" DisplayFormat="1" Enabled="False" Help="抵用劵行.Misc.生效" IsNull="True" IsProperty="False" IsSequence="False" Name="VouchersLine_IsEffectived0" NPos="8" Point="0" UIFieldID="VouchersLine_IsEffectived" UIViewID="SOVouchersHead_SOVouchersLine" Visible="True" Width="55">

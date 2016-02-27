@@ -8,6 +8,9 @@ using System.Collections.Generic;
 using System.Text;
 using HBH.DoNet.DevPlatform.EntityMapping;
 using UFIDA.U9.Base;
+using UFSoft.UBF.Business;
+using UFSoft.UBF.PL;
+using UFIDA.U9.SM.Enums;
 
 #endregion
 
@@ -136,11 +139,121 @@ namespace U9.VOB.Cus.HBHTianRiSheng {
 		/// <summary>
 		/// on Validate
 		/// </summary>
-		protected override void OnValidate() {
-			base.OnValidate();
-			this.SelfEntityValidator();
-			// TO DO: write your business code here...
-		}
+        protected override void OnValidate()
+        {
+            base.OnValidate();
+            this.SelfEntityValidator();
+            // TO DO: write your business code here...
+
+            string msg = string.Empty;
+
+
+            if (this.ActivityType != SMActivityEnum.ServiceUpd)
+            {
+                // 抵用券号重复校验
+                StringBuilder sbVouNo = new StringBuilder();
+                // ①本单重复
+                Dictionary<string, List<long>> dicVouchersNo = new Dictionary<string, List<long>>();
+                foreach (VouchersLine vline in this.VouchersLine)
+                {
+                    DateTime today = Context.LoginDate;
+                    if (vline != null
+                        && vline.IsEffectived
+                        && today >= vline.EffectiveDate
+                        && today <= vline.DisabledDate
+                        )
+                    {
+                        string vouNo = vline.VouchersNo;
+                        int doclineNo = vline.DocLineNo;
+
+                        if (vouNo.IsNull())
+                        {
+                            msg = string.Format("单号[{0}]行[{1}]券号不允许为空!"
+                                , vouNo
+                                , doclineNo
+                                );
+                            throw new BusinessException(msg);
+                        }
+                        else
+                        {
+                            sbVouNo.Append("'").Append(vouNo).Append("',");
+
+                            if (!dicVouchersNo.ContainsKey(vouNo))
+                            {
+                                dicVouchersNo.Add(vouNo, new List<long>() { doclineNo });
+                            }
+                            else
+                            {
+                                if (!dicVouchersNo[vouNo].Contains(doclineNo))
+                                {
+                                    dicVouchersNo[vouNo].Add(doclineNo);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                if (dicVouchersNo.Count < this.VouchersLine.Count)
+                {
+                    StringBuilder sbErrorNo = new StringBuilder();
+                    foreach (string strVouNo in dicVouchersNo.Keys)
+                    {
+                        List<long> list = dicVouchersNo[strVouNo];
+                        if (list.Count > 1)
+                        {
+                            sbErrorNo.Append(string.Format("[券号{0},行号{1}]"
+                                    , strVouNo
+                                    , list.GetOpathFromList()
+                                    )
+                                );
+                        }
+                    }
+
+                    if (sbErrorNo.Length > 0)
+                    {
+                        msg = string.Format("抵用券单{0}券号重复，重复信息:{1}"
+                            , this.DocNo
+                            , sbErrorNo.ToString()
+                            );
+                        throw new BusinessException(msg);
+                    }
+                }
+
+                // ②与数据库其他有效期的抵用券重复
+                if (sbVouNo.Length > 0)
+                {
+                    string opath = string.Format("IsEffectived = 1 and @Today between EffectiveDate and DisabledDate and Vouchers != @Vou and VouchersNo != null and VouchersNo != '' and VouchersNo in ({0})"
+                        , sbVouNo.GetStringRemoveLastSplit()
+                        );
+                    HBHTianRiSheng.VouchersLine.EntityList list = HBHTianRiSheng.VouchersLine.Finder.FindAll(opath
+                        , new OqlParam(Context.LoginDate)
+                        , new OqlParam(this.ID)
+                        );
+
+                    if (list != null
+                        && list.Count > 0
+                        )
+                    {
+                        StringBuilder sbRepeatVouNo = new StringBuilder();
+                        foreach (VouchersLine line in list)
+                        {
+                            if (line != null
+                                && line.Vouchers != null
+                                )
+                            {
+                                sbRepeatVouNo.Append(string.Format("券号[{0}]已被单号[{1}]行号[{2}]使用! \r\n"
+                                    ));
+                            }
+                        }
+
+                        if (sbRepeatVouNo.Length > 0)
+                        {
+                            throw new BusinessException(sbRepeatVouNo.ToString());
+                        }
+                    }
+                }
+            }
+        }
 		#endregion
 		
 		#region 异常处理，开发人员可以重新封装异常

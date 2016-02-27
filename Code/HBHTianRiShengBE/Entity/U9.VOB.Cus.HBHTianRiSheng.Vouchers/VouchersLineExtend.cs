@@ -6,6 +6,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
+using HBH.DoNet.DevPlatform.EntityMapping;
+using UFSoft.UBF.Business;
 
 #endregion
 
@@ -96,6 +98,25 @@ namespace U9.VOB.Cus.HBHTianRiSheng {
 
             //    }
             //}
+
+            string msg = string.Empty;
+
+            if (this.Vouchers == null)
+            {
+                msg = string.Format("行[{1}]抵用券头不允许为空!"
+                    , this.DocLineNo
+                    );
+                throw new BusinessException(msg);
+            }
+
+            if (this.VouchersNo.IsNull())
+            {
+                msg = string.Format("单号[{0}]行[{1}]券号不允许为空!"
+                    , this.Vouchers.DocNo
+                    , this.DocLineNo  
+                    );
+                throw new BusinessException(msg);
+            }
         }
 		#endregion
 		

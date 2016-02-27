@@ -291,10 +291,10 @@
           <CurrencyType Name="CurrencyType2" />
           <Events />
         </NumberColumn>
-        <DatePickerColumn ID="de4b62fe-252b-4195-aba4-c1d841d9261c" DefaultValue="" DisplayFormat="19" Enabled="True" Help="抵用劵行.Misc.生效日期" IsNull="True" IsProperty="False" IsSequence="False" Name="EffectiveDate0" NPos="7" Point="0" UIFieldID="EffectiveDate" UIViewID="Vouchers_VouchersLine" Visible="True">
+        <DatePickerColumn ID="de4b62fe-252b-4195-aba4-c1d841d9261c" DateTimeFormat="Date" DefaultValue="" DisplayFormat="19" Enabled="True" Help="抵用劵行.Misc.生效日期" IsNull="True" IsProperty="False" IsSequence="False" Name="EffectiveDate0" NPos="7" Point="0" UIFieldID="EffectiveDate" UIViewID="Vouchers_VouchersLine" Visible="True">
           <Events />
         </DatePickerColumn>
-        <DatePickerColumn ID="3c4c968f-4cdb-4e48-91a1-0364973326c2" DefaultValue="" DisplayFormat="19" Enabled="True" Help="抵用劵行.Misc.失效日期" IsNull="True" IsProperty="False" IsSequence="False" Name="DisabledDate0" NPos="8" Point="0" UIFieldID="DisabledDate" UIViewID="Vouchers_VouchersLine" Visible="True">
+        <DatePickerColumn ID="3c4c968f-4cdb-4e48-91a1-0364973326c2" DateTimeFormat="Date" DefaultValue="" DisplayFormat="19" Enabled="True" Help="抵用劵行.Misc.失效日期" IsNull="True" IsProperty="False" IsSequence="False" Name="DisabledDate0" NPos="8" Point="0" UIFieldID="DisabledDate" UIViewID="Vouchers_VouchersLine" Visible="True">
           <Events />
         </DatePickerColumn>
         <CheckBoxColumn ID="d2907173-cf5f-42f7-9216-811c38446b0f" DefaultValue="false" DisplayFormat="1" Enabled="True" Help="抵用劵行.Misc.生效" IsNull="True" IsProperty="False" IsSequence="False" Name="IsEffectived0" NPos="9" Point="0" UIFieldID="IsEffectived" UIViewID="Vouchers_VouchersLine" Visible="True" Width="55">

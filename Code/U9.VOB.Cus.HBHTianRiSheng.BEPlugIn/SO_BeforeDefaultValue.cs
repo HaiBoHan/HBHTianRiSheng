@@ -79,13 +79,13 @@ namespace U9.VOB.Cus.HBHTianRiSheng.BEPlugIn
                                     if (entity.IsPriceIncludeTax)
                                     {
                                         uIChangeInfoData.FieldName = "TotalMoneyIncludeTax";
-                                        uIChangeInfoData.OldValue = 0;
+                                        uIChangeInfoData.OldValue = line.NetMoneyTC != 0 ? 0 : 1;
                                         uIChangeInfoData.NewValue = line.TotalMoneyTC;
                                     }
                                     else
                                     {
                                         uIChangeInfoData.FieldName = "TotalMoneyExcludeTax";
-                                        uIChangeInfoData.OldValue = 0;
+                                        uIChangeInfoData.OldValue = line.NetMoneyTC != 0 ? 0 : 1;
                                         uIChangeInfoData.NewValue = line.NetMoneyTC;
                                     }
                                     if (line.ApportionPriceTC == 1M)

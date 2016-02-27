@@ -104,11 +104,83 @@ namespace U9.VOB.Cus.HBHTianRiSheng {
 		protected override void OnValidate() {
 			base.OnValidate();
 			this.SelfEntityValidator();
-			// TO DO: write your business code here...
+            // TO DO: write your business code here...
+
+            string msg = string.Empty;
+
 
             if (this.SO == null)
             {
                 throw new BusinessException("销售订单不可为空!");
+            }
+
+
+            // 抵用券号重复校验
+            StringBuilder sbVouNo = new StringBuilder();
+            // ①本单重复
+            Dictionary<string, List<long>> dicVouchersNo = new Dictionary<string, List<long>>();
+            foreach (SOVouchersLine soVouline in this.SOVouchersLine)
+            {
+                if (soVouline != null)
+                {
+                    VouchersLine vline = soVouline.VouchersLine;
+                    if (vline != null)
+                    {
+                        string vouNo = vline.VouchersNo;
+                        int doclineNo = soVouline.DocLineNo;
+
+                        if (vouNo.IsNull())
+                        {
+                            msg = string.Format("订单[{0}]抵用卷行[{1}]券号不允许为空!"
+                                , this.SO.DocNo
+                                , doclineNo
+                                );
+                            throw new BusinessException(msg);
+                        }
+                        else
+                        {
+                            sbVouNo.Append("'").Append(vouNo).Append("',");
+
+                            if (!dicVouchersNo.ContainsKey(vouNo))
+                            {
+                                dicVouchersNo.Add(vouNo, new List<long>() { doclineNo });
+                            }
+                            else
+                            {
+                                if (!dicVouchersNo[vouNo].Contains(doclineNo))
+                                {
+                                    dicVouchersNo[vouNo].Add(doclineNo);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            if (dicVouchersNo.Count < this.SOVouchersLine.Count)
+            {
+                StringBuilder sbErrorNo = new StringBuilder();
+                foreach (string strVouNo in dicVouchersNo.Keys)
+                {
+                    List<long> list = dicVouchersNo[strVouNo];
+                    if (list.Count > 1)
+                    {
+                        sbErrorNo.Append(string.Format("[券号{0},行号{1}]"
+                                , strVouNo
+                                , list.GetOpathFromList()
+                                )
+                            );
+                    }
+                }
+
+                if (sbErrorNo.Length > 0)
+                {
+                    msg = string.Format("订单{0}券号重复，重复信息:{1}"
+                        , this.SO.DocNo
+                        , sbErrorNo.ToString()
+                        );
+                    throw new BusinessException(msg);   
+                }
             }
 
             CheckSOVouchers();
@@ -194,6 +266,14 @@ namespace U9.VOB.Cus.HBHTianRiSheng {
                 // 1、满额抵用券只能在满额后限用一张；
                 if (countFulfilQuota > 0)
                 {
+                    if (countFulfilQuota > 1)
+                    {
+                        msg = string.Format("订单[{0}]满额抵用券只能使用一张！"
+                            , this.SO.DocNo
+                            );
+                        throw new BusinessException(msg);                        
+                    }
+
                     // 抵用券满额额度
                     decimal dFulFilQuota = 0;
 
@@ -297,11 +377,30 @@ namespace U9.VOB.Cus.HBHTianRiSheng {
                 // 3、家博会抵用券使用张数不能大于扣除爆款及配件外的订单总数量
                 if(countHomeExpo > 0)
                 {
+                    StringBuilder sbVouTypes = GetVouTypes();
+
                     // 爆款 = 私有段1 ， 配件 = 私有段2
-                    string priceOpath = string.Format("(DescFlexField.PrivateDescSeg1 = 'true' or DescFlexField.PrivateDescSeg2 = 'true') and ItemInfo.ItemID in ({0})"
-                        , sbItems.GetStringRemoveLastSplit()
-                        );
-                    SalePriceLine.EntityList priceList = SalePriceLine.Finder.FindAll(priceOpath);
+                    //string priceOpath = string.Format("(DescFlexField.PrivateDescSeg1 = 'true' or DescFlexField.PrivateDescSeg2 = 'true') and ItemInfo.ItemID in ({0})"
+                    //    , sbItems.GetStringRemoveLastSplit()
+                    //    );
+                    //string priceOpath = string.Format("(DescFlexField.PrivateDescSeg1 = 'true' or DescFlexField.PrivateDescSeg2 = 'true') and ItemInfo.ItemID in (select soline.ItemInfo.ItemID from UFIDA::U9::SM::SO::SOLine soline where soline.SO = @SO)"
+                    //    );
+                    
+                    string priceOpath = string.Empty;
+                    if (sbVouTypes.Length > 0)
+                    {
+                        priceOpath = string.Format("(DescFlexField.PrivateDescSeg1 = 'true' or DescFlexField.PrivateDescSeg2 = 'true') and ItemInfo.ItemID in (select soline.ItemInfo.ItemID from UFIDA::U9::SM::SO::SOLine soline where soline.SO = @SO) and SalePriceList.DescFlexField.PrivateDescSeg1 is not null and SalePriceList.DescFlexField.PrivateDescSeg1 != '' and SalePriceList.DescFlexField.PrivateDescSeg1 in ({0})"
+                            , sbVouTypes.GetStringRemoveLastSplit()
+                            );
+                    }
+                    else
+                    {
+                        priceOpath = string.Format("(DescFlexField.PrivateDescSeg1 = 'true' or DescFlexField.PrivateDescSeg2 = 'true') and ItemInfo.ItemID in (select soline.ItemInfo.ItemID from UFIDA::U9::SM::SO::SOLine soline where soline.SO = @SO)"
+                                );
+                    }
+                    SalePriceLine.EntityList priceList = SalePriceLine.Finder.FindAll(priceOpath
+                            , new OqlParam(this.SOKey.ID)
+                            );
 
                     if (priceList != null
                         && priceList.Count > 0
@@ -337,8 +436,8 @@ namespace U9.VOB.Cus.HBHTianRiSheng {
                     if (dHomeExpoQty > soHomeExpoTotalQty )
                     {
                         msg = string.Format("家博会抵用券数量[{0}]不可多于订单非爆款非配件商品数量[{1}]!"
-                            , dHomeExpoQty
-                            , soHomeExpoTotalQty
+                            , dHomeExpoQty.ToString("G0")
+                            , soHomeExpoTotalQty.ToString("G0")
                             );
                         throw new BusinessException(msg);
                     }
@@ -347,11 +446,30 @@ namespace U9.VOB.Cus.HBHTianRiSheng {
                 // （4）	新品促销抵用券：例如水槽，销售订单发券在一定时间范围内下次购买可用，除配件什么都可以买。使用时只认券号不认人。可以配合家博会券一起使用。面值不确定。目前是500。
                 if (countNewPromotion > 0)
                 {
+                    StringBuilder sbVouTypes = GetVouTypes();
+
                     // 爆款 = 私有段1 ， 配件 = 私有段2
-                    string priceOpath = string.Format("(DescFlexField.PrivateDescSeg2 = 'true') and ItemInfo.ItemID in ({0})"
-                        , sbItems.GetStringRemoveLastSplit()
-                        );
-                    SalePriceLine.EntityList priceList = SalePriceLine.Finder.FindAll(priceOpath);
+                    //string priceOpath = string.Format("(DescFlexField.PrivateDescSeg2 = 'true') and ItemInfo.ItemID in ({0})"
+                    //    , sbItems.GetStringRemoveLastSplit()
+                    //    );
+                    //string priceOpath = string.Format("(DescFlexField.PrivateDescSeg2 = 'true') and ItemInfo.ItemID in (select soline.ItemInfo.ItemID from UFIDA::U9::SM::SO::SOLine soline where soline.SO = @SO)"
+                    //    );
+
+                    string priceOpath = string.Empty;
+                    if (sbVouTypes.Length > 0)
+                    {
+                        priceOpath = string.Format("(DescFlexField.PrivateDescSeg2 = 'true')  and ItemInfo.ItemID in (select soline.ItemInfo.ItemID from UFIDA::U9::SM::SO::SOLine soline where soline.SO = @SO) and SalePriceList.DescFlexField.PrivateDescSeg1 is not null and SalePriceList.DescFlexField.PrivateDescSeg1 != '' and SalePriceList.DescFlexField.PrivateDescSeg1 in ({0})"
+                            , sbVouTypes.GetStringRemoveLastSplit()
+                            );
+                    }
+                    else
+                    {
+                        priceOpath = string.Format("(DescFlexField.PrivateDescSeg2 = 'true') and ItemInfo.ItemID in (select soline.ItemInfo.ItemID from UFIDA::U9::SM::SO::SOLine soline where soline.SO = @SO)"
+                            );
+                    }
+                    SalePriceLine.EntityList priceList = SalePriceLine.Finder.FindAll(priceOpath
+                            , new OqlParam(this.SOKey.ID)
+                            );
 
 
                     foreach (SOLine soline in this.SO.SOLines)
@@ -472,6 +590,7 @@ namespace U9.VOB.Cus.HBHTianRiSheng {
                         )
                     {
                         vouLine = sovouline.VouchersLine;
+                        vouLine.Vouchers.ActivityType = SMActivityEnum.ServiceUpd;
                         if (sovouline.SysState == UFSoft.UBF.PL.Engine.ObjectState.Deleted)
                         {
                             if (sovouline.OriginalData != null)
@@ -521,6 +640,7 @@ namespace U9.VOB.Cus.HBHTianRiSheng {
                         )
                     {
                         VouchersLine vouLine = sovouline.OriginalData.VouchersLine;
+                        vouLine.Vouchers.ActivityType = SMActivityEnum.ServiceUpd;
                         if (vouLine != null
                             && vouLine.IsUsed
                             )
@@ -574,8 +694,64 @@ namespace U9.VOB.Cus.HBHTianRiSheng {
                     so.DescFlexField.PubDescSeg14 = newVouMoney.ToString("G0");
                     so.DescFlexField.PubDescSeg15 = this.VouchersTypeNames;
 
+                    decimal newPromotionMoney;
+                    decimal soVouTotalMoney = GetVouTotalMoney(out newPromotionMoney);
                     decimal soTotalMoney = GetSOTotalMoney(so);
-                    decimal soVouTotalMoney = GetVouTotalMoney();
+
+                    List<SOLine> lstEffectSOLine = new List<SOLine>();
+                    List<SOLine> lstVogueSOLine = new List<SOLine>();
+
+                    foreach (SOLine soline in so.SOLines)
+                    {
+                        if (soline != null)
+                        {
+                            if (IsVogue(soline))
+                            {
+                                lstVogueSOLine.Add(soline);
+                            }
+                            else if (IsInVoucherCalc(soline))
+                            {
+                                lstEffectSOLine.Add(soline);
+                            }
+                        }
+                    }
+
+                    // 爆款先抵用新品的折扣券
+                    // 不做大于0 的判断，是因为，如果为0，要清空抵用券 金额、重算订单金额
+                    //if (newPromotionMoney > 0)
+                    {
+                        if (lstVogueSOLine.Count > 0)
+                        {
+                            SOLine vogueMaxLine = null;
+                            decimal vogueAverageMoney = so.TC.MoneyRound.GetRoundValue(newPromotionMoney / lstVogueSOLine.Count);
+                            decimal promRemain = newPromotionMoney - vogueAverageMoney * lstVogueSOLine.Count;
+                            foreach (SOLine soline in lstVogueSOLine)
+                            {
+                                CalcVouchersSOLine(vogueAverageMoney, ref promRemain, ref vogueMaxLine, soline);
+                            }
+
+                            if (promRemain != 0
+                                && vogueMaxLine != null
+                                )
+                            {
+                                decimal curVouchersMoney = vogueAverageMoney + promRemain;
+                                promRemain = 0;
+
+                                SetSOLineMoney(vogueMaxLine
+                                    , PubClass.GetDecimal(vogueMaxLine.DescFlexField.PrivateDescSeg3)
+                                    //, vogueAverageMoney + promRemain
+                                    , curVouchersMoney
+                                    , ref promRemain
+                                    );
+
+                                if (promRemain > 0)
+                                {
+                                    soVouTotalMoney += promRemain;
+                                }
+                            }
+                        }
+                    }
+
 
                     //if (soVouTotalMoney > soTotalMoney)
                     //{
@@ -587,63 +763,120 @@ namespace U9.VOB.Cus.HBHTianRiSheng {
                     //    }
                     //}
                     //else
+
+                    // 不做大于0 的判断，是因为，如果为0，要清空抵用券 金额、重算订单金额
+                    //if (soVouTotalMoney > 0)
                     {
-                        int lineCount = so.SOLines.Count;
-                        decimal averageMoney = so.TC.MoneyRound.GetRoundValue(newVouMoney / lineCount);
-                        decimal remainMoney = newVouMoney - averageMoney * lineCount;
-
-                        SOLine maxMoneyLine = null;
-                        foreach (SOLine soline in so.SOLines)
+                        if (lstEffectSOLine.Count > 0)
                         {
-                            if (soline != null)
+                            //int lineCount = GetCalcVouchersLineCount(so);
+                            int lineCount = lstEffectSOLine.Count;
+                            decimal averageMoney = so.TC.MoneyRound.GetRoundValue(soVouTotalMoney / lineCount);
+                            decimal remainMoney = soVouTotalMoney - averageMoney * lineCount;
+
+                            SOLine maxMoneyLine = null;
+                            //foreach (SOLine soline in so.SOLines)
+                            foreach (SOLine soline in lstEffectSOLine)
                             {
-                                // 券分摊金额 Pri 2 
-                                // 原含税金额 Pri 3 
-
-                                decimal lineTotalMoney = 0;
-                                if (!soline.DescFlexField.PrivateDescSeg3.IsNull())
+                                if (soline != null)
                                 {
-                                    lineTotalMoney = PubClass.GetDecimal(soline.DescFlexField.PrivateDescSeg3);
+                                    if (IsInVoucherCalc(soline))
+                                    {
+                                        CalcVouchersSOLine(averageMoney, ref remainMoney, ref maxMoneyLine, soline);
+                                    }
                                 }
-                                else
-                                {
-                                    lineTotalMoney = soline.TotalMoneyTC;
-                                    soline.DescFlexField.PrivateDescSeg3 = lineTotalMoney.ToString("G0");
-                                }
-
-                                if (maxMoneyLine == null
-                                    || soline.TotalMoneyTC > maxMoneyLine.TotalMoneyTC
-                                    )
-                                {
-                                    maxMoneyLine = soline;
-                                }
-
-                                //decimal line
-                                SetSOLineMoney(soline, lineTotalMoney, averageMoney, ref remainMoney);
                             }
-                        }
 
-                        if (remainMoney != 0
-                            && maxMoneyLine != null
-                            )
+                            if (remainMoney != 0
+                                && maxMoneyLine != null
+                                )
+                            {
+                                SetSOLineMoney(maxMoneyLine
+                                    , PubClass.GetDecimal(maxMoneyLine.DescFlexField.PrivateDescSeg3)
+                                    , averageMoney + remainMoney
+                                    , ref remainMoney
+                                    );
+                            }
+
+                            so.ActionSrc = SMActivityEnum.OBAUpdate;
+                        }
+                        else
                         {
-                            SetSOLineMoney(maxMoneyLine
-                                , PubClass.GetDecimal(maxMoneyLine.DescFlexField.PrivateDescSeg3)
-                                , averageMoney + remainMoney
-                                , ref remainMoney
+                            string msg = string.Format("订单[{0}]没有有效的行分摊抵用券金额[{1}]"
+                                , so.DocNo
+                                , soVouTotalMoney.ToString("G0")
                                 );
+                            throw new BusinessException(msg);
                         }
-
-                        so.ActionSrc = SMActivityEnum.OBAUpdate;
-
-                        session.Commit();
                     }
+
+                    session.Commit();
                 }
             }
         }
 
-        private decimal GetVouTotalMoney()
+        private static void CalcVouchersSOLine(decimal vouchersMoney, ref decimal remainMoney, ref SOLine maxMoneyLine, SOLine soline)
         {
+
+            // 券分摊金额 Pri 2 
+            // 原含税金额 Pri 3 
+
+            decimal lineTotalMoney = 0;
+            if (!soline.DescFlexField.PrivateDescSeg3.IsNull())
+            {
+                lineTotalMoney = PubClass.GetDecimal(soline.DescFlexField.PrivateDescSeg3);
+            }
+            else
+            {
+                lineTotalMoney = soline.TotalMoneyTC;
+                soline.DescFlexField.PrivateDescSeg3 = lineTotalMoney.ToString("G0");
+            }
+
+            // 把赠品打开
+            if (lineTotalMoney > 0)
+            {
+                if (soline.FreeType == UFIDA.U9.CBO.SCM.Enums.FreeTypeEnum.Present)
+                {
+                    soline.FreeType = UFIDA.U9.CBO.SCM.Enums.FreeTypeEnum.Empty;
+                }
+            }
+
+            if (maxMoneyLine == null
+                || soline.TotalMoneyTC > maxMoneyLine.TotalMoneyTC
+                )
+            {
+                maxMoneyLine = soline;
+            }
+
+            //decimal line
+
+            SetSOLineMoney(soline, lineTotalMoney, vouchersMoney, ref remainMoney);
+        }
+
+        private int GetCalcVouchersLineCount(SO so)
+        {
+            int count = 0;
+
+            foreach (SOLine soline in so.SOLines)
+            {
+                if (soline != null)
+                {
+                    // 券分摊金额 Pri 2 
+                    // 原含税金额 Pri 3 
+
+                    if (IsInVoucherCalc(soline))
+                    {
+                        count++;
+                    }
+                }
+            }
+
+            return count;
+        }
+
+        private decimal GetVouTotalMoney(out decimal newPromotionMoney)
+        {
+            newPromotionMoney = 0;
             decimal totalMoney = 0;
 
             if (this.SOVouchersLine != null
@@ -656,7 +889,17 @@ namespace U9.VOB.Cus.HBHTianRiSheng {
                         && line.VouchersLine != null
                         )
                     {
-                        totalMoney += line.VouchersLine.Money;
+                        //totalMoney += line.VouchersLine.Money;
+
+                        if (line.VouchersLine.VouchersType == VouchersTypeEnum.NewPromotion)
+                        {
+                            newPromotionMoney += line.VouchersLine.Money;
+                        }
+                        // 非新品的，计入到分摊抵用券总金额里
+                        else
+                        {
+                            totalMoney += line.VouchersLine.Money;
+                        }
                     }
                 }
             }
@@ -681,13 +924,17 @@ namespace U9.VOB.Cus.HBHTianRiSheng {
                         // 原含税金额 Pri 3 
 
                         decimal lineMoney = 0;
-                        if (!soline.DescFlexField.PrivateDescSeg3.IsNull())
+
+                        if (IsInVoucherCalc(soline))
                         {
-                            lineMoney = PubClass.GetDecimal(soline.DescFlexField.PrivateDescSeg3);
-                        }
-                        else
-                        {
-                            lineMoney = soline.TotalMoneyTC;
+                            if (!soline.DescFlexField.PrivateDescSeg3.IsNull())
+                            {
+                                lineMoney = PubClass.GetDecimal(soline.DescFlexField.PrivateDescSeg3);
+                            }
+                            else
+                            {
+                                lineMoney = soline.TotalMoneyTC;
+                            }
                         }
 
                         soTotalMoney += lineMoney;
@@ -697,27 +944,56 @@ namespace U9.VOB.Cus.HBHTianRiSheng {
             return soTotalMoney;
         }
 
-        private static void SetSOLineMoney(SOLine soline, decimal lineTotalMoney, decimal vouchersMoney, ref decimal remainMoney)
+        // 是否爆款
+        /// <summary>
+        /// 是否爆款
+        /// </summary>
+        /// <param name="soline"></param>
+        /// <returns></returns>
+        private bool IsVogue(SOLine soline)
         {
-            string strVouMoney = vouchersMoney.ToString("G0");
-            if (soline.DescFlexField.PrivateDescSeg2 != strVouMoney)
+            long itemID = soline.ItemInfo.ItemIDKey.ID;
+
+            if (VogueAndParts.ContainsKey(itemID)
+                )
             {
-                soline.DescFlexField.PrivateDescSeg2 = strVouMoney;
+                ItemTypeWithVouchers itemType = VogueAndParts[itemID];
+
+                if (itemType == ItemTypeWithVouchers.Vogue
+                    || itemType == ItemTypeWithVouchers.VogueAndPart
+                    )
+                {
+                    return true;
+                }
             }
 
+            return false;
+        }
+
+        private bool IsInVoucherCalc(SOLine soline)
+        {
+            long itemID = soline.ItemInfo.ItemIDKey.ID;
+
+            if (VogueAndParts.ContainsKey(itemID)
+                && VogueAndParts[itemID] != ItemTypeWithVouchers.Empty
+                )
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        private static void SetSOLineMoney(SOLine soline, decimal lineTotalMoney, decimal vouchersMoney, ref decimal remainMoney)
+        {
             decimal finallyMoney = lineTotalMoney - vouchersMoney;
+            decimal curLineVouMoney = vouchersMoney;
 
             if (finallyMoney > 0)
             {
-                if (soline.TotalMoneyTC != finallyMoney)
+                //if (soline.TotalMoneyTC != finallyMoney)
                 {
-                    soline.TotalMoneyTC = finallyMoney;
-                    soline.TotalMoneyFC = soline.TotalMoneyTC;
-                    soline.TotalMoneyCC = soline.TotalMoneyTC;
-                    soline.TotalMoneyAC = soline.TotalMoneyTC;
-
-                    //soline.FinallyPriceTC = 0;
-                    //soline.PriceCalField = "TotalMoneyTC";
+                    SetLineFinallyMoney(soline, finallyMoney);
                 }
             }
             else
@@ -725,6 +1001,49 @@ namespace U9.VOB.Cus.HBHTianRiSheng {
                 remainMoney += finallyMoney * -1;
 
                 soline.FreeType = UFIDA.U9.CBO.SCM.Enums.FreeTypeEnum.Present;
+
+                // OBA，修改金额  =0，这时候价格计算可能有问题，会报错；
+                // OBA, 修改最终价=0，这时候价格计算可能有问题，税额不对，税子表没有重算；
+                // 金额改为0，好合算是否分摊正确
+                SetLineFinallyMoney(soline, lineTotalMoney);
+                //SetLineFinallyMoney(soline, 0);
+
+                curLineVouMoney = lineTotalMoney;
+            }
+
+            // 本行分摊金额
+            string strVouMoney = curLineVouMoney.ToString("G0");
+            if (soline.DescFlexField.PrivateDescSeg2 != strVouMoney)
+            {
+                soline.DescFlexField.PrivateDescSeg2 = strVouMoney;
+            }
+        }
+
+        private static void SetLineFinallyMoney(SOLine soline, decimal finallyMoney)
+        {
+            if (soline.TotalMoneyTC != finallyMoney)
+            {
+                soline.TotalMoneyTC = finallyMoney;
+                soline.TotalMoneyFC = soline.TotalMoneyTC;
+                soline.TotalMoneyCC = soline.TotalMoneyTC;
+                soline.TotalMoneyAC = soline.TotalMoneyTC;
+
+                //soline.FinallyPriceTC = 0;
+                //soline.PriceCalField = "TotalMoneyTC";
+
+                // OBA，修改金额  =0，这时候价格计算可能有问题，会报错；
+                // OBA, 修改最终价=0，这时候价格计算可能有问题，税额不对，税子表没有重算；
+                //if (finallyMoney == 0)
+                //{
+                //    soline.FinallyPriceTC = 0;
+                //}
+
+                //soline.NetMoneyTC = 0;
+                //soline.NetMoneyFC = 0;
+                //soline.NetMontyAC = 0;
+                //soline.TaxMoneyTC = 0;
+                //soline.TaxMoneyFC = 0;
+                //soline.TaxMoneyAC = 0;
             }
         }
 
@@ -793,6 +1112,131 @@ namespace U9.VOB.Cus.HBHTianRiSheng {
         }
 
 
-		#endregion		
+
+        // 获得爆款和配件物料
+        private Dictionary<long, ItemTypeWithVouchers> _vogueAndParts;
+        public Dictionary<long, ItemTypeWithVouchers> VogueAndParts
+        {
+            get
+            {
+                if (_vogueAndParts == null)
+                {
+                    _vogueAndParts = new Dictionary<long, ItemTypeWithVouchers>();
+                    
+                    if (this.SO != null)
+                    {
+                        StringBuilder sbVouTypes = GetVouTypes();
+
+                        // .价表.私有字段1 = 抵用劵类型
+                        // 爆款 = 私有段1 ， 配件 = 私有段2
+                        //string priceOpath = string.Format("(DescFlexField.PrivateDescSeg1 = 'true' or DescFlexField.PrivateDescSeg2 = 'true') and ItemInfo.ItemID in (select soline.ItemInfo.ItemID from UFIDA::U9::SM::SO::SOLine soline where soline.SO = @SO)"
+                        //    );
+                        string priceOpath = string.Empty;
+                        if (sbVouTypes.Length > 0)
+                        {
+                            priceOpath = string.Format("(DescFlexField.PrivateDescSeg1 = 'true' or DescFlexField.PrivateDescSeg2 = 'true') and ItemInfo.ItemID in (select soline.ItemInfo.ItemID from UFIDA::U9::SM::SO::SOLine soline where soline.SO = @SO) and SalePriceList.DescFlexField.PrivateDescSeg1 is not null and SalePriceList.DescFlexField.PrivateDescSeg1 != '' and SalePriceList.DescFlexField.PrivateDescSeg1 in ({0})"
+                                , sbVouTypes.GetStringRemoveLastSplit()
+                                );
+                        }
+                        else
+                        {
+                            priceOpath = string.Format("(DescFlexField.PrivateDescSeg1 = 'true' or DescFlexField.PrivateDescSeg2 = 'true') and ItemInfo.ItemID in (select soline.ItemInfo.ItemID from UFIDA::U9::SM::SO::SOLine soline where soline.SO = @SO)"
+                                );
+                        }
+                        SalePriceLine.EntityList priceList = SalePriceLine.Finder.FindAll(priceOpath
+                            , new OqlParam(this.SOKey.ID)
+                            );
+
+                        if (priceList != null
+                            && priceList.Count > 0
+                            )
+                        {
+                            foreach (SalePriceLine pLine in priceList)
+                            {
+                                if (pLine != null
+                                    && pLine.ItemInfo != null
+                                    && pLine.ItemInfo.ItemIDKey != null
+                                    )
+                                {
+                                    long itemID = pLine.ItemInfo.ItemIDKey.ID;
+
+                                    bool isVogue = pLine.DescFlexField.PrivateDescSeg1.GetBool();
+                                    bool isPart = pLine.DescFlexField.PrivateDescSeg2.GetBool();
+
+                                    if (!_vogueAndParts.ContainsKey(itemID))
+                                    {
+                                        _vogueAndParts.Add(itemID
+                                            , isVogue ? (isPart ? ItemTypeWithVouchers.VogueAndPart : ItemTypeWithVouchers.Vogue) : (isPart ? ItemTypeWithVouchers.Part : ItemTypeWithVouchers.Empty)
+                                            );
+                                    }
+                                    else
+                                    {
+                                        ItemTypeWithVouchers type = _vogueAndParts[itemID];
+
+                                        if (type == ItemTypeWithVouchers.VogueAndPart)
+                                        {
+                                            isVogue = true;
+                                            isPart = true;
+                                        }
+                                        else if(type == ItemTypeWithVouchers.Part)
+                                        {
+                                            isPart = true;
+                                        }
+                                        else if (type == ItemTypeWithVouchers.Vogue)
+                                        {
+                                            isVogue = true;
+                                        }
+
+                                        _vogueAndParts[itemID] = isVogue ? (isPart ? ItemTypeWithVouchers.VogueAndPart : ItemTypeWithVouchers.Vogue) : (isPart ? ItemTypeWithVouchers.Part : ItemTypeWithVouchers.Empty);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                return _vogueAndParts;
+            }
+        }
+
+        private StringBuilder GetVouTypes()
+        {
+            StringBuilder sbVouTypes = new StringBuilder();
+            foreach (SOVouchersLine line in this.SOVouchersLine)
+            {
+                if (line != null
+                    && line.VouchersLine != null
+                    && line.VouchersLine.VouchersType != null
+                    && line.VouchersLine.VouchersType != VouchersTypeEnum.Empty
+                    )
+                {
+                    sbVouTypes.Append("'").Append(line.VouchersLine.VouchersType.Name.ToString()).Append("',");
+                }
+            }
+            return sbVouTypes;
+        }
+
+		#endregion	
+	
 	}
+
+    public enum ItemTypeWithVouchers
+    { 
+        /// <summary>
+        /// 空
+        /// </summary>
+        Empty = 0,
+        /// <summary>
+        /// 爆款
+        /// </summary>
+        Vogue = 1,
+        /// <summary>
+        /// 配件
+        /// </summary>
+        Part = 2,
+        /// <summary>
+        /// 爆款并且配件
+        /// </summary>
+        VogueAndPart = 2,
+    }
 }

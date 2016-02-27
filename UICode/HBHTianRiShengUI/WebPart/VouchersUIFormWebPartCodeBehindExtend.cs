@@ -234,38 +234,7 @@ namespace VouchersUIModel
             //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
             //ContainUsed125_TextChanged_DefaultImpl(sender,e);
 
-            VouchersRecord head = this.Model.Vouchers.FocusedRecord;
-
-            if (head != null
-                )
-            {
-                if (!head.ContainUsed.GetValueOrDefault(true))
-                {
-                    foreach (Vouchers_VouchersLineRecord line in head.GetChildRecords(this.Model.Vouchers_VouchersLine))
-                    {
-                        if (line != null)
-                        {
-                            if (line.IsUsed.GetValueOrDefault(false))
-                            {
-                                line.Hidden = true;
-                            }
-                        }
-                    }
-                }
-                else
-                {
-                    foreach (Vouchers_VouchersLineRecord line in head.GetChildRecords(this.Model.Vouchers_VouchersLine))
-                    {
-                        if (line != null)
-                        {
-                            if (line.IsUsed.GetValueOrDefault(false))
-                            {
-                                line.Hidden = false;
-                            }
-                        }
-                    }
-                }
-            }
+            //HideLineByIsUsed();
         }
 
         #endregion
@@ -328,7 +297,7 @@ namespace VouchersUIModel
 
         public void BeforeUIModelBinding()
         {
-
+            HideLineByIsUsed();
         }
 
         public void AfterUIModelBinding()
@@ -366,6 +335,43 @@ namespace VouchersUIModel
 
         #endregion
 
+
+
+        private void HideLineByIsUsed()
+        {
+            VouchersRecord head = this.Model.Vouchers.FocusedRecord;
+
+            if (head != null
+                )
+            {
+                if (!head.ContainUsed.GetValueOrDefault(true))
+                {
+                    foreach (Vouchers_VouchersLineRecord line in head.GetChildRecords(this.Model.Vouchers_VouchersLine))
+                    {
+                        if (line != null)
+                        {
+                            if (line.IsUsed.GetValueOrDefault(false))
+                            {
+                                line.Hidden = true;
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    foreach (Vouchers_VouchersLineRecord line in head.GetChildRecords(this.Model.Vouchers_VouchersLine))
+                    {
+                        if (line != null)
+                        {
+                            if (line.IsUsed.GetValueOrDefault(false))
+                            {
+                                line.Hidden = false;
+                            }
+                        }
+                    }
+                }
+            }
+        }
 
         private void CellEditEnabledAssoControl()
         {

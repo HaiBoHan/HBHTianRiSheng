@@ -12,7 +12,7 @@ namespace U9.VOB.Cus.HBHTianRiSheng.UIPlugin
 {
     public class SO_UIPlugin  : UFSoft.UBF.UI.Custom.ExtendedPartBase
     {   // 特价订单、零售订单、套餐订单
-        public const string Cons_SOVouchersDocTypeCode = ",SO04,SO08,SO09,";
+        public const string Cons_SOVouchersDocTypeCode = ",SO03,SO04,SO08,SO09,";
 
         UFSoft.UBF.UI.IView.IPart part;
         UFIDA.U9.SCM.SM.SOUIModel.StandardSOMainUIFormWebPart _strongPart;
@@ -174,6 +174,30 @@ namespace U9.VOB.Cus.HBHTianRiSheng.UIPlugin
 
         }
 
+        public override void AfterEventProcess(UFSoft.UBF.UI.IView.IPart Part, string eventName, object sender, EventArgs args)
+        {
+            base.AfterEventProcess(Part, eventName, sender, args);
+
+            //UFSoft.UBF.UI.WebControlAdapter.UFWebReferenceAdapter web = sender as UFSoft.UBF.UI.WebControlAdapter.UFWebReferenceAdapter;
+            //if (web != null && web.UIField.Name == "ReqDepartment")
+            //{
+            //}
+
+            UFSoft.UBF.UI.WebControlAdapter.UFWebButton4ToolbarAdapter webButton = sender as UFSoft.UBF.UI.WebControlAdapter.UFWebButton4ToolbarAdapter;
+            if (webButton != null
+                && webButton.ID == "BtnCopy"
+                )
+            {
+                UFIDA.U9.SCM.SM.SOUIModel.SORecord head = _strongPart.Model.SO.FocusedRecord;
+
+                if (head != null)
+                {
+                    head.DescFlexField_PubDescSeg13 = string.Empty;
+                    head.DescFlexField_PubDescSeg14 = string.Empty;
+                    head.DescFlexField_PubDescSeg15 = string.Empty;
+                }
+            }
+        }
 
         void btnHBHRefresh_Click(object sender, EventArgs e)
         {

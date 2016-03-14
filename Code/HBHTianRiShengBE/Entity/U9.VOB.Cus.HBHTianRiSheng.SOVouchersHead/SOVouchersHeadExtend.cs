@@ -13,12 +13,15 @@ using UFIDA.U9.SM.Enums;
 using UFIDA.U9.SPR.SalePriceList;
 using UFIDA.U9.Base.Profile;
 using UFSoft.UBF.PL;
+using UFIDA.U9.CBO.SCM.Enums;
 
 #endregion
 
 namespace U9.VOB.Cus.HBHTianRiSheng {
 
 	public partial class SOVouchersHead{
+
+        List<long> deletedVouchersLines = new List<long>();
 
 		#region Custom Constructor
 
@@ -34,16 +37,42 @@ namespace U9.VOB.Cus.HBHTianRiSheng {
 		/// <summary>
 		/// 设置默认值
 		/// </summary>
-		protected override void OnSetDefaultValue()
-		{
-			base.OnSetDefaultValue();
-		}
+        protected override void OnSetDefaultValue()
+        {
+            base.OnSetDefaultValue();
+
+            if (this.IsRecalcSOMoney)
+            {
+                // 删除没有抵用券号的行
+                for (int i = this.SOVouchersLine.Count - 1; i >= 0; i-- )
+                {
+                    SOVouchersLine line = this.SOVouchersLine[i];
+                    if (line != null
+                        && line.VouchersLine == null
+                        )
+                    {
+                        if (line.VouchersLineKey != null)
+                        {
+                            if (!deletedVouchersLines.Contains(line.VouchersLineKey.ID))
+                            {
+                                deletedVouchersLines.Add(line.VouchersLineKey.ID);
+                            }
+                        }
+
+                        line.Remove();
+                    }
+                }
+
+            }
+        }
 		/// <summary>
 		/// before Insert
 		/// </summary>
 		protected override void OnInserting() {
 			base.OnInserting();
             // TO DO: write your business code here...
+
+            UpdateSOMoney();
 
             UpdateSrcVouchers();
 		}
@@ -53,9 +82,7 @@ namespace U9.VOB.Cus.HBHTianRiSheng {
 		/// </summary>
 		protected override void OnInserted() {
 			base.OnInserted();
-			// TO DO: write your business code here...
-
-            UpdateSOMoney();
+            // TO DO: write your business code here...
 		}
 
 		/// <summary>
@@ -64,6 +91,8 @@ namespace U9.VOB.Cus.HBHTianRiSheng {
 		protected override void OnUpdating() {
 			base.OnUpdating();
             // TO DO: write your business code here...
+
+            UpdateSOMoney();
 
             UpdateSrcVouchers();
 		}
@@ -74,8 +103,6 @@ namespace U9.VOB.Cus.HBHTianRiSheng {
 		protected override void OnUpdated() {
 			base.OnUpdated();
 			// TO DO: write your business code here...
-
-            UpdateSOMoney();
 		}
 
 		/// <summary>
@@ -83,7 +110,9 @@ namespace U9.VOB.Cus.HBHTianRiSheng {
 		/// </summary>
 		protected override void OnDeleting() {
 			base.OnDeleting();
-			// TO DO: write your business code here...
+            // TO DO: write your business code here...
+
+            UpdateSOMoney();
 
             UpdateSrcVouchers();
 		}
@@ -94,8 +123,6 @@ namespace U9.VOB.Cus.HBHTianRiSheng {
 		protected override void OnDeleted() {
 			base.OnDeleted();
 			// TO DO: write your business code here...
-
-            UpdateSOMoney();
 		}
 
 		/// <summary>
@@ -593,7 +620,9 @@ namespace U9.VOB.Cus.HBHTianRiSheng {
                         vouLine.Vouchers.ActivityType = SMActivityEnum.ServiceUpd;
                         if (sovouline.SysState == UFSoft.UBF.PL.Engine.ObjectState.Deleted)
                         {
-                            if (sovouline.OriginalData != null)
+                            if (sovouline.OriginalData != null
+                                && !IsDeletedVouchersLine(sovouline.OriginalData.VouchersLineKey)
+                                )
                             {
                                 vouLine = sovouline.OriginalData.VouchersLine;
                                 if (vouLine != null
@@ -616,6 +645,7 @@ namespace U9.VOB.Cus.HBHTianRiSheng {
 
                         // 如果换 抵用券，则删除旧抵用券的 已被使用；
                         if (sovouline.OriginalData != null
+                            && !IsDeletedVouchersLine(sovouline.OriginalData.VouchersLineKey)
                             && sovouline.OriginalData.VouchersLine != sovouline.VouchersLine
                             )
                         {
@@ -636,6 +666,7 @@ namespace U9.VOB.Cus.HBHTianRiSheng {
                 {
                     if (sovouline != null
                         && sovouline.OriginalData != null
+                        && !IsDeletedVouchersLine(sovouline.OriginalData.VouchersLineKey)
                         && sovouline.OriginalData.VouchersLine != null
                         )
                     {
@@ -659,7 +690,10 @@ namespace U9.VOB.Cus.HBHTianRiSheng {
             decimal oldVouchersMoney = GetOldVouchersMoney();
             decimal newVouchersMoney = GetNewVouchersMoney();
 
-            if (oldVouchersMoney != newVouchersMoney)
+            if (oldVouchersMoney != newVouchersMoney
+                // 前台可以重算
+                || this.IsRecalcSOMoney
+                )
             {
                 RecalcSOLineMoney(newVouchersMoney);
             }
@@ -717,6 +751,7 @@ namespace U9.VOB.Cus.HBHTianRiSheng {
                     }
 
                     // 爆款先抵用新品的折扣券
+                    decimal promRemain = 0;
                     // 不做大于0 的判断，是因为，如果为0，要清空抵用券 金额、重算订单金额
                     //if (newPromotionMoney > 0)
                     {
@@ -724,7 +759,7 @@ namespace U9.VOB.Cus.HBHTianRiSheng {
                         {
                             SOLine vogueMaxLine = null;
                             decimal vogueAverageMoney = so.TC.MoneyRound.GetRoundValue(newPromotionMoney / lstVogueSOLine.Count);
-                            decimal promRemain = newPromotionMoney - vogueAverageMoney * lstVogueSOLine.Count;
+                            promRemain = newPromotionMoney - vogueAverageMoney * lstVogueSOLine.Count;
                             foreach (SOLine soline in lstVogueSOLine)
                             {
                                 CalcVouchersSOLine(vogueAverageMoney, ref promRemain, ref vogueMaxLine, soline);
@@ -744,12 +779,18 @@ namespace U9.VOB.Cus.HBHTianRiSheng {
                                     , ref promRemain
                                     );
 
-                                if (promRemain > 0)
-                                {
-                                    soVouTotalMoney += promRemain;
-                                }
                             }
                         }
+                        else
+                        {
+                            //soVouTotalMoney += promRemain;
+                            promRemain = newPromotionMoney;
+                        }
+                    }
+
+                    if (promRemain > 0)
+                    {
+                        soVouTotalMoney += promRemain;
                     }
 
 
@@ -800,6 +841,23 @@ namespace U9.VOB.Cus.HBHTianRiSheng {
 
                             so.ActionSrc = SMActivityEnum.OBAUpdate;
                         }
+                        // 所有行，还原金额
+                        else if (soVouTotalMoney == 0)
+                        {
+                            decimal remainMoney = 0;
+                            SOLine maxMoneyLine = null;
+                            foreach (SOLine soline in so.SOLines)
+                            //foreach (SOLine soline in lstEffectSOLine)
+                            {
+                                if (soline != null)
+                                {
+                                    //if (IsInVoucherCalc(soline))
+                                    {
+                                        CalcVouchersSOLine(0, ref remainMoney, ref maxMoneyLine, soline);
+                                    }
+                                }
+                            }
+                        }
                         else
                         {
                             string msg = string.Format("订单[{0}]没有有效的行分摊抵用券金额[{1}]"
@@ -808,6 +866,24 @@ namespace U9.VOB.Cus.HBHTianRiSheng {
                                 );
                             throw new BusinessException(msg);
                         }
+                    }
+
+
+                    // 需预收金额: NeedPreRecMoneyAC
+                    decimal needPreRec = 0;
+                    foreach (SOLine soline in this.SO.SOLines)
+                    {
+                        if (soline.FreeType == null
+                            || soline.FreeType == FreeTypeEnum.Empty
+                            )
+                        {
+                            needPreRec += soline.TotalMoneyAC;
+                        }
+                    }
+
+                    if (this.SO.NeedPreRecMoneyAC != needPreRec)
+                    {
+                        this.SO.NeedPreRecMoneyAC = needPreRec;
                     }
 
                     session.Commit();
@@ -1054,16 +1130,26 @@ namespace U9.VOB.Cus.HBHTianRiSheng {
             if (this.SOVouchersLine != null
                 && this.SOVouchersLine.Count > 0
                 )
-            { 
-                foreach(SOVouchersLine line in this.SOVouchersLine)
+            {
+                foreach (SOVouchersLine line in this.SOVouchersLine)
                 {
-                    if(line != null
-                        && line.OriginalData != null
-                        && line.OriginalData.VouchersLine != null
-                        && line.OriginalData.VouchersLine.Money > 0
-                        )
+                    //if (line != null
+                    //    && line.OriginalData != null
+                    //    )
+                    //{
+                    //    if (!IsDeletedVouchersLine(line.OriginalData.VouchersLineKey)
+                    //        && line.OriginalData.VouchersLine != null
+                    //        && line.OriginalData.VouchersLine.Money > 0
+                    //        )
+                    //    {
+                    //        money += line.OriginalData.VouchersLine.Money;
+                    //    }
+                    //}
+                    decimal originalMoney = GetOriginalMoney(line);
+
+                    if (originalMoney != 0)
                     {
-                        money += line.OriginalData.VouchersLine.Money;
+                        money += originalMoney;
                     }
                 }
             }
@@ -1074,18 +1160,52 @@ namespace U9.VOB.Cus.HBHTianRiSheng {
             {
                 foreach (SOVouchersLine line in this.SOVouchersLine.DelLists)
                 {
-                    if (line != null
-                        && line.OriginalData != null
-                        && line.OriginalData.VouchersLine != null
-                        && line.OriginalData.VouchersLine.Money > 0
-                        )
+                    //if (line != null
+                    //    && line.OriginalData != null
+                    //    && line.OriginalData.VouchersLine != null
+                    //    && line.OriginalData.VouchersLine.Money > 0
+                    //    )
+                    //{
+                    //    money -= line.OriginalData.VouchersLine.Money;
+                    //}
+                    decimal originalMoney = GetOriginalMoney(line);
+
+                    if (originalMoney != 0)
                     {
-                        money -= line.OriginalData.VouchersLine.Money;
+                        money -= originalMoney;
                     }
                 }
             }
 
             return money;
+        }
+
+        private decimal GetOriginalMoney(HBHTianRiSheng.SOVouchersLine line)
+        {
+            if (line != null
+                && line.OriginalData != null
+                )
+            {
+                if (!IsDeletedVouchersLine(line.OriginalData.VouchersLineKey)
+                    && line.OriginalData.VouchersLine != null
+                    && line.OriginalData.VouchersLine.Money > 0
+                    )
+                {
+                    return line.OriginalData.VouchersLine.Money;
+                }
+            }
+            return 0;
+        }
+
+        private bool IsDeletedVouchersLine(VouchersLine.EntityKey entityKey)
+        {
+            if (entityKey != null
+                && deletedVouchersLines.Contains(entityKey.ID)
+                )
+            {
+                return true;
+            }
+            return false;
         }
 
         private decimal GetNewVouchersMoney()

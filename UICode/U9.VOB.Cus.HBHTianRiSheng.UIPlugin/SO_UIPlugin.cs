@@ -266,6 +266,18 @@ namespace U9.VOB.Cus.HBHTianRiSheng.UIPlugin
                     SetPriceControlStatus(true);
                 }
 
+                
+                string strDocType = head.DocumentType_Code;
+                if (head.Status == (int)SODocStatusEnumData.Open
+                    && Cons_SOVouchersDocTypeCode.Contains("," + strDocType + ",")
+                    )
+                {
+                    btnSOVouchers.Enabled = true;
+                }
+                else
+                {
+                    btnSOVouchers.Enabled = false;
+                }
             }
         }
 

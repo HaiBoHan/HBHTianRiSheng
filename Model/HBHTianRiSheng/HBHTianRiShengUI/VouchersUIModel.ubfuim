@@ -65,7 +65,11 @@
             <UIFieldInfo id="c99af107-6560-43c2-af38-3a63f90cc6d4" name="Memo" displayName="备注" description="" DefaultValue="" GroupName="Misc" DisplayRule="50" IsNullable="True" IsReadOnly="False" IsEnableReference="False" IsLink="False" ControlID="68095607-50d1-4296-a35a-623b21d654f0" DataTypeID="3d174255-fd12-47f7-8844-3b5e4fae9e8c" EnumTypeID="" BindingFullName="VouchersUIModel.Vouchers.Memo" Expression="" Sequence="0" Length="50" IsBinding="False" IsGlobalized="False" CustomIsLoadable="False" CustomAttrName="" />
           </Fields>
           <Filters>
-            <UIFilterInfo id="a6e2b031-eded-4416-87e4-5365c01539b6" name="DefaultFilter" displayName="缺省过滤条件" description="" help="" OPath="" OrderBy="" />
+            <UIFilterInfo id="a6e2b031-eded-4416-87e4-5365c01539b6" name="DefaultFilter" displayName="缺省过滤条件" description="" help="" OPath="" OrderBy="">
+              <Parameters>
+                <UIParameterInfo id="f0fbe240-9023-4468-9e22-7b47a3c59f74" name="@LineID" displayName="LineID" description="LineID" help="" DefaultValue="LineID" DataTypeID="ba391065-6c27-4c82-acc8-b52b1c93a910" BindingFullName="" IsNullable="False" />
+              </Parameters>
+            </UIFilterInfo>
           </Filters>
         </UIViewInfo>
         <UIViewInfo id="030e2ae3-4f25-4475-a0fe-ea6285acfbe0" name="Vouchers_VouchersLine" displayName="抵用劵行" description="抵用劵行" RootFullName="VouchersUIModel.Vouchers.VouchersLine.Item">

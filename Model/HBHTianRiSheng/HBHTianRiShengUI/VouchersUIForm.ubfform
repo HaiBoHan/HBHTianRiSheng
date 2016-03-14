@@ -7,8 +7,22 @@
     <Row Fixed="False" Height="421" Name="Row4" />
     <Row Fixed="True" Height="25" Name="Row3" />
   </Rows>
-  <Providers />
-  <InParameters />
+  <Providers>
+    <Parameter IsProvider="True" Name="ID" UIFieldID="ID" UIViewID="Vouchers_VouchersLine" />
+    <Parameter IsProvider="True" Name="VouchersNo" UIFieldID="VouchersNo" UIViewID="Vouchers_VouchersLine" />
+    <Parameter IsProvider="True" Name="Money" UIFieldID="Money" UIViewID="Vouchers_VouchersLine" />
+    <Parameter IsProvider="True" Name="VouchersType" UIFieldID="VouchersType" UIViewID="Vouchers_VouchersLine" />
+    <Parameter IsProvider="True" Name="EffectiveDate" UIFieldID="EffectiveDate" UIViewID="Vouchers_VouchersLine" />
+    <Parameter IsProvider="True" Name="DisableDate" UIFieldID="DisabledDate" UIViewID="Vouchers_VouchersLine" />
+    <Parameter IsProvider="True" Name="IsEffectived" UIFieldID="IsEffectived" UIViewID="Vouchers_VouchersLine" />
+    <Parameter IsProvider="True" Name="IsUsed" UIFieldID="IsUsed" UIViewID="Vouchers_VouchersLine" />
+    <Parameter IsProvider="True" Name="Seller" UIFieldID="Seller" UIViewID="Vouchers_VouchersLine" />
+    <Parameter IsProvider="True" Name="SellerCode" UIFieldID="Seller_Code" UIViewID="Vouchers_VouchersLine" />
+    <Parameter IsProvider="True" Name="SellerName" UIFieldID="Seller_Name" UIViewID="Vouchers_VouchersLine" />
+  </Providers>
+  <InParameters>
+    <Parameter DataType="Int64" IsConsumer="True" IsPersoner="False" Name="LineID" UIModelParameterName="@LineID" UIViewID="Vouchers" />
+  </InParameters>
   <Toolbar ID="5f7baeb1-d4e5-404d-86ab-462f1cdfb689" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="28" Name="Toolbar2" TabIndex="1" TabStop="True" Width="992">
     <Button ID="746d08aa-0da6-44b6-ba8e-e8a6db0dd7df" AccessKey="S" DisplayNameResourceID="8288c5a3-3b19-48d3-b139-f7018d2782ee" DisplaySrcType="PublicResource" Height="28" Name="BtnSave" TabIndex="1" TabStop="True" Width="35" X="0" Y="0">
       <Events>

@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Text;
 using HBH.DoNet.DevPlatform.EntityMapping;
 using UFSoft.UBF.Business;
+using UFSoft.UBF.PL;
 
 #endregion
 
@@ -72,6 +73,8 @@ namespace U9.VOB.Cus.HBHTianRiSheng {
 		protected override void OnDeleting() {
 			base.OnDeleting();
 			// TO DO: write your business code here...
+
+            DeleteValidate();
 		}
 
 		/// <summary>
@@ -117,7 +120,10 @@ namespace U9.VOB.Cus.HBHTianRiSheng {
                     );
                 throw new BusinessException(msg);
             }
+
+            DeleteValidate();
         }
+
 		#endregion
 		
 		#region 异常处理，开发人员可以重新封装异常
@@ -147,6 +153,48 @@ namespace U9.VOB.Cus.HBHTianRiSheng {
 
 
 		#region Model Methods
+
+
+        private void DeleteValidate()
+        {
+            if (this.SysState == UFSoft.UBF.PL.Engine.ObjectState.Deleted)
+            {
+                string msg = string.Empty;
+
+                string opath = string.Format("VouchersLine=@VouLine");
+                SOVouchersLine.EntityList lstSOVou = SOVouchersLine.Finder.FindAll(opath
+                    , new OqlParam(this.ID)
+                    );
+
+                if (lstSOVou != null
+                    && lstSOVou.Count > 0
+                    )
+                {
+                    StringBuilder sbVou = new StringBuilder();
+                    foreach (SOVouchersLine sovouLine in lstSOVou)
+                    {
+                        if (sovouLine != null)
+                        {
+                            sbVou.Append(string.Format("订单[{0}]抵用券行号[{1}],"
+                                , sovouLine.SOVouchersHead.SO != null ? sovouLine.SOVouchersHead.SO.DocNo : string.Empty
+                                , sovouLine.DocLineNo
+                                ));
+                        }
+                    }
+
+                    if (sbVou.Length > 0)
+                    {
+                        msg = string.Format("抵用券[{0}]已被引用，无法删除!引用信息:  \r\n {1}"
+                            , this.VouchersNo
+                            , sbVou.GetStringRemoveLastSplit()
+                            );
+                        throw new BusinessException(msg);
+                    }
+                }
+            }
+        }
+
+
 		#endregion		
 	}
 }

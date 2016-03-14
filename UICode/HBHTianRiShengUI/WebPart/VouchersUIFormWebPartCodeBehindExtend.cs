@@ -26,6 +26,7 @@ using System.Collections.Generic;
 using UFSoft.UBF.UI.WebControls.Association;
 using UFSoft.UBF.UI.WebControls.Association.Adapter;
 using UFSoft.UBF.UI.ControlModel;
+using HBH.DoNet.DevPlatform.EntityMapping;
 
 
 
@@ -80,9 +81,41 @@ namespace VouchersUIModel
         private void BtnCopy_Click_Extend(object sender, EventArgs e)
         {
             //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
-
-
             BtnCopy_Click_DefaultImpl(sender, e);
+
+            AfterCopyDo();
+        }
+
+        private void AfterCopyDo()
+        {
+            //throw new Exception("The method or operation is not implemented.");
+            //如果单号为空则返回
+            if (this.Model.Vouchers.FocusedRecord == null)
+            {
+                return;
+            }
+            this.Model.ClearErrorMessage();
+            VouchersView headView = this.Model.Vouchers;
+            // 复制后单据状态置为开立,状态清空
+            headView.FocusedRecord.Status = headView.FieldStatus.DefaultValue as int?;//开立。
+            headView.FocusedRecord.DocNo = headView.FieldDocNo.DefaultValue as string;
+
+            headView.FocusedRecord.ContainUsed = headView.FieldContainUsed.DefaultValue as bool?;
+
+            if (this.Model.Vouchers_VouchersLine.Records != null
+                && this.Model.Vouchers_VouchersLine.Records.Count > 0
+                )
+            {
+                Vouchers_VouchersLineView lineView = this.Model.Vouchers_VouchersLine;
+                foreach (Vouchers_VouchersLineRecord line in this.Model.Vouchers_VouchersLine.Records)
+                {
+                    line.EffectiveDate = lineView.FieldEffectiveDate.DefaultValue as DateTime?;
+                    line.DisabledDate = lineView.FieldDisabledDate.DefaultValue as DateTime?;
+                    line.IsEffectived = lineView.FieldIsEffectived.DefaultValue as bool?;
+                    line.IsUsed = lineView.FieldIsUsed.DefaultValue as bool?;
+
+                }
+            }
         }
 
         //BtnSubmit_Click...
@@ -244,9 +277,45 @@ namespace VouchersUIModel
 
 
         #region 自定义数据初始化加载和数据收集
+
+        long lineID = -1;
+
         private void OnLoadData_Extend(object sender)
         {
-            OnLoadData_DefaultImpl(sender);
+            object objLineID = this.NameValues["LineID"];
+            lineID = PubClass.GetLong(objLineID);
+
+            if (lineID > 0)
+            {
+                string opath = string.Format("ID in (select line.Vouchers from U9::VOB::Cus::HBHTianRiSheng::VouchersLine line where line.ID = {0})"
+                    , lineID
+                    );
+
+                this.Model.Vouchers.CurrentFilter.OPath = opath;
+
+
+                this.Action.CommonAction.Load(this.Model);
+
+
+                if (this.Model.Vouchers_VouchersLine.Records != null
+                    && this.Model.Vouchers_VouchersLine.Records.Count > 0
+                )
+                {
+                    foreach (Vouchers_VouchersLineRecord line in this.Model.Vouchers_VouchersLine.Records)
+                    {
+                        if (line != null
+                            && line.ID == lineID
+                            )
+                        {
+                            this.Model.Vouchers_VouchersLine.FocusedRecord = line;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                OnLoadData_DefaultImpl(sender);
+            }
         }
         private void OnDataCollect_Extend(object sender)
         {

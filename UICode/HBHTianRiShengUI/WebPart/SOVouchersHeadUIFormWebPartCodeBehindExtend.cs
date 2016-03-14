@@ -102,7 +102,30 @@ namespace SOVouchersHeadUIModel
                 BtnSave_Click(sender, e);
             }
 		}
+
+        //BtnRecalcMoney_Click...
+        private void BtnRecalcMoney_Click_Extend(object sender, EventArgs e)
+		{
+			//调用模版提供的默认实现.--默认实现可能会调用相应的Action.
+            //BtnRecalcMoney_Click_DefaultImpl(sender,e);
+
+
+            this.Model.ClearErrorMessage();
+
+            SOVouchersHeadRecord head = this.Model.SOVouchersHead.FocusedRecord;
+
+            if (head != null)
+            {
+                head.IsRecalcSOMoney = true;
+
+                BtnSave_Click(sender, e);
+
+                this.Action.NavigateAction.Refresh(null);
+            }
+		}
 		
+
+
         #endregion
 
 		
@@ -177,6 +200,12 @@ namespace SOVouchersHeadUIModel
                     , "Const_RefType"
                     , "IsSingleReturn"
                     );
+
+
+            // 绑定注册弹出对话框到按钮 
+            UFIDA.U9.UI.PDHelper.PDFormMessage.ShowDelConfirmDialog(this.Page, "确认清空订单抵用券行?", "", this.BtnClearLine);
+
+            UFIDA.U9.UI.PDHelper.PDFormMessage.ShowDelConfirmDialog(this.Page, "确认抵用券订单金额重算?", "", this.BtnRecalcMoney);
         }
         
         public void AfterEventBind()

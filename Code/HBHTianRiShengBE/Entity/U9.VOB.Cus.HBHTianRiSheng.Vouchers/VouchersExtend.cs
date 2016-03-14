@@ -222,7 +222,7 @@ namespace U9.VOB.Cus.HBHTianRiSheng {
                 // ②与数据库其他有效期的抵用券重复
                 if (sbVouNo.Length > 0)
                 {
-                    string opath = string.Format("IsEffectived = 1 and @Today between EffectiveDate and DisabledDate and Vouchers != @Vou and VouchersNo != null and VouchersNo != '' and VouchersNo in ({0})"
+                    string opath = string.Format("IsEffectived = 1 and @Today between EffectiveDate and DisabledDate and Vouchers != @Vou and VouchersNo is not null and VouchersNo != '' and VouchersNo in ({0})"
                         , sbVouNo.GetStringRemoveLastSplit()
                         );
                     HBHTianRiSheng.VouchersLine.EntityList list = HBHTianRiSheng.VouchersLine.Finder.FindAll(opath
@@ -242,6 +242,9 @@ namespace U9.VOB.Cus.HBHTianRiSheng {
                                 )
                             {
                                 sbRepeatVouNo.Append(string.Format("券号[{0}]已被单号[{1}]行号[{2}]使用! \r\n"
+                                    , line.VouchersNo
+                                    , line.Vouchers.DocNo
+                                    , line.DocLineNo
                                     ));
                             }
                         }

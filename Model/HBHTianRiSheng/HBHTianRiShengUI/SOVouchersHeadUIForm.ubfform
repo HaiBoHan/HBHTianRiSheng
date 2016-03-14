@@ -13,11 +13,11 @@
     <Columns>
       <Column Fixed="True" Name="Column0" Type="Value" Width="80" />
       <Column Fixed="True" Name="Column1" Type="Spacing" Width="10" />
-      <Column Fixed="True" Name="Column2" Type="Title" Width="80" />
+      <Column Fixed="True" Name="Column2" Type="Title" Width="60" />
       <Column Fixed="True" Name="Column3" Type="Spacing" Width="10" />
       <Column Fixed="True" Name="Column4" Type="Title" Width="80" />
       <Column Fixed="True" Name="Column5" Type="Spacing" Width="10" />
-      <Column Fixed="True" Name="Column6" Type="Title" Width="80" />
+      <Column Fixed="True" Name="Column6" Type="Title" Width="100" />
       <Column Fixed="True" Name="Column18" Type="Spacing" Width="10" />
       <Column Fixed="True" Name="Column17" Type="Title" Width="80" />
       <Column Fixed="True" Name="Column21" Type="Spacing" Width="10" />
@@ -46,7 +46,12 @@
         <Event ActionName="SaveClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="SaveClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
       </Events>
     </Button>
-    <Button ID="164cc111-8d71-4082-8095-583b087c2957" AccessKey="" DisplayName="清空行" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="1" GridX="4" GridY="0" Height="20" Name="BtnClearLine" TabIndex="9" TabStop="True" Width="80" X="190" Y="3">
+    <Button ID="164cc111-8d71-4082-8095-583b087c2957" AccessKey="" DisplayName="清空行" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="1" GridX="4" GridY="0" Height="20" Name="BtnClearLine" TabIndex="9" TabStop="True" Width="80" X="170" Y="3">
+      <Events>
+        <Event EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="" Template="" />
+      </Events>
+    </Button>
+    <Button ID="0b53208f-8203-4e98-81ff-cc1cad1f30f7" AccessKey="" DisplayName="订单金额重算" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="1" GridX="6" GridY="0" Height="20" Name="BtnRecalcMoney" TabIndex="10" TabStop="True" Width="100" X="260" Y="3">
       <Events>
         <Event EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="" Template="" />
       </Events>
@@ -113,6 +118,25 @@
           <UIFilterBar Name="ReferenceFilter">
             <Parameter ContextID="" ControlID="VouchersTypeIDs210" ControlProperty="Value" ControlType="TextBoxModel" Name="VouchersType" ParameterBindType="Bind2Control" />
           </UIFilterBar>
+          <FormLink FormRefID="dc906bd3-950d-4189-99d4-2ea7abf11fe4" FormRefName="VouchersUIForm.ubfform" FormRefPath="VouchersUIForm.ubfform" FormRefProjectPath="HBHTianRiShengUI.ubfuiproj" Height="504" IsShowStateBar="True" Width="992">
+            <InParameters>
+              <Parameter ContextID="" ControlID="VouchersLine" ControlProperty="Key" ControlType="ReferenceColumnModel" Name="LineID" ParameterBindType="Bind2Control" />
+            </InParameters>
+            <OutParameters>
+              <Parameter ContextID="" ControlID="VouchersLine" ControlProperty="Key" ControlType="ReferenceColumnModel" Name="ID" />
+              <Parameter ContextID="" ControlID="VouchersLine" ControlProperty="Value" ControlType="ReferenceColumnModel" Name="VouchersNo" />
+              <Parameter ContextID="" ControlID="VouchersLine_Money" ControlProperty="Value" ControlType="NumberColumnModel" Name="Money" />
+              <Parameter ContextID="" ControlID="VouchersLine_VouchersType" ControlProperty="Value" ControlType="DropDownListColumnModel" Name="VouchersType" />
+              <Parameter ContextID="" ControlID="VouchersLine_EffectiveDate" ControlProperty="Value" ControlType="DatePickerColumnModel" Name="EffectiveDate" />
+              <Parameter ContextID="" ControlID="VouchersLine_DisabledDate" ControlProperty="Value" ControlType="DatePickerColumnModel" Name="DisableDate" />
+              <Parameter ContextID="" ControlID="VouchersLine_IsEffectived" ControlProperty="Value" ControlType="CheckBoxColumnModel" Name="IsEffectived" />
+              <Parameter ContextID="" ControlID="VouchersLine_IsUsed" ControlProperty="Value" ControlType="CheckBoxColumnModel" Name="IsUsed" />
+              <Parameter ContextID="" ControlID="VouchersLine_Seller" ControlProperty="Key" ControlType="ReferenceColumnModel" Name="Seller" />
+              <Parameter ContextID="" ControlID="VouchersLine_Seller" ControlProperty="Value" ControlType="ReferenceColumnModel" Name="SellerCode" />
+              <Parameter ContextID="" ControlID="VouchersLine_Seller" ControlProperty="Text" ControlType="ReferenceColumnModel" Name="SellerName" />
+              <Parameter ContextID="" ControlID="VouchersLine" ControlProperty="Text" ControlType="ReferenceColumnModel" Name="VouchersNo" />
+            </OutParameters>
+          </FormLink>
           <Events />
         </ReferenceColumn>
         <NumberColumn ID="81046c5a-0298-4eff-a802-c68405f07809" DefaultValue="0" DisplayFormat="24.9" Enabled="False" HasSum="True" Help="抵用劵行.Misc.面值" IsNull="True" IsProperty="False" IsSequence="False" Name="VouchersLine_Money0" NPos="4" Point="0" UIFieldID="VouchersLine_Money" UIViewID="SOVouchersHead_SOVouchersLine" Visible="True">

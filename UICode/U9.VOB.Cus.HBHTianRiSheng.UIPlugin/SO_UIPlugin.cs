@@ -7,6 +7,7 @@ using UFSoft.UBF.UI.WebControlAdapter;
 using U9.VOB.HBHCommon.HBHCommonUI;
 using UFIDA.U9.SM.SO;
 using System.Collections.Specialized;
+using UFIDA.U9.CBO.SCM.Enums;
 
 namespace U9.VOB.Cus.HBHTianRiSheng.UIPlugin
 {
@@ -253,11 +254,14 @@ namespace U9.VOB.Cus.HBHTianRiSheng.UIPlugin
             base.AfterRender(Part, args);
 
             UFIDA.U9.SCM.SM.SOUIModel.SORecord head = _strongPart.Model.SO.FocusedRecord;
+            UFIDA.U9.SCM.SM.SOUIModel.SO_SOLinesRecord line = _strongPart.Model.SO_SOLines.FocusedRecord;
 
             if (head != null
                 )
             {
-                if (IsUnchangeFinallyPrice(head.DocumentType_Code))
+                if (IsUnchangeFinallyPrice(head.DocumentType_Code)
+                    && IsUnchangeFinallyPrice(line)
+                    )
                 {
                     SetPriceControlStatus(false);
                 }
@@ -333,6 +337,17 @@ namespace U9.VOB.Cus.HBHTianRiSheng.UIPlugin
             return false;
         }
 
+
+        private bool IsUnchangeFinallyPrice(UFIDA.U9.SCM.SM.SOUIModel.SO_SOLinesRecord line)
+        {
+            if (line != null
+                && line.FreeType == (int)FreeTypeEnumData.Present
+                )
+            {
+                return false;
+            }
+            return true;
+        }
 
     }
 }

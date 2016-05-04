@@ -26,6 +26,9 @@ namespace U9.VOB.Cus.HBHTianRiSheng.BEPlugIn
                 // 校验 整单原始金额 与 折扣是否匹配
                 if (entity != null
                     //&& entity.OriginalData != null
+                    && entity.OriginalData != null
+                    && entity.OriginalData.Status == SODocStatusEnum.Open
+                    && entity.Status == SODocStatusEnum.Open
                     )
                 {
                     List<SODiscount> listDis = entity.GetHeadDiscountLines();

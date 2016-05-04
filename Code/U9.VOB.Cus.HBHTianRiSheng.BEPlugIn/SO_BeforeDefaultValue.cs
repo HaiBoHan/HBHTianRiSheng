@@ -32,6 +32,9 @@ namespace U9.VOB.Cus.HBHTianRiSheng.BEPlugIn
                 SO entity = key.GetEntity() as SO;
 
                 if (entity != null
+                    && entity.OriginalData != null
+                    && entity.OriginalData.Status == SODocStatusEnum.Open
+                    && entity.Status == SODocStatusEnum.Open
                     )
                 {
                     // UI 更新修改变动了金额
